@@ -1,24 +1,37 @@
 # Render Blueprint (Infrastructure-as-Code) for the FarmLink backend.
 #
-# What this does when you connect this repo at https://dashboard.render.com/blueprints:
-#   1. Provisions a free-tier managed PostgreSQL 16 database.
-#   2. Provisions a free-tier web service running api_v2.py, with
-#      DATABASE_URL wired automatically from the database above (Render
-#      injects it — you never type a connection string by hand).
-#   3. Leaves CORS_ALLOWED_ORIGINS blank for you to fill in once you know
-#      your frontend's deployed URL (see DEPLOYMENT.md step 4).
+# Compute (this web service) runs on Render's free tier -- verified
+# working in this session, and Render's free web service has no
+# expiration (only spins down after 15 min idle, ~1 min cold start on
+# the next request).
+#
+# The DATABASE is Neon, not Render Postgres -- deliberate choice, made
+# after Render's own free Postgres tier turned out to expire 30 days
+# after creation (checked against Render's docs). Neon's free tier is
+# a standing, non-expiring offer: 0.5GB storage, 100 compute-hours/
+# month, no credit card (checked against Neon's docs, Sept 2026).
+# Since this is now an external database, it can't use Render's
+# `fromDatabase` blueprint wiring (that only works for Render-managed
+# Postgres) -- DATABASE_URL is entered manually as a secret instead
+# (`sync: false` below), which Render will prompt for when you apply
+# this blueprint.
+#
+# IMPORTANT -- use Neon's DIRECT connection string, not the pooled one
+# (the one with "-pooler" in the hostname). Neon's own docs say pooled
+# connections (PgBouncer in transaction mode) can break migrations and
+# other session-scoped operations. This project's actual connection
+# pool tops out at 15 connections (SQLAlchemy default pool_size=5 +
+# max_overflow=10, see db/session.py) -- nowhere near Neon's 104-
+# connection direct limit on the free tier -- so there's no need for
+# the pooler's 10,000-connection multiplexing here. Use direct for
+# both migrations and runtime; simpler, and correct for this project's
+# actual scale.
 #
 # This file only takes effect if Render is told to use it (New + >
-# Blueprint, point at this repo). It does not run anything on its own —
-# verified in this session by installing this exact requirements.txt in
-# a clean venv and running the full test suite + starting uvicorn bound
-# to a $PORT-style env var (matching what Render's runtime does), not
-# just written from documentation.
-
-databases:
-  - name: farmlink-db
-    plan: free
-    postgresMajorVersion: "16"
+# Blueprint, point at this repo). The requirements.txt and $PORT
+# binding it depends on were verified working in this session; the
+# actual Render+Neon combination could not be, since that needs your
+# accounts.
 
 services:
   - type: web
@@ -26,26 +39,25 @@ services:
     runtime: python
     plan: free
     # Render has no India region (checked Sept 2026); Singapore is the
-    # closest of its 5 regions (Oregon/Ohio/Virginia/Frankfurt/Singapore)
-    # to Maharashtra, but still expect ~200-300ms latency from India, not
-    # local-region speed. Change if you'd rather optimize for a
-    # different judge/user location.
+    # closest of its 5 regions to Maharashtra, but still expect
+    # ~200-300ms latency from India, not local-region speed.
     region: singapore
     # Only migrations here, not seeding: verified in this session that
     # db.seed_from_json is NOT idempotent (a second run throws
     # IntegrityError on the buyer_profiles unique constraint), so it
     # would break every redeploy if it ran on every build. `alembic
-    # upgrade head` IS safe to re-run (Alembic tracks the applied
-    # revision and no-ops if already current). Seed data once manually
-    # after the first deploy -- see DEPLOYMENT.md step 3.
+    # upgrade head` IS safe to re-run. Seed data once manually after
+    # the first deploy -- see DEPLOYMENT.md.
     buildCommand: "pip install -r requirements.txt && alembic upgrade head"
     startCommand: "uvicorn api_v2:app --host 0.0.0.0 --port $PORT"
     envVars:
       - key: DATABASE_URL
-        fromDatabase:
-          name: farmlink-db
-          property: connectionString
+        sync: false   # Render prompts for this when you apply the blueprint --
+                       # paste Neon's DIRECT connection string here, with the
+                       # scheme changed from postgresql:// to postgresql+psycopg2://
+                       # (db/session.py expects the driver named explicitly).
+                       # Keep the ?sslmode=require suffix Neon includes.
       - key: CORS_ALLOWED_ORIGINS
-        value: ""   # fill in with your Vercel URL after step 4 in DEPLOYMENT.md, then redeploy
+        value: ""   # fill in with your Vercel URL once the frontend is deployed
       - key: PYTHON_VERSION
         value: "3.12.3"
