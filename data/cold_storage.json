@@ -1,0 +1,133 @@
+[
+  {
+    "facility_id": "CS001",
+    "name": "Parbhani Cold Storage & Warehousing",
+    "district": "Bhandara",
+    "capacity_quintals": 2500,
+    "available_capacity_pct": 78,
+    "rate_per_quintal_per_day": 3.99,
+    "supports_crops": [
+      "Tomato",
+      "Pomegranate",
+      "Groundnut",
+      "Turmeric",
+      "Soybean"
+    ]
+  },
+  {
+    "facility_id": "CS002",
+    "name": "Solapur Cold Storage & Warehousing",
+    "district": "Buldhana",
+    "capacity_quintals": 5000,
+    "available_capacity_pct": 24,
+    "rate_per_quintal_per_day": 2.86,
+    "supports_crops": [
+      "Sugarcane",
+      "Orange (Nagpur)",
+      "Banana"
+    ]
+  },
+  {
+    "facility_id": "CS003",
+    "name": "Wardha Cold Storage & Warehousing",
+    "district": "Chandrapur",
+    "capacity_quintals": 500,
+    "available_capacity_pct": 30,
+    "rate_per_quintal_per_day": 3.94,
+    "supports_crops": [
+      "Turmeric",
+      "Groundnut",
+      "Wheat"
+    ]
+  },
+  {
+    "facility_id": "CS004",
+    "name": "Yavatmal Cold Storage & Warehousing",
+    "district": "Ahmednagar",
+    "capacity_quintals": 1000,
+    "available_capacity_pct": 73,
+    "rate_per_quintal_per_day": 3.34,
+    "supports_crops": [
+      "Sugarcane",
+      "Wheat"
+    ]
+  },
+  {
+    "facility_id": "CS005",
+    "name": "Chandrapur Cold Storage & Warehousing",
+    "district": "Nandurbar",
+    "capacity_quintals": 2500,
+    "available_capacity_pct": 35,
+    "rate_per_quintal_per_day": 3.07,
+    "supports_crops": [
+      "Cotton",
+      "Grapes"
+    ]
+  },
+  {
+    "facility_id": "CS006",
+    "name": "Sindhudurg Cold Storage & Warehousing",
+    "district": "Nandurbar",
+    "capacity_quintals": 1000,
+    "available_capacity_pct": 61,
+    "rate_per_quintal_per_day": 3.72,
+    "supports_crops": [
+      "Cotton",
+      "Groundnut",
+      "Tur (Arhar)"
+    ]
+  },
+  {
+    "facility_id": "CS007",
+    "name": "Gadchiroli Cold Storage & Warehousing",
+    "district": "Osmanabad",
+    "capacity_quintals": 500,
+    "available_capacity_pct": 36,
+    "rate_per_quintal_per_day": 3.49,
+    "supports_crops": [
+      "Turmeric",
+      "Groundnut"
+    ]
+  },
+  {
+    "facility_id": "CS008",
+    "name": "Yavatmal Cold Storage & Warehousing",
+    "district": "Nashik",
+    "capacity_quintals": 500,
+    "available_capacity_pct": 89,
+    "rate_per_quintal_per_day": 3.46,
+    "supports_crops": [
+      "Grapes",
+      "Pomegranate",
+      "Turmeric",
+      "Tomato",
+      "Cotton"
+    ]
+  },
+  {
+    "facility_id": "CS009",
+    "name": "Amravati Cold Storage & Warehousing",
+    "district": "Thane",
+    "capacity_quintals": 500,
+    "available_capacity_pct": 58,
+    "rate_per_quintal_per_day": 3.83,
+    "supports_crops": [
+      "Tomato",
+      "Pomegranate"
+    ]
+  },
+  {
+    "facility_id": "CS010",
+    "name": "Nagpur Cold Storage & Warehousing",
+    "district": "Satara",
+    "capacity_quintals": 1000,
+    "available_capacity_pct": 77,
+    "rate_per_quintal_per_day": 2.08,
+    "supports_crops": [
+      "Orange (Nagpur)",
+      "Gram",
+      "Cotton",
+      "Onion"
+    ]
+  }
+]

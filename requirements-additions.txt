@@ -1,0 +1,20 @@
+# Additional dependencies introduced by this deterministic-intelligence-layer
+# package, on top of the existing requirements.txt (crewai, fastapi, uvicorn,
+# python-dotenv, requests, pydantic are already there for the original repo --
+# these are the versions actually verified working together in this build).
+
+fastapi>=0.110.0
+pydantic>=2.0.0
+requests>=2.32.0
+
+# Only needed to run tests/test_api_v2.py (FastAPI's TestClient uses httpx
+# under the hood as of Starlette's current version) -- not needed at runtime.
+httpx>=0.28.0
+
+# --- Added for the PostgreSQL schema + migrations component (db/, migrations/) ---
+# Versions actually verified together in this build: SQLAlchemy 2.0.52,
+# Alembic 1.19.2, psycopg2-binary against PostgreSQL 16 (see DB_REPORT.md).
+SQLAlchemy>=2.0.0
+alembic>=1.13.0
+psycopg2-binary>=2.9.0
+pytest>=7.0.0

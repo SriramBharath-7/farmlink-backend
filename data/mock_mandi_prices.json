@@ -1,0 +1,6722 @@
+[
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Onion",
+    "arrival_date": "05/09/2026",
+    "min_price": 4022.51,
+    "max_price": 4916.4,
+    "modal_price": 4469.45
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Wardha",
+    "market": "Wardha APMC",
+    "commodity": "Onion",
+    "arrival_date": "05/09/2026",
+    "min_price": 4010.96,
+    "max_price": 4902.28,
+    "modal_price": 4456.62
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Onion",
+    "arrival_date": "05/09/2026",
+    "min_price": 3976.46,
+    "max_price": 4860.12,
+    "modal_price": 4418.29
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Onion",
+    "arrival_date": "04/09/2026",
+    "min_price": 4074.02,
+    "max_price": 4979.36,
+    "modal_price": 4526.69
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Onion",
+    "arrival_date": "04/09/2026",
+    "min_price": 4109.77,
+    "max_price": 5023.05,
+    "modal_price": 4566.41
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Onion",
+    "arrival_date": "04/09/2026",
+    "min_price": 4208.41,
+    "max_price": 5143.61,
+    "modal_price": 4676.01
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Onion",
+    "arrival_date": "03/09/2026",
+    "min_price": 4162.06,
+    "max_price": 5086.96,
+    "modal_price": 4624.51
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Onion",
+    "arrival_date": "03/09/2026",
+    "min_price": 4254.74,
+    "max_price": 5200.24,
+    "modal_price": 4727.49
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Onion",
+    "arrival_date": "03/09/2026",
+    "min_price": 4185.16,
+    "max_price": 5115.2,
+    "modal_price": 4650.18
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Onion",
+    "arrival_date": "02/09/2026",
+    "min_price": 4274.36,
+    "max_price": 5224.22,
+    "modal_price": 4749.29
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Onion",
+    "arrival_date": "02/09/2026",
+    "min_price": 4208.37,
+    "max_price": 5143.57,
+    "modal_price": 4675.97
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Onion",
+    "arrival_date": "02/09/2026",
+    "min_price": 4144.28,
+    "max_price": 5065.23,
+    "modal_price": 4604.75
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Onion",
+    "arrival_date": "01/09/2026",
+    "min_price": 4165.47,
+    "max_price": 5091.13,
+    "modal_price": 4628.3
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Onion",
+    "arrival_date": "01/09/2026",
+    "min_price": 4291.11,
+    "max_price": 5244.69,
+    "modal_price": 4767.9
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Onion",
+    "arrival_date": "01/09/2026",
+    "min_price": 4312.12,
+    "max_price": 5270.38,
+    "modal_price": 4791.25
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Onion",
+    "arrival_date": "31/08/2026",
+    "min_price": 4168.49,
+    "max_price": 5094.83,
+    "modal_price": 4631.66
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Onion",
+    "arrival_date": "31/08/2026",
+    "min_price": 4036.94,
+    "max_price": 4934.04,
+    "modal_price": 4485.49
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Onion",
+    "arrival_date": "31/08/2026",
+    "min_price": 4139.31,
+    "max_price": 5059.15,
+    "modal_price": 4599.23
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Onion",
+    "arrival_date": "30/08/2026",
+    "min_price": 3921.63,
+    "max_price": 4793.11,
+    "modal_price": 4357.37
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Onion",
+    "arrival_date": "30/08/2026",
+    "min_price": 3989.51,
+    "max_price": 4876.07,
+    "modal_price": 4432.79
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Onion",
+    "arrival_date": "30/08/2026",
+    "min_price": 3896.88,
+    "max_price": 4762.86,
+    "modal_price": 4329.87
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Onion",
+    "arrival_date": "29/08/2026",
+    "min_price": 3929.24,
+    "max_price": 4802.4,
+    "modal_price": 4365.82
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Onion",
+    "arrival_date": "29/08/2026",
+    "min_price": 3970.83,
+    "max_price": 4853.23,
+    "modal_price": 4412.03
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Wardha",
+    "market": "Wardha APMC",
+    "commodity": "Onion",
+    "arrival_date": "29/08/2026",
+    "min_price": 4091.28,
+    "max_price": 5000.46,
+    "modal_price": 4545.87
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Onion",
+    "arrival_date": "28/08/2026",
+    "min_price": 3874.28,
+    "max_price": 4735.23,
+    "modal_price": 4304.75
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Onion",
+    "arrival_date": "28/08/2026",
+    "min_price": 3914.06,
+    "max_price": 4783.86,
+    "modal_price": 4348.96
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Onion",
+    "arrival_date": "28/08/2026",
+    "min_price": 3849.33,
+    "max_price": 4704.73,
+    "modal_price": 4277.03
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Onion",
+    "arrival_date": "27/08/2026",
+    "min_price": 4063.59,
+    "max_price": 4966.61,
+    "modal_price": 4515.1
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Onion",
+    "arrival_date": "27/08/2026",
+    "min_price": 3930.17,
+    "max_price": 4803.55,
+    "modal_price": 4366.86
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Onion",
+    "arrival_date": "27/08/2026",
+    "min_price": 3876.32,
+    "max_price": 4737.72,
+    "modal_price": 4307.02
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Onion",
+    "arrival_date": "26/08/2026",
+    "min_price": 3958.43,
+    "max_price": 4838.09,
+    "modal_price": 4398.26
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Onion",
+    "arrival_date": "26/08/2026",
+    "min_price": 3758.88,
+    "max_price": 4594.18,
+    "modal_price": 4176.53
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Onion",
+    "arrival_date": "26/08/2026",
+    "min_price": 3904.03,
+    "max_price": 4771.59,
+    "modal_price": 4337.81
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Onion",
+    "arrival_date": "25/08/2026",
+    "min_price": 3895.83,
+    "max_price": 4761.57,
+    "modal_price": 4328.7
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Yavatmal",
+    "market": "Yavatmal APMC",
+    "commodity": "Onion",
+    "arrival_date": "25/08/2026",
+    "min_price": 3895.77,
+    "max_price": 4761.49,
+    "modal_price": 4328.63
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Onion",
+    "arrival_date": "25/08/2026",
+    "min_price": 3939.55,
+    "max_price": 4815.01,
+    "modal_price": 4377.28
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Onion",
+    "arrival_date": "24/08/2026",
+    "min_price": 4086.43,
+    "max_price": 4994.53,
+    "modal_price": 4540.48
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Onion",
+    "arrival_date": "24/08/2026",
+    "min_price": 3914.81,
+    "max_price": 4784.77,
+    "modal_price": 4349.79
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gadchiroli",
+    "market": "Gadchiroli APMC",
+    "commodity": "Onion",
+    "arrival_date": "24/08/2026",
+    "min_price": 3918.07,
+    "max_price": 4788.75,
+    "modal_price": 4353.41
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Onion",
+    "arrival_date": "23/08/2026",
+    "min_price": 4082.76,
+    "max_price": 4990.04,
+    "modal_price": 4536.4
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Onion",
+    "arrival_date": "23/08/2026",
+    "min_price": 4075.35,
+    "max_price": 4980.99,
+    "modal_price": 4528.17
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Onion",
+    "arrival_date": "23/08/2026",
+    "min_price": 3991.21,
+    "max_price": 4878.15,
+    "modal_price": 4434.68
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Tomato",
+    "arrival_date": "05/09/2026",
+    "min_price": 5616.8,
+    "max_price": 6864.98,
+    "modal_price": 6240.89
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gadchiroli",
+    "market": "Gadchiroli APMC",
+    "commodity": "Tomato",
+    "arrival_date": "05/09/2026",
+    "min_price": 5601.65,
+    "max_price": 6846.46,
+    "modal_price": 6224.05
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Tomato",
+    "arrival_date": "05/09/2026",
+    "min_price": 5484.72,
+    "max_price": 6703.54,
+    "modal_price": 6094.13
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Wardha",
+    "market": "Wardha APMC",
+    "commodity": "Tomato",
+    "arrival_date": "04/09/2026",
+    "min_price": 5723.77,
+    "max_price": 6995.71,
+    "modal_price": 6359.74
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Tomato",
+    "arrival_date": "04/09/2026",
+    "min_price": 5706.4,
+    "max_price": 6974.5,
+    "modal_price": 6340.45
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Tomato",
+    "arrival_date": "04/09/2026",
+    "min_price": 5819.82,
+    "max_price": 7113.12,
+    "modal_price": 6466.47
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Tomato",
+    "arrival_date": "03/09/2026",
+    "min_price": 5841.91,
+    "max_price": 7140.11,
+    "modal_price": 6491.01
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Tomato",
+    "arrival_date": "03/09/2026",
+    "min_price": 6195.1,
+    "max_price": 7571.8,
+    "modal_price": 6883.45
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Tomato",
+    "arrival_date": "03/09/2026",
+    "min_price": 5917.13,
+    "max_price": 7232.05,
+    "modal_price": 6574.59
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Tomato",
+    "arrival_date": "02/09/2026",
+    "min_price": 5805.12,
+    "max_price": 7095.14,
+    "modal_price": 6450.13
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Tomato",
+    "arrival_date": "02/09/2026",
+    "min_price": 5935.81,
+    "max_price": 7254.87,
+    "modal_price": 6595.34
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Tomato",
+    "arrival_date": "02/09/2026",
+    "min_price": 5827.18,
+    "max_price": 7122.11,
+    "modal_price": 6474.65
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Yavatmal",
+    "market": "Yavatmal APMC",
+    "commodity": "Tomato",
+    "arrival_date": "01/09/2026",
+    "min_price": 5963.11,
+    "max_price": 7288.25,
+    "modal_price": 6625.68
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "commodity": "Tomato",
+    "arrival_date": "01/09/2026",
+    "min_price": 5710.52,
+    "max_price": 6979.52,
+    "modal_price": 6345.02
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Wardha",
+    "market": "Wardha APMC",
+    "commodity": "Tomato",
+    "arrival_date": "01/09/2026",
+    "min_price": 5818.66,
+    "max_price": 7111.7,
+    "modal_price": 6465.18
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Tomato",
+    "arrival_date": "31/08/2026",
+    "min_price": 5983.51,
+    "max_price": 7313.17,
+    "modal_price": 6648.34
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Tomato",
+    "arrival_date": "31/08/2026",
+    "min_price": 6222.56,
+    "max_price": 7605.35,
+    "modal_price": 6913.95
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Tomato",
+    "arrival_date": "31/08/2026",
+    "min_price": 6172.71,
+    "max_price": 7544.43,
+    "modal_price": 6858.57
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "commodity": "Tomato",
+    "arrival_date": "30/08/2026",
+    "min_price": 6261.19,
+    "max_price": 7652.57,
+    "modal_price": 6956.88
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Tomato",
+    "arrival_date": "30/08/2026",
+    "min_price": 6203.94,
+    "max_price": 7582.6,
+    "modal_price": 6893.27
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Tomato",
+    "arrival_date": "30/08/2026",
+    "min_price": 6019.49,
+    "max_price": 7357.15,
+    "modal_price": 6688.32
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Tomato",
+    "arrival_date": "29/08/2026",
+    "min_price": 5929.88,
+    "max_price": 7247.64,
+    "modal_price": 6588.76
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Tomato",
+    "arrival_date": "29/08/2026",
+    "min_price": 6091.26,
+    "max_price": 7444.88,
+    "modal_price": 6768.07
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gadchiroli",
+    "market": "Gadchiroli APMC",
+    "commodity": "Tomato",
+    "arrival_date": "29/08/2026",
+    "min_price": 6091.97,
+    "max_price": 7445.74,
+    "modal_price": 6768.85
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Nashik APMC",
+    "commodity": "Tomato",
+    "arrival_date": "28/08/2026",
+    "min_price": 5774.51,
+    "max_price": 7057.73,
+    "modal_price": 6416.12
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Tomato",
+    "arrival_date": "28/08/2026",
+    "min_price": 5682.1,
+    "max_price": 6944.78,
+    "modal_price": 6313.44
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Tomato",
+    "arrival_date": "28/08/2026",
+    "min_price": 5856.95,
+    "max_price": 7158.49,
+    "modal_price": 6507.72
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Tomato",
+    "arrival_date": "27/08/2026",
+    "min_price": 5534.5,
+    "max_price": 6764.38,
+    "modal_price": 6149.44
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "commodity": "Tomato",
+    "arrival_date": "27/08/2026",
+    "min_price": 5766.92,
+    "max_price": 7048.46,
+    "modal_price": 6407.69
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Tomato",
+    "arrival_date": "27/08/2026",
+    "min_price": 5651.33,
+    "max_price": 6907.19,
+    "modal_price": 6279.26
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Tomato",
+    "arrival_date": "26/08/2026",
+    "min_price": 5665.26,
+    "max_price": 6924.2,
+    "modal_price": 6294.73
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Tomato",
+    "arrival_date": "26/08/2026",
+    "min_price": 5786.23,
+    "max_price": 7072.05,
+    "modal_price": 6429.14
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "commodity": "Tomato",
+    "arrival_date": "26/08/2026",
+    "min_price": 5568.35,
+    "max_price": 6805.77,
+    "modal_price": 6187.06
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Tomato",
+    "arrival_date": "25/08/2026",
+    "min_price": 5552.8,
+    "max_price": 6786.76,
+    "modal_price": 6169.78
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Tomato",
+    "arrival_date": "25/08/2026",
+    "min_price": 5598.76,
+    "max_price": 6842.92,
+    "modal_price": 6220.84
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gondia",
+    "market": "Gondia APMC",
+    "commodity": "Tomato",
+    "arrival_date": "25/08/2026",
+    "min_price": 5610.92,
+    "max_price": 6857.79,
+    "modal_price": 6234.35
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Tomato",
+    "arrival_date": "24/08/2026",
+    "min_price": 5757.34,
+    "max_price": 7036.74,
+    "modal_price": 6397.04
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Tomato",
+    "arrival_date": "24/08/2026",
+    "min_price": 5814.17,
+    "max_price": 7106.21,
+    "modal_price": 6460.19
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Tomato",
+    "arrival_date": "24/08/2026",
+    "min_price": 5656.48,
+    "max_price": 6913.48,
+    "modal_price": 6284.98
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Yavatmal",
+    "market": "Yavatmal APMC",
+    "commodity": "Tomato",
+    "arrival_date": "23/08/2026",
+    "min_price": 5947.65,
+    "max_price": 7269.35,
+    "modal_price": 6608.5
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Tomato",
+    "arrival_date": "23/08/2026",
+    "min_price": 5788.5,
+    "max_price": 7074.84,
+    "modal_price": 6431.67
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Tomato",
+    "arrival_date": "23/08/2026",
+    "min_price": 5999.37,
+    "max_price": 7332.57,
+    "modal_price": 6665.97
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gadchiroli",
+    "market": "Gadchiroli APMC",
+    "commodity": "Soybean",
+    "arrival_date": "05/09/2026",
+    "min_price": 1469.26,
+    "max_price": 1795.76,
+    "modal_price": 1632.51
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Soybean",
+    "arrival_date": "05/09/2026",
+    "min_price": 1483.09,
+    "max_price": 1812.67,
+    "modal_price": 1647.88
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Soybean",
+    "arrival_date": "05/09/2026",
+    "min_price": 1511.02,
+    "max_price": 1846.8,
+    "modal_price": 1678.91
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Soybean",
+    "arrival_date": "04/09/2026",
+    "min_price": 1552.27,
+    "max_price": 1897.21,
+    "modal_price": 1724.74
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Soybean",
+    "arrival_date": "04/09/2026",
+    "min_price": 1535.37,
+    "max_price": 1876.57,
+    "modal_price": 1705.97
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Soybean",
+    "arrival_date": "04/09/2026",
+    "min_price": 1580.1,
+    "max_price": 1931.24,
+    "modal_price": 1755.67
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Soybean",
+    "arrival_date": "03/09/2026",
+    "min_price": 1476.47,
+    "max_price": 1804.57,
+    "modal_price": 1640.52
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Soybean",
+    "arrival_date": "03/09/2026",
+    "min_price": 1471.22,
+    "max_price": 1798.16,
+    "modal_price": 1634.69
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Soybean",
+    "arrival_date": "03/09/2026",
+    "min_price": 1552.35,
+    "max_price": 1897.31,
+    "modal_price": 1724.83
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Soybean",
+    "arrival_date": "02/09/2026",
+    "min_price": 1595.58,
+    "max_price": 1950.16,
+    "modal_price": 1772.87
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Nashik APMC",
+    "commodity": "Soybean",
+    "arrival_date": "02/09/2026",
+    "min_price": 1540.45,
+    "max_price": 1882.77,
+    "modal_price": 1711.61
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Soybean",
+    "arrival_date": "02/09/2026",
+    "min_price": 1572.52,
+    "max_price": 1921.96,
+    "modal_price": 1747.24
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Soybean",
+    "arrival_date": "01/09/2026",
+    "min_price": 1528.58,
+    "max_price": 1868.26,
+    "modal_price": 1698.42
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Wardha",
+    "market": "Wardha APMC",
+    "commodity": "Soybean",
+    "arrival_date": "01/09/2026",
+    "min_price": 1562.2,
+    "max_price": 1909.36,
+    "modal_price": 1735.78
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Soybean",
+    "arrival_date": "01/09/2026",
+    "min_price": 1535.14,
+    "max_price": 1876.28,
+    "modal_price": 1705.71
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Soybean",
+    "arrival_date": "31/08/2026",
+    "min_price": 1517.33,
+    "max_price": 1854.51,
+    "modal_price": 1685.92
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Soybean",
+    "arrival_date": "31/08/2026",
+    "min_price": 1527.89,
+    "max_price": 1867.42,
+    "modal_price": 1697.65
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Wardha",
+    "market": "Wardha APMC",
+    "commodity": "Soybean",
+    "arrival_date": "31/08/2026",
+    "min_price": 1574.8,
+    "max_price": 1924.76,
+    "modal_price": 1749.78
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Soybean",
+    "arrival_date": "30/08/2026",
+    "min_price": 1531.23,
+    "max_price": 1871.51,
+    "modal_price": 1701.37
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Soybean",
+    "arrival_date": "30/08/2026",
+    "min_price": 1587.25,
+    "max_price": 1939.97,
+    "modal_price": 1763.61
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Nashik APMC",
+    "commodity": "Soybean",
+    "arrival_date": "30/08/2026",
+    "min_price": 1587.49,
+    "max_price": 1940.27,
+    "modal_price": 1763.88
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Soybean",
+    "arrival_date": "29/08/2026",
+    "min_price": 1618.0,
+    "max_price": 1977.56,
+    "modal_price": 1797.78
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "commodity": "Soybean",
+    "arrival_date": "29/08/2026",
+    "min_price": 1676.09,
+    "max_price": 2048.55,
+    "modal_price": 1862.32
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Soybean",
+    "arrival_date": "29/08/2026",
+    "min_price": 1627.24,
+    "max_price": 1988.86,
+    "modal_price": 1808.05
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Soybean",
+    "arrival_date": "28/08/2026",
+    "min_price": 1715.76,
+    "max_price": 2097.04,
+    "modal_price": 1906.4
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "commodity": "Soybean",
+    "arrival_date": "28/08/2026",
+    "min_price": 1727.34,
+    "max_price": 2111.2,
+    "modal_price": 1919.27
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Soybean",
+    "arrival_date": "28/08/2026",
+    "min_price": 1674.88,
+    "max_price": 2047.08,
+    "modal_price": 1860.98
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Soybean",
+    "arrival_date": "27/08/2026",
+    "min_price": 1653.93,
+    "max_price": 2021.47,
+    "modal_price": 1837.7
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Soybean",
+    "arrival_date": "27/08/2026",
+    "min_price": 1682.34,
+    "max_price": 2056.2,
+    "modal_price": 1869.27
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Soybean",
+    "arrival_date": "27/08/2026",
+    "min_price": 1662.62,
+    "max_price": 2032.09,
+    "modal_price": 1847.35
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Soybean",
+    "arrival_date": "26/08/2026",
+    "min_price": 1690.15,
+    "max_price": 2065.75,
+    "modal_price": 1877.95
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Soybean",
+    "arrival_date": "26/08/2026",
+    "min_price": 1657.16,
+    "max_price": 2025.42,
+    "modal_price": 1841.29
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Soybean",
+    "arrival_date": "26/08/2026",
+    "min_price": 1651.84,
+    "max_price": 2018.92,
+    "modal_price": 1835.38
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Soybean",
+    "arrival_date": "25/08/2026",
+    "min_price": 1767.89,
+    "max_price": 2160.75,
+    "modal_price": 1964.32
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Soybean",
+    "arrival_date": "25/08/2026",
+    "min_price": 1794.51,
+    "max_price": 2193.29,
+    "modal_price": 1993.9
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Soybean",
+    "arrival_date": "25/08/2026",
+    "min_price": 1795.75,
+    "max_price": 2194.81,
+    "modal_price": 1995.28
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Soybean",
+    "arrival_date": "24/08/2026",
+    "min_price": 1775.25,
+    "max_price": 2169.75,
+    "modal_price": 1972.5
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Soybean",
+    "arrival_date": "24/08/2026",
+    "min_price": 1856.35,
+    "max_price": 2268.87,
+    "modal_price": 2062.61
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "commodity": "Soybean",
+    "arrival_date": "24/08/2026",
+    "min_price": 1830.21,
+    "max_price": 2236.93,
+    "modal_price": 2033.57
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Soybean",
+    "arrival_date": "23/08/2026",
+    "min_price": 1727.6,
+    "max_price": 2111.52,
+    "modal_price": 1919.56
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "commodity": "Soybean",
+    "arrival_date": "23/08/2026",
+    "min_price": 1718.38,
+    "max_price": 2100.24,
+    "modal_price": 1909.31
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Soybean",
+    "arrival_date": "23/08/2026",
+    "min_price": 1804.49,
+    "max_price": 2205.49,
+    "modal_price": 2004.99
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Cotton",
+    "arrival_date": "05/09/2026",
+    "min_price": 5065.99,
+    "max_price": 6191.77,
+    "modal_price": 5628.88
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Cotton",
+    "arrival_date": "05/09/2026",
+    "min_price": 4901.31,
+    "max_price": 5990.49,
+    "modal_price": 5445.9
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Cotton",
+    "arrival_date": "05/09/2026",
+    "min_price": 5019.16,
+    "max_price": 6134.52,
+    "modal_price": 5576.84
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Cotton",
+    "arrival_date": "04/09/2026",
+    "min_price": 5040.35,
+    "max_price": 6160.43,
+    "modal_price": 5600.39
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gadchiroli",
+    "market": "Gadchiroli APMC",
+    "commodity": "Cotton",
+    "arrival_date": "04/09/2026",
+    "min_price": 5012.97,
+    "max_price": 6126.97,
+    "modal_price": 5569.97
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Cotton",
+    "arrival_date": "04/09/2026",
+    "min_price": 4891.1,
+    "max_price": 5978.01,
+    "modal_price": 5434.55
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Cotton",
+    "arrival_date": "03/09/2026",
+    "min_price": 4922.56,
+    "max_price": 6016.46,
+    "modal_price": 5469.51
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Cotton",
+    "arrival_date": "03/09/2026",
+    "min_price": 4721.67,
+    "max_price": 5770.93,
+    "modal_price": 5246.3
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Cotton",
+    "arrival_date": "03/09/2026",
+    "min_price": 4688.08,
+    "max_price": 5729.88,
+    "modal_price": 5208.98
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Cotton",
+    "arrival_date": "02/09/2026",
+    "min_price": 4839.97,
+    "max_price": 5915.51,
+    "modal_price": 5377.74
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Cotton",
+    "arrival_date": "02/09/2026",
+    "min_price": 4861.74,
+    "max_price": 5942.12,
+    "modal_price": 5401.93
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Cotton",
+    "arrival_date": "02/09/2026",
+    "min_price": 4808.84,
+    "max_price": 5877.48,
+    "modal_price": 5343.16
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Cotton",
+    "arrival_date": "01/09/2026",
+    "min_price": 4787.6,
+    "max_price": 5851.52,
+    "modal_price": 5319.56
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Cotton",
+    "arrival_date": "01/09/2026",
+    "min_price": 4756.66,
+    "max_price": 5813.7,
+    "modal_price": 5285.18
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "commodity": "Cotton",
+    "arrival_date": "01/09/2026",
+    "min_price": 5038.59,
+    "max_price": 6158.27,
+    "modal_price": 5598.43
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "commodity": "Cotton",
+    "arrival_date": "31/08/2026",
+    "min_price": 4846.4,
+    "max_price": 5923.38,
+    "modal_price": 5384.89
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Cotton",
+    "arrival_date": "31/08/2026",
+    "min_price": 5055.32,
+    "max_price": 6178.72,
+    "modal_price": 5617.02
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Cotton",
+    "arrival_date": "31/08/2026",
+    "min_price": 4862.69,
+    "max_price": 5943.29,
+    "modal_price": 5402.99
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Cotton",
+    "arrival_date": "30/08/2026",
+    "min_price": 5260.44,
+    "max_price": 6429.42,
+    "modal_price": 5844.93
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Cotton",
+    "arrival_date": "30/08/2026",
+    "min_price": 5148.95,
+    "max_price": 6293.16,
+    "modal_price": 5721.05
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Cotton",
+    "arrival_date": "30/08/2026",
+    "min_price": 5039.55,
+    "max_price": 6159.45,
+    "modal_price": 5599.5
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Cotton",
+    "arrival_date": "29/08/2026",
+    "min_price": 5163.66,
+    "max_price": 6311.14,
+    "modal_price": 5737.4
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Cotton",
+    "arrival_date": "29/08/2026",
+    "min_price": 5171.14,
+    "max_price": 6320.28,
+    "modal_price": 5745.71
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Nashik APMC",
+    "commodity": "Cotton",
+    "arrival_date": "29/08/2026",
+    "min_price": 4951.31,
+    "max_price": 6051.61,
+    "modal_price": 5501.46
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Cotton",
+    "arrival_date": "28/08/2026",
+    "min_price": 5038.4,
+    "max_price": 6158.04,
+    "modal_price": 5598.22
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Cotton",
+    "arrival_date": "28/08/2026",
+    "min_price": 5278.12,
+    "max_price": 6451.04,
+    "modal_price": 5864.58
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Cotton",
+    "arrival_date": "28/08/2026",
+    "min_price": 5119.24,
+    "max_price": 6256.84,
+    "modal_price": 5688.04
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Cotton",
+    "arrival_date": "27/08/2026",
+    "min_price": 5195.09,
+    "max_price": 6349.55,
+    "modal_price": 5772.32
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Cotton",
+    "arrival_date": "27/08/2026",
+    "min_price": 5304.25,
+    "max_price": 6482.97,
+    "modal_price": 5893.61
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Yavatmal",
+    "market": "Yavatmal APMC",
+    "commodity": "Cotton",
+    "arrival_date": "27/08/2026",
+    "min_price": 5251.56,
+    "max_price": 6418.58,
+    "modal_price": 5835.07
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Cotton",
+    "arrival_date": "26/08/2026",
+    "min_price": 5402.85,
+    "max_price": 6603.49,
+    "modal_price": 6003.17
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gondia",
+    "market": "Gondia APMC",
+    "commodity": "Cotton",
+    "arrival_date": "26/08/2026",
+    "min_price": 5380.5,
+    "max_price": 6576.16,
+    "modal_price": 5978.33
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Cotton",
+    "arrival_date": "26/08/2026",
+    "min_price": 5502.04,
+    "max_price": 6724.72,
+    "modal_price": 6113.38
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Yavatmal",
+    "market": "Yavatmal APMC",
+    "commodity": "Cotton",
+    "arrival_date": "25/08/2026",
+    "min_price": 5218.92,
+    "max_price": 6378.68,
+    "modal_price": 5798.8
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gondia",
+    "market": "Gondia APMC",
+    "commodity": "Cotton",
+    "arrival_date": "25/08/2026",
+    "min_price": 5205.95,
+    "max_price": 6362.83,
+    "modal_price": 5784.39
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Cotton",
+    "arrival_date": "25/08/2026",
+    "min_price": 5241.69,
+    "max_price": 6406.51,
+    "modal_price": 5824.1
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Cotton",
+    "arrival_date": "24/08/2026",
+    "min_price": 5131.64,
+    "max_price": 6272.0,
+    "modal_price": 5701.82
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Cotton",
+    "arrival_date": "24/08/2026",
+    "min_price": 5098.32,
+    "max_price": 6231.28,
+    "modal_price": 5664.8
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gondia",
+    "market": "Gondia APMC",
+    "commodity": "Cotton",
+    "arrival_date": "24/08/2026",
+    "min_price": 4951.52,
+    "max_price": 6051.86,
+    "modal_price": 5501.69
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Cotton",
+    "arrival_date": "23/08/2026",
+    "min_price": 4879.79,
+    "max_price": 5964.19,
+    "modal_price": 5421.99
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Cotton",
+    "arrival_date": "23/08/2026",
+    "min_price": 4933.34,
+    "max_price": 6029.64,
+    "modal_price": 5481.49
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Cotton",
+    "arrival_date": "23/08/2026",
+    "min_price": 4770.3,
+    "max_price": 5830.36,
+    "modal_price": 5300.33
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Grapes",
+    "arrival_date": "05/09/2026",
+    "min_price": 3132.06,
+    "max_price": 3828.08,
+    "modal_price": 3480.07
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gondia",
+    "market": "Gondia APMC",
+    "commodity": "Grapes",
+    "arrival_date": "05/09/2026",
+    "min_price": 3075.36,
+    "max_price": 3758.78,
+    "modal_price": 3417.07
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Grapes",
+    "arrival_date": "05/09/2026",
+    "min_price": 3156.8,
+    "max_price": 3858.31,
+    "modal_price": 3507.55
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Grapes",
+    "arrival_date": "04/09/2026",
+    "min_price": 3245.02,
+    "max_price": 3966.14,
+    "modal_price": 3605.58
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Grapes",
+    "arrival_date": "04/09/2026",
+    "min_price": 3332.31,
+    "max_price": 4072.83,
+    "modal_price": 3702.57
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Grapes",
+    "arrival_date": "04/09/2026",
+    "min_price": 3374.9,
+    "max_price": 4124.88,
+    "modal_price": 3749.89
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Grapes",
+    "arrival_date": "03/09/2026",
+    "min_price": 3426.14,
+    "max_price": 4187.5,
+    "modal_price": 3806.82
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Grapes",
+    "arrival_date": "03/09/2026",
+    "min_price": 3314.23,
+    "max_price": 4050.73,
+    "modal_price": 3682.48
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Grapes",
+    "arrival_date": "03/09/2026",
+    "min_price": 3441.07,
+    "max_price": 4205.75,
+    "modal_price": 3823.41
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Grapes",
+    "arrival_date": "02/09/2026",
+    "min_price": 3495.72,
+    "max_price": 4272.54,
+    "modal_price": 3884.13
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Grapes",
+    "arrival_date": "02/09/2026",
+    "min_price": 3389.82,
+    "max_price": 4143.12,
+    "modal_price": 3766.47
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Grapes",
+    "arrival_date": "02/09/2026",
+    "min_price": 3416.37,
+    "max_price": 4175.57,
+    "modal_price": 3795.97
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Grapes",
+    "arrival_date": "01/09/2026",
+    "min_price": 3506.65,
+    "max_price": 4285.91,
+    "modal_price": 3896.28
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Grapes",
+    "arrival_date": "01/09/2026",
+    "min_price": 3358.02,
+    "max_price": 4104.24,
+    "modal_price": 3731.13
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Grapes",
+    "arrival_date": "01/09/2026",
+    "min_price": 3411.18,
+    "max_price": 4169.22,
+    "modal_price": 3790.2
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Grapes",
+    "arrival_date": "31/08/2026",
+    "min_price": 3458.44,
+    "max_price": 4226.98,
+    "modal_price": 3842.71
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Grapes",
+    "arrival_date": "31/08/2026",
+    "min_price": 3461.42,
+    "max_price": 4230.62,
+    "modal_price": 3846.02
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Grapes",
+    "arrival_date": "31/08/2026",
+    "min_price": 3476.56,
+    "max_price": 4249.12,
+    "modal_price": 3862.84
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Wardha",
+    "market": "Wardha APMC",
+    "commodity": "Grapes",
+    "arrival_date": "30/08/2026",
+    "min_price": 3595.9,
+    "max_price": 4394.98,
+    "modal_price": 3995.44
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Nashik APMC",
+    "commodity": "Grapes",
+    "arrival_date": "30/08/2026",
+    "min_price": 3596.11,
+    "max_price": 4395.25,
+    "modal_price": 3995.68
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Grapes",
+    "arrival_date": "30/08/2026",
+    "min_price": 3662.75,
+    "max_price": 4476.69,
+    "modal_price": 4069.72
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Grapes",
+    "arrival_date": "29/08/2026",
+    "min_price": 3668.8,
+    "max_price": 4484.08,
+    "modal_price": 4076.44
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Yavatmal",
+    "market": "Yavatmal APMC",
+    "commodity": "Grapes",
+    "arrival_date": "29/08/2026",
+    "min_price": 3644.02,
+    "max_price": 4453.8,
+    "modal_price": 4048.91
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Grapes",
+    "arrival_date": "29/08/2026",
+    "min_price": 3629.66,
+    "max_price": 4436.26,
+    "modal_price": 4032.96
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Nashik APMC",
+    "commodity": "Grapes",
+    "arrival_date": "28/08/2026",
+    "min_price": 3554.81,
+    "max_price": 4344.77,
+    "modal_price": 3949.79
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Yavatmal",
+    "market": "Yavatmal APMC",
+    "commodity": "Grapes",
+    "arrival_date": "28/08/2026",
+    "min_price": 3541.64,
+    "max_price": 4328.67,
+    "modal_price": 3935.15
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Grapes",
+    "arrival_date": "28/08/2026",
+    "min_price": 3598.33,
+    "max_price": 4397.95,
+    "modal_price": 3998.14
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Grapes",
+    "arrival_date": "27/08/2026",
+    "min_price": 3309.19,
+    "max_price": 4044.57,
+    "modal_price": 3676.88
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Grapes",
+    "arrival_date": "27/08/2026",
+    "min_price": 3476.07,
+    "max_price": 4248.53,
+    "modal_price": 3862.3
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Grapes",
+    "arrival_date": "27/08/2026",
+    "min_price": 3437.91,
+    "max_price": 4201.89,
+    "modal_price": 3819.9
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Grapes",
+    "arrival_date": "26/08/2026",
+    "min_price": 3429.01,
+    "max_price": 4191.01,
+    "modal_price": 3810.01
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Grapes",
+    "arrival_date": "26/08/2026",
+    "min_price": 3506.81,
+    "max_price": 4286.11,
+    "modal_price": 3896.46
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Grapes",
+    "arrival_date": "26/08/2026",
+    "min_price": 3456.33,
+    "max_price": 4224.41,
+    "modal_price": 3840.37
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Grapes",
+    "arrival_date": "25/08/2026",
+    "min_price": 3689.69,
+    "max_price": 4509.63,
+    "modal_price": 4099.66
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Grapes",
+    "arrival_date": "25/08/2026",
+    "min_price": 3508.79,
+    "max_price": 4288.52,
+    "modal_price": 3898.65
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Grapes",
+    "arrival_date": "25/08/2026",
+    "min_price": 3553.27,
+    "max_price": 4342.89,
+    "modal_price": 3948.08
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Grapes",
+    "arrival_date": "24/08/2026",
+    "min_price": 3645.6,
+    "max_price": 4455.74,
+    "modal_price": 4050.67
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Grapes",
+    "arrival_date": "24/08/2026",
+    "min_price": 3478.78,
+    "max_price": 4251.84,
+    "modal_price": 3865.31
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gadchiroli",
+    "market": "Gadchiroli APMC",
+    "commodity": "Grapes",
+    "arrival_date": "24/08/2026",
+    "min_price": 3565.76,
+    "max_price": 4358.16,
+    "modal_price": 3961.96
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Grapes",
+    "arrival_date": "23/08/2026",
+    "min_price": 3473.5,
+    "max_price": 4245.38,
+    "modal_price": 3859.44
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Grapes",
+    "arrival_date": "23/08/2026",
+    "min_price": 3509.13,
+    "max_price": 4288.93,
+    "modal_price": 3899.03
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Grapes",
+    "arrival_date": "23/08/2026",
+    "min_price": 3491.68,
+    "max_price": 4267.62,
+    "modal_price": 3879.65
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "05/09/2026",
+    "min_price": 1585.07,
+    "max_price": 1937.31,
+    "modal_price": 1761.19
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "05/09/2026",
+    "min_price": 1625.26,
+    "max_price": 1986.44,
+    "modal_price": 1805.85
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "05/09/2026",
+    "min_price": 1569.08,
+    "max_price": 1917.76,
+    "modal_price": 1743.42
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "04/09/2026",
+    "min_price": 1612.67,
+    "max_price": 1971.05,
+    "modal_price": 1791.86
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "04/09/2026",
+    "min_price": 1623.51,
+    "max_price": 1984.29,
+    "modal_price": 1803.9
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "04/09/2026",
+    "min_price": 1610.04,
+    "max_price": 1967.82,
+    "modal_price": 1788.93
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "03/09/2026",
+    "min_price": 1525.39,
+    "max_price": 1864.37,
+    "modal_price": 1694.88
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "03/09/2026",
+    "min_price": 1527.51,
+    "max_price": 1866.95,
+    "modal_price": 1697.23
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "03/09/2026",
+    "min_price": 1584.25,
+    "max_price": 1936.31,
+    "modal_price": 1760.28
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "02/09/2026",
+    "min_price": 1510.99,
+    "max_price": 1846.77,
+    "modal_price": 1678.88
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "02/09/2026",
+    "min_price": 1531.74,
+    "max_price": 1872.12,
+    "modal_price": 1701.93
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "02/09/2026",
+    "min_price": 1538.8,
+    "max_price": 1880.76,
+    "modal_price": 1709.78
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "01/09/2026",
+    "min_price": 1492.24,
+    "max_price": 1823.86,
+    "modal_price": 1658.05
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "01/09/2026",
+    "min_price": 1449.79,
+    "max_price": 1771.97,
+    "modal_price": 1610.88
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Wardha",
+    "market": "Wardha APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "01/09/2026",
+    "min_price": 1467.3,
+    "max_price": 1793.36,
+    "modal_price": 1630.33
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Nashik APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "31/08/2026",
+    "min_price": 1436.99,
+    "max_price": 1756.33,
+    "modal_price": 1596.66
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "31/08/2026",
+    "min_price": 1470.34,
+    "max_price": 1797.08,
+    "modal_price": 1633.71
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "31/08/2026",
+    "min_price": 1460.9,
+    "max_price": 1785.54,
+    "modal_price": 1623.22
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "30/08/2026",
+    "min_price": 1424.55,
+    "max_price": 1741.11,
+    "modal_price": 1582.83
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "30/08/2026",
+    "min_price": 1431.95,
+    "max_price": 1750.17,
+    "modal_price": 1591.06
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "30/08/2026",
+    "min_price": 1394.82,
+    "max_price": 1704.78,
+    "modal_price": 1549.8
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "29/08/2026",
+    "min_price": 1371.39,
+    "max_price": 1676.15,
+    "modal_price": 1523.77
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "29/08/2026",
+    "min_price": 1397.04,
+    "max_price": 1707.5,
+    "modal_price": 1552.27
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "29/08/2026",
+    "min_price": 1431.04,
+    "max_price": 1749.04,
+    "modal_price": 1590.04
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "28/08/2026",
+    "min_price": 1486.55,
+    "max_price": 1816.89,
+    "modal_price": 1651.72
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "28/08/2026",
+    "min_price": 1439.7,
+    "max_price": 1759.64,
+    "modal_price": 1599.67
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "28/08/2026",
+    "min_price": 1476.92,
+    "max_price": 1805.12,
+    "modal_price": 1641.02
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "27/08/2026",
+    "min_price": 1466.23,
+    "max_price": 1792.05,
+    "modal_price": 1629.14
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "27/08/2026",
+    "min_price": 1473.88,
+    "max_price": 1801.4,
+    "modal_price": 1637.64
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "27/08/2026",
+    "min_price": 1427.69,
+    "max_price": 1744.95,
+    "modal_price": 1586.32
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "26/08/2026",
+    "min_price": 1552.19,
+    "max_price": 1897.12,
+    "modal_price": 1724.65
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "26/08/2026",
+    "min_price": 1519.87,
+    "max_price": 1857.61,
+    "modal_price": 1688.74
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "26/08/2026",
+    "min_price": 1539.4,
+    "max_price": 1881.5,
+    "modal_price": 1710.45
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "25/08/2026",
+    "min_price": 1558.97,
+    "max_price": 1905.41,
+    "modal_price": 1732.19
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "25/08/2026",
+    "min_price": 1548.62,
+    "max_price": 1892.76,
+    "modal_price": 1720.69
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "25/08/2026",
+    "min_price": 1544.38,
+    "max_price": 1887.58,
+    "modal_price": 1715.98
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "24/08/2026",
+    "min_price": 1470.38,
+    "max_price": 1797.13,
+    "modal_price": 1633.75
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "24/08/2026",
+    "min_price": 1541.86,
+    "max_price": 1884.5,
+    "modal_price": 1713.18
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "24/08/2026",
+    "min_price": 1496.13,
+    "max_price": 1828.61,
+    "modal_price": 1662.37
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "23/08/2026",
+    "min_price": 1523.71,
+    "max_price": 1862.31,
+    "modal_price": 1693.01
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "23/08/2026",
+    "min_price": 1586.67,
+    "max_price": 1939.27,
+    "modal_price": 1762.97
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Pomegranate",
+    "arrival_date": "23/08/2026",
+    "min_price": 1586.0,
+    "max_price": 1938.44,
+    "modal_price": 1762.22
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "05/09/2026",
+    "min_price": 4921.08,
+    "max_price": 6014.66,
+    "modal_price": 5467.87
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "05/09/2026",
+    "min_price": 4977.18,
+    "max_price": 6083.22,
+    "modal_price": 5530.2
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "05/09/2026",
+    "min_price": 5020.4,
+    "max_price": 6136.04,
+    "modal_price": 5578.22
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "04/09/2026",
+    "min_price": 5304.01,
+    "max_price": 6482.67,
+    "modal_price": 5893.34
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "04/09/2026",
+    "min_price": 5093.79,
+    "max_price": 6225.75,
+    "modal_price": 5659.77
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "04/09/2026",
+    "min_price": 5370.65,
+    "max_price": 6564.13,
+    "modal_price": 5967.39
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "03/09/2026",
+    "min_price": 5240.48,
+    "max_price": 6405.04,
+    "modal_price": 5822.76
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "03/09/2026",
+    "min_price": 5320.65,
+    "max_price": 6503.01,
+    "modal_price": 5911.83
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "03/09/2026",
+    "min_price": 5260.34,
+    "max_price": 6429.3,
+    "modal_price": 5844.82
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "02/09/2026",
+    "min_price": 5035.08,
+    "max_price": 6153.98,
+    "modal_price": 5594.53
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "02/09/2026",
+    "min_price": 4907.72,
+    "max_price": 5998.32,
+    "modal_price": 5453.02
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "02/09/2026",
+    "min_price": 5051.34,
+    "max_price": 6173.86,
+    "modal_price": 5612.6
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "01/09/2026",
+    "min_price": 5087.25,
+    "max_price": 6217.75,
+    "modal_price": 5652.5
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "01/09/2026",
+    "min_price": 5047.66,
+    "max_price": 6169.36,
+    "modal_price": 5608.51
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "01/09/2026",
+    "min_price": 5073.61,
+    "max_price": 6201.07,
+    "modal_price": 5637.34
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "31/08/2026",
+    "min_price": 4977.55,
+    "max_price": 6083.67,
+    "modal_price": 5530.61
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "31/08/2026",
+    "min_price": 5015.48,
+    "max_price": 6130.03,
+    "modal_price": 5572.75
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "31/08/2026",
+    "min_price": 4936.65,
+    "max_price": 6033.69,
+    "modal_price": 5485.17
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "30/08/2026",
+    "min_price": 5179.4,
+    "max_price": 6330.38,
+    "modal_price": 5754.89
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "30/08/2026",
+    "min_price": 5181.52,
+    "max_price": 6332.96,
+    "modal_price": 5757.24
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "30/08/2026",
+    "min_price": 5095.24,
+    "max_price": 6227.52,
+    "modal_price": 5661.38
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "29/08/2026",
+    "min_price": 5259.28,
+    "max_price": 6428.02,
+    "modal_price": 5843.65
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Yavatmal",
+    "market": "Yavatmal APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "29/08/2026",
+    "min_price": 5434.84,
+    "max_price": 6642.58,
+    "modal_price": 6038.71
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "29/08/2026",
+    "min_price": 5345.92,
+    "max_price": 6533.9,
+    "modal_price": 5939.91
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "28/08/2026",
+    "min_price": 5528.38,
+    "max_price": 6756.9,
+    "modal_price": 6142.64
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "28/08/2026",
+    "min_price": 5252.18,
+    "max_price": 6419.33,
+    "modal_price": 5835.75
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "28/08/2026",
+    "min_price": 5360.07,
+    "max_price": 6551.19,
+    "modal_price": 5955.63
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gondia",
+    "market": "Gondia APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "27/08/2026",
+    "min_price": 5260.15,
+    "max_price": 6429.07,
+    "modal_price": 5844.61
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "27/08/2026",
+    "min_price": 5164.9,
+    "max_price": 6312.66,
+    "modal_price": 5738.78
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "27/08/2026",
+    "min_price": 5323.18,
+    "max_price": 6506.11,
+    "modal_price": 5914.65
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "26/08/2026",
+    "min_price": 5219.23,
+    "max_price": 6379.05,
+    "modal_price": 5799.14
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "26/08/2026",
+    "min_price": 5446.95,
+    "max_price": 6657.39,
+    "modal_price": 6052.17
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "26/08/2026",
+    "min_price": 5413.64,
+    "max_price": 6616.68,
+    "modal_price": 6015.16
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "25/08/2026",
+    "min_price": 5099.3,
+    "max_price": 6232.48,
+    "modal_price": 5665.89
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "25/08/2026",
+    "min_price": 5096.84,
+    "max_price": 6229.48,
+    "modal_price": 5663.16
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "25/08/2026",
+    "min_price": 5295.02,
+    "max_price": 6471.7,
+    "modal_price": 5883.36
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "24/08/2026",
+    "min_price": 5326.24,
+    "max_price": 6509.84,
+    "modal_price": 5918.04
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gondia",
+    "market": "Gondia APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "24/08/2026",
+    "min_price": 5315.35,
+    "max_price": 6496.55,
+    "modal_price": 5905.95
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "24/08/2026",
+    "min_price": 5354.39,
+    "max_price": 6544.25,
+    "modal_price": 5949.32
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "23/08/2026",
+    "min_price": 5327.99,
+    "max_price": 6511.99,
+    "modal_price": 5919.99
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "23/08/2026",
+    "min_price": 5343.59,
+    "max_price": 6531.05,
+    "modal_price": 5937.32
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Sugarcane",
+    "arrival_date": "23/08/2026",
+    "min_price": 5463.65,
+    "max_price": 6677.79,
+    "modal_price": 6070.72
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Wheat",
+    "arrival_date": "05/09/2026",
+    "min_price": 4553.49,
+    "max_price": 5565.37,
+    "modal_price": 5059.43
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Wheat",
+    "arrival_date": "05/09/2026",
+    "min_price": 4753.48,
+    "max_price": 5809.82,
+    "modal_price": 5281.65
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Wheat",
+    "arrival_date": "05/09/2026",
+    "min_price": 4747.67,
+    "max_price": 5802.71,
+    "modal_price": 5275.19
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Wheat",
+    "arrival_date": "04/09/2026",
+    "min_price": 4587.37,
+    "max_price": 5606.79,
+    "modal_price": 5097.08
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Wheat",
+    "arrival_date": "04/09/2026",
+    "min_price": 4590.86,
+    "max_price": 5611.06,
+    "modal_price": 5100.96
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Wheat",
+    "arrival_date": "04/09/2026",
+    "min_price": 4648.3,
+    "max_price": 5681.26,
+    "modal_price": 5164.78
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Wheat",
+    "arrival_date": "03/09/2026",
+    "min_price": 4613.31,
+    "max_price": 5638.49,
+    "modal_price": 5125.9
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Wheat",
+    "arrival_date": "03/09/2026",
+    "min_price": 4745.56,
+    "max_price": 5800.12,
+    "modal_price": 5272.84
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Wheat",
+    "arrival_date": "03/09/2026",
+    "min_price": 4683.25,
+    "max_price": 5723.97,
+    "modal_price": 5203.61
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gadchiroli",
+    "market": "Gadchiroli APMC",
+    "commodity": "Wheat",
+    "arrival_date": "02/09/2026",
+    "min_price": 4706.14,
+    "max_price": 5751.94,
+    "modal_price": 5229.04
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Wheat",
+    "arrival_date": "02/09/2026",
+    "min_price": 4849.15,
+    "max_price": 5926.73,
+    "modal_price": 5387.94
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Yavatmal",
+    "market": "Yavatmal APMC",
+    "commodity": "Wheat",
+    "arrival_date": "02/09/2026",
+    "min_price": 4869.24,
+    "max_price": 5951.3,
+    "modal_price": 5410.27
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Wheat",
+    "arrival_date": "01/09/2026",
+    "min_price": 4864.35,
+    "max_price": 5945.31,
+    "modal_price": 5404.83
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Wheat",
+    "arrival_date": "01/09/2026",
+    "min_price": 4797.18,
+    "max_price": 5863.22,
+    "modal_price": 5330.2
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Wheat",
+    "arrival_date": "01/09/2026",
+    "min_price": 4899.69,
+    "max_price": 5988.51,
+    "modal_price": 5444.1
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gondia",
+    "market": "Gondia APMC",
+    "commodity": "Wheat",
+    "arrival_date": "31/08/2026",
+    "min_price": 4909.55,
+    "max_price": 6000.56,
+    "modal_price": 5455.05
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Wheat",
+    "arrival_date": "31/08/2026",
+    "min_price": 4883.58,
+    "max_price": 5968.82,
+    "modal_price": 5426.2
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "commodity": "Wheat",
+    "arrival_date": "31/08/2026",
+    "min_price": 4948.69,
+    "max_price": 6048.39,
+    "modal_price": 5498.54
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Wheat",
+    "arrival_date": "30/08/2026",
+    "min_price": 4895.74,
+    "max_price": 5983.68,
+    "modal_price": 5439.71
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Wheat",
+    "arrival_date": "30/08/2026",
+    "min_price": 4915.99,
+    "max_price": 6008.43,
+    "modal_price": 5462.21
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Wheat",
+    "arrival_date": "30/08/2026",
+    "min_price": 4920.6,
+    "max_price": 6014.06,
+    "modal_price": 5467.33
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Nashik APMC",
+    "commodity": "Wheat",
+    "arrival_date": "29/08/2026",
+    "min_price": 4896.4,
+    "max_price": 5984.49,
+    "modal_price": 5440.45
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Wheat",
+    "arrival_date": "29/08/2026",
+    "min_price": 4854.98,
+    "max_price": 5933.86,
+    "modal_price": 5394.42
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Wheat",
+    "arrival_date": "29/08/2026",
+    "min_price": 4910.09,
+    "max_price": 6001.23,
+    "modal_price": 5455.66
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Wheat",
+    "arrival_date": "28/08/2026",
+    "min_price": 4840.24,
+    "max_price": 5915.86,
+    "modal_price": 5378.05
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Wheat",
+    "arrival_date": "28/08/2026",
+    "min_price": 4896.82,
+    "max_price": 5985.0,
+    "modal_price": 5440.91
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gadchiroli",
+    "market": "Gadchiroli APMC",
+    "commodity": "Wheat",
+    "arrival_date": "28/08/2026",
+    "min_price": 4918.37,
+    "max_price": 6011.34,
+    "modal_price": 5464.85
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Wheat",
+    "arrival_date": "27/08/2026",
+    "min_price": 4939.59,
+    "max_price": 6037.27,
+    "modal_price": 5488.43
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gondia",
+    "market": "Gondia APMC",
+    "commodity": "Wheat",
+    "arrival_date": "27/08/2026",
+    "min_price": 4710.27,
+    "max_price": 5756.99,
+    "modal_price": 5233.63
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Wheat",
+    "arrival_date": "27/08/2026",
+    "min_price": 4953.68,
+    "max_price": 6054.5,
+    "modal_price": 5504.09
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Nashik APMC",
+    "commodity": "Wheat",
+    "arrival_date": "26/08/2026",
+    "min_price": 5174.95,
+    "max_price": 6324.95,
+    "modal_price": 5749.95
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Wheat",
+    "arrival_date": "26/08/2026",
+    "min_price": 5176.3,
+    "max_price": 6326.58,
+    "modal_price": 5751.44
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Wheat",
+    "arrival_date": "26/08/2026",
+    "min_price": 4984.7,
+    "max_price": 6092.42,
+    "modal_price": 5538.56
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gondia",
+    "market": "Gondia APMC",
+    "commodity": "Wheat",
+    "arrival_date": "25/08/2026",
+    "min_price": 5153.45,
+    "max_price": 6298.67,
+    "modal_price": 5726.06
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Wheat",
+    "arrival_date": "25/08/2026",
+    "min_price": 5162.53,
+    "max_price": 6309.75,
+    "modal_price": 5736.14
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Wheat",
+    "arrival_date": "25/08/2026",
+    "min_price": 5092.88,
+    "max_price": 6224.63,
+    "modal_price": 5658.75
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Wheat",
+    "arrival_date": "24/08/2026",
+    "min_price": 5160.41,
+    "max_price": 6307.17,
+    "modal_price": 5733.79
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Wheat",
+    "arrival_date": "24/08/2026",
+    "min_price": 5013.87,
+    "max_price": 6128.07,
+    "modal_price": 5570.97
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Wheat",
+    "arrival_date": "24/08/2026",
+    "min_price": 5031.14,
+    "max_price": 6149.18,
+    "modal_price": 5590.16
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Wheat",
+    "arrival_date": "23/08/2026",
+    "min_price": 5029.66,
+    "max_price": 6147.36,
+    "modal_price": 5588.51
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Nashik APMC",
+    "commodity": "Wheat",
+    "arrival_date": "23/08/2026",
+    "min_price": 4878.79,
+    "max_price": 5962.97,
+    "modal_price": 5420.88
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Wheat",
+    "arrival_date": "23/08/2026",
+    "min_price": 5100.4,
+    "max_price": 6233.82,
+    "modal_price": 5667.11
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Bajra",
+    "arrival_date": "05/09/2026",
+    "min_price": 4198.33,
+    "max_price": 5131.29,
+    "modal_price": 4664.81
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Bajra",
+    "arrival_date": "05/09/2026",
+    "min_price": 4206.56,
+    "max_price": 5141.36,
+    "modal_price": 4673.96
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Bajra",
+    "arrival_date": "05/09/2026",
+    "min_price": 4157.7,
+    "max_price": 5081.64,
+    "modal_price": 4619.67
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Bajra",
+    "arrival_date": "04/09/2026",
+    "min_price": 4269.7,
+    "max_price": 5218.52,
+    "modal_price": 4744.11
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Bajra",
+    "arrival_date": "04/09/2026",
+    "min_price": 4371.6,
+    "max_price": 5343.06,
+    "modal_price": 4857.33
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Bajra",
+    "arrival_date": "04/09/2026",
+    "min_price": 4259.56,
+    "max_price": 5206.12,
+    "modal_price": 4732.84
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gadchiroli",
+    "market": "Gadchiroli APMC",
+    "commodity": "Bajra",
+    "arrival_date": "03/09/2026",
+    "min_price": 4292.29,
+    "max_price": 5246.13,
+    "modal_price": 4769.21
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Nashik APMC",
+    "commodity": "Bajra",
+    "arrival_date": "03/09/2026",
+    "min_price": 4138.38,
+    "max_price": 5058.02,
+    "modal_price": 4598.2
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Bajra",
+    "arrival_date": "03/09/2026",
+    "min_price": 4205.23,
+    "max_price": 5139.73,
+    "modal_price": 4672.48
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Bajra",
+    "arrival_date": "02/09/2026",
+    "min_price": 4243.61,
+    "max_price": 5186.63,
+    "modal_price": 4715.12
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Bajra",
+    "arrival_date": "02/09/2026",
+    "min_price": 4094.78,
+    "max_price": 5004.74,
+    "modal_price": 4549.76
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Bajra",
+    "arrival_date": "02/09/2026",
+    "min_price": 4187.43,
+    "max_price": 5117.97,
+    "modal_price": 4652.7
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Bajra",
+    "arrival_date": "01/09/2026",
+    "min_price": 4289.27,
+    "max_price": 5242.44,
+    "modal_price": 4765.85
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Bajra",
+    "arrival_date": "01/09/2026",
+    "min_price": 4290.91,
+    "max_price": 5244.45,
+    "modal_price": 4767.68
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Bajra",
+    "arrival_date": "01/09/2026",
+    "min_price": 4313.21,
+    "max_price": 5271.71,
+    "modal_price": 4792.46
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Bajra",
+    "arrival_date": "31/08/2026",
+    "min_price": 4309.98,
+    "max_price": 5267.76,
+    "modal_price": 4788.87
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Bajra",
+    "arrival_date": "31/08/2026",
+    "min_price": 4216.93,
+    "max_price": 5154.03,
+    "modal_price": 4685.48
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Bajra",
+    "arrival_date": "31/08/2026",
+    "min_price": 4084.57,
+    "max_price": 4992.25,
+    "modal_price": 4538.41
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Bajra",
+    "arrival_date": "30/08/2026",
+    "min_price": 4174.55,
+    "max_price": 5102.23,
+    "modal_price": 4638.39
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Bajra",
+    "arrival_date": "30/08/2026",
+    "min_price": 4332.45,
+    "max_price": 5295.21,
+    "modal_price": 4813.83
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Bajra",
+    "arrival_date": "30/08/2026",
+    "min_price": 4159.82,
+    "max_price": 5084.22,
+    "modal_price": 4622.02
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Bajra",
+    "arrival_date": "29/08/2026",
+    "min_price": 4138.6,
+    "max_price": 5058.3,
+    "modal_price": 4598.45
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Wardha",
+    "market": "Wardha APMC",
+    "commodity": "Bajra",
+    "arrival_date": "29/08/2026",
+    "min_price": 4126.0,
+    "max_price": 5042.88,
+    "modal_price": 4584.44
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Bajra",
+    "arrival_date": "29/08/2026",
+    "min_price": 4124.7,
+    "max_price": 5041.3,
+    "modal_price": 4583.0
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Bajra",
+    "arrival_date": "28/08/2026",
+    "min_price": 4080.22,
+    "max_price": 4986.94,
+    "modal_price": 4533.58
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Bajra",
+    "arrival_date": "28/08/2026",
+    "min_price": 4186.46,
+    "max_price": 5116.78,
+    "modal_price": 4651.62
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Bajra",
+    "arrival_date": "28/08/2026",
+    "min_price": 4273.31,
+    "max_price": 5222.93,
+    "modal_price": 4748.12
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Bajra",
+    "arrival_date": "27/08/2026",
+    "min_price": 4002.15,
+    "max_price": 4891.51,
+    "modal_price": 4446.83
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Bajra",
+    "arrival_date": "27/08/2026",
+    "min_price": 4026.23,
+    "max_price": 4920.95,
+    "modal_price": 4473.59
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Wardha",
+    "market": "Wardha APMC",
+    "commodity": "Bajra",
+    "arrival_date": "27/08/2026",
+    "min_price": 4041.83,
+    "max_price": 4940.01,
+    "modal_price": 4490.92
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Bajra",
+    "arrival_date": "26/08/2026",
+    "min_price": 4254.11,
+    "max_price": 5199.47,
+    "modal_price": 4726.79
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Bajra",
+    "arrival_date": "26/08/2026",
+    "min_price": 4117.13,
+    "max_price": 5032.05,
+    "modal_price": 4574.59
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Bajra",
+    "arrival_date": "26/08/2026",
+    "min_price": 4227.28,
+    "max_price": 5166.68,
+    "modal_price": 4696.98
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Bajra",
+    "arrival_date": "25/08/2026",
+    "min_price": 4309.73,
+    "max_price": 5267.45,
+    "modal_price": 4788.59
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Bajra",
+    "arrival_date": "25/08/2026",
+    "min_price": 4216.21,
+    "max_price": 5153.15,
+    "modal_price": 4684.68
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Bajra",
+    "arrival_date": "25/08/2026",
+    "min_price": 4273.1,
+    "max_price": 5222.68,
+    "modal_price": 4747.89
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Bajra",
+    "arrival_date": "24/08/2026",
+    "min_price": 4382.36,
+    "max_price": 5356.22,
+    "modal_price": 4869.29
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Bajra",
+    "arrival_date": "24/08/2026",
+    "min_price": 4399.38,
+    "max_price": 5377.02,
+    "modal_price": 4888.2
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Yavatmal",
+    "market": "Yavatmal APMC",
+    "commodity": "Bajra",
+    "arrival_date": "24/08/2026",
+    "min_price": 4253.87,
+    "max_price": 5199.17,
+    "modal_price": 4726.52
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Bajra",
+    "arrival_date": "23/08/2026",
+    "min_price": 4459.93,
+    "max_price": 5451.03,
+    "modal_price": 4955.48
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Bajra",
+    "arrival_date": "23/08/2026",
+    "min_price": 4291.39,
+    "max_price": 5245.03,
+    "modal_price": 4768.21
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Wardha",
+    "market": "Wardha APMC",
+    "commodity": "Bajra",
+    "arrival_date": "23/08/2026",
+    "min_price": 4305.0,
+    "max_price": 5261.66,
+    "modal_price": 4783.33
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "commodity": "Jowar",
+    "arrival_date": "05/09/2026",
+    "min_price": 2727.09,
+    "max_price": 3333.11,
+    "modal_price": 3030.1
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Jowar",
+    "arrival_date": "05/09/2026",
+    "min_price": 2771.54,
+    "max_price": 3387.44,
+    "modal_price": 3079.49
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Jowar",
+    "arrival_date": "05/09/2026",
+    "min_price": 2755.66,
+    "max_price": 3368.02,
+    "modal_price": 3061.84
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Jowar",
+    "arrival_date": "04/09/2026",
+    "min_price": 2803.31,
+    "max_price": 3426.27,
+    "modal_price": 3114.79
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Jowar",
+    "arrival_date": "04/09/2026",
+    "min_price": 2757.66,
+    "max_price": 3370.48,
+    "modal_price": 3064.07
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Jowar",
+    "arrival_date": "04/09/2026",
+    "min_price": 2652.61,
+    "max_price": 3242.09,
+    "modal_price": 2947.35
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Jowar",
+    "arrival_date": "03/09/2026",
+    "min_price": 2815.76,
+    "max_price": 3441.48,
+    "modal_price": 3128.62
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gadchiroli",
+    "market": "Gadchiroli APMC",
+    "commodity": "Jowar",
+    "arrival_date": "03/09/2026",
+    "min_price": 2804.18,
+    "max_price": 3427.33,
+    "modal_price": 3115.75
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Jowar",
+    "arrival_date": "03/09/2026",
+    "min_price": 2775.38,
+    "max_price": 3392.13,
+    "modal_price": 3083.75
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gondia",
+    "market": "Gondia APMC",
+    "commodity": "Jowar",
+    "arrival_date": "02/09/2026",
+    "min_price": 2938.38,
+    "max_price": 3591.36,
+    "modal_price": 3264.87
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Jowar",
+    "arrival_date": "02/09/2026",
+    "min_price": 2913.07,
+    "max_price": 3560.41,
+    "modal_price": 3236.74
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Yavatmal",
+    "market": "Yavatmal APMC",
+    "commodity": "Jowar",
+    "arrival_date": "02/09/2026",
+    "min_price": 2844.6,
+    "max_price": 3476.74,
+    "modal_price": 3160.67
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Jowar",
+    "arrival_date": "01/09/2026",
+    "min_price": 2899.49,
+    "max_price": 3543.82,
+    "modal_price": 3221.65
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Jowar",
+    "arrival_date": "01/09/2026",
+    "min_price": 2926.85,
+    "max_price": 3577.26,
+    "modal_price": 3252.05
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Nashik APMC",
+    "commodity": "Jowar",
+    "arrival_date": "01/09/2026",
+    "min_price": 2785.7,
+    "max_price": 3404.74,
+    "modal_price": 3095.22
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "commodity": "Jowar",
+    "arrival_date": "31/08/2026",
+    "min_price": 2733.37,
+    "max_price": 3340.79,
+    "modal_price": 3037.08
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Jowar",
+    "arrival_date": "31/08/2026",
+    "min_price": 2744.03,
+    "max_price": 3353.81,
+    "modal_price": 3048.92
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Jowar",
+    "arrival_date": "31/08/2026",
+    "min_price": 2728.98,
+    "max_price": 3335.42,
+    "modal_price": 3032.2
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Jowar",
+    "arrival_date": "30/08/2026",
+    "min_price": 2747.2,
+    "max_price": 3357.68,
+    "modal_price": 3052.44
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Jowar",
+    "arrival_date": "30/08/2026",
+    "min_price": 2697.06,
+    "max_price": 3296.4,
+    "modal_price": 2996.73
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Jowar",
+    "arrival_date": "30/08/2026",
+    "min_price": 2708.29,
+    "max_price": 3310.13,
+    "modal_price": 3009.21
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Jowar",
+    "arrival_date": "29/08/2026",
+    "min_price": 2658.48,
+    "max_price": 3249.26,
+    "modal_price": 2953.87
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Jowar",
+    "arrival_date": "29/08/2026",
+    "min_price": 2627.27,
+    "max_price": 3211.11,
+    "modal_price": 2919.19
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Jowar",
+    "arrival_date": "29/08/2026",
+    "min_price": 2558.35,
+    "max_price": 3126.87,
+    "modal_price": 2842.61
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Jowar",
+    "arrival_date": "28/08/2026",
+    "min_price": 2644.1,
+    "max_price": 3231.68,
+    "modal_price": 2937.89
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Jowar",
+    "arrival_date": "28/08/2026",
+    "min_price": 2632.06,
+    "max_price": 3216.96,
+    "modal_price": 2924.51
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Jowar",
+    "arrival_date": "28/08/2026",
+    "min_price": 2628.21,
+    "max_price": 3212.25,
+    "modal_price": 2920.23
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Wardha",
+    "market": "Wardha APMC",
+    "commodity": "Jowar",
+    "arrival_date": "27/08/2026",
+    "min_price": 2642.53,
+    "max_price": 3229.75,
+    "modal_price": 2936.14
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Jowar",
+    "arrival_date": "27/08/2026",
+    "min_price": 2607.99,
+    "max_price": 3187.55,
+    "modal_price": 2897.77
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Jowar",
+    "arrival_date": "27/08/2026",
+    "min_price": 2660.41,
+    "max_price": 3251.61,
+    "modal_price": 2956.01
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Wardha",
+    "market": "Wardha APMC",
+    "commodity": "Jowar",
+    "arrival_date": "26/08/2026",
+    "min_price": 2738.62,
+    "max_price": 3347.2,
+    "modal_price": 3042.91
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Jowar",
+    "arrival_date": "26/08/2026",
+    "min_price": 2892.12,
+    "max_price": 3534.82,
+    "modal_price": 3213.47
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Jowar",
+    "arrival_date": "26/08/2026",
+    "min_price": 2760.77,
+    "max_price": 3374.27,
+    "modal_price": 3067.52
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Jowar",
+    "arrival_date": "25/08/2026",
+    "min_price": 2804.97,
+    "max_price": 3428.29,
+    "modal_price": 3116.63
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "commodity": "Jowar",
+    "arrival_date": "25/08/2026",
+    "min_price": 2786.61,
+    "max_price": 3405.85,
+    "modal_price": 3096.23
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Jowar",
+    "arrival_date": "25/08/2026",
+    "min_price": 2817.28,
+    "max_price": 3443.34,
+    "modal_price": 3130.31
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Jowar",
+    "arrival_date": "24/08/2026",
+    "min_price": 2637.26,
+    "max_price": 3223.32,
+    "modal_price": 2930.29
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Wardha",
+    "market": "Wardha APMC",
+    "commodity": "Jowar",
+    "arrival_date": "24/08/2026",
+    "min_price": 2643.05,
+    "max_price": 3230.39,
+    "modal_price": 2936.72
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "commodity": "Jowar",
+    "arrival_date": "24/08/2026",
+    "min_price": 2750.01,
+    "max_price": 3361.13,
+    "modal_price": 3055.57
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Jowar",
+    "arrival_date": "23/08/2026",
+    "min_price": 2819.86,
+    "max_price": 3446.5,
+    "modal_price": 3133.18
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Jowar",
+    "arrival_date": "23/08/2026",
+    "min_price": 2710.56,
+    "max_price": 3312.9,
+    "modal_price": 3011.73
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Jowar",
+    "arrival_date": "23/08/2026",
+    "min_price": 2716.75,
+    "max_price": 3320.47,
+    "modal_price": 3018.61
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "05/09/2026",
+    "min_price": 2696.45,
+    "max_price": 3295.67,
+    "modal_price": 2996.06
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gondia",
+    "market": "Gondia APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "05/09/2026",
+    "min_price": 2765.07,
+    "max_price": 3379.53,
+    "modal_price": 3072.3
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Nashik APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "05/09/2026",
+    "min_price": 2692.46,
+    "max_price": 3290.78,
+    "modal_price": 2991.62
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "04/09/2026",
+    "min_price": 2673.27,
+    "max_price": 3267.33,
+    "modal_price": 2970.3
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "04/09/2026",
+    "min_price": 2722.5,
+    "max_price": 3327.5,
+    "modal_price": 3025.0
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Nashik APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "04/09/2026",
+    "min_price": 2737.13,
+    "max_price": 3345.39,
+    "modal_price": 3041.26
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "03/09/2026",
+    "min_price": 2598.04,
+    "max_price": 3175.38,
+    "modal_price": 2886.71
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "03/09/2026",
+    "min_price": 2634.36,
+    "max_price": 3219.78,
+    "modal_price": 2927.07
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "03/09/2026",
+    "min_price": 2685.57,
+    "max_price": 3282.37,
+    "modal_price": 2983.97
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "02/09/2026",
+    "min_price": 2569.95,
+    "max_price": 3141.05,
+    "modal_price": 2855.5
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "02/09/2026",
+    "min_price": 2498.52,
+    "max_price": 3053.74,
+    "modal_price": 2776.13
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "02/09/2026",
+    "min_price": 2485.33,
+    "max_price": 3037.63,
+    "modal_price": 2761.48
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "01/09/2026",
+    "min_price": 2585.49,
+    "max_price": 3160.05,
+    "modal_price": 2872.77
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "01/09/2026",
+    "min_price": 2616.25,
+    "max_price": 3197.63,
+    "modal_price": 2906.94
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "01/09/2026",
+    "min_price": 2575.49,
+    "max_price": 3147.82,
+    "modal_price": 2861.65
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "31/08/2026",
+    "min_price": 2481.08,
+    "max_price": 3032.44,
+    "modal_price": 2756.76
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "31/08/2026",
+    "min_price": 2489.18,
+    "max_price": 3042.33,
+    "modal_price": 2765.75
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "31/08/2026",
+    "min_price": 2569.3,
+    "max_price": 3140.26,
+    "modal_price": 2854.78
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "30/08/2026",
+    "min_price": 2614.9,
+    "max_price": 3195.98,
+    "modal_price": 2905.44
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "30/08/2026",
+    "min_price": 2591.87,
+    "max_price": 3167.85,
+    "modal_price": 2879.86
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "30/08/2026",
+    "min_price": 2569.72,
+    "max_price": 3140.76,
+    "modal_price": 2855.24
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "29/08/2026",
+    "min_price": 2664.21,
+    "max_price": 3256.25,
+    "modal_price": 2960.23
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "29/08/2026",
+    "min_price": 2663.95,
+    "max_price": 3255.95,
+    "modal_price": 2959.95
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "29/08/2026",
+    "min_price": 2725.82,
+    "max_price": 3331.56,
+    "modal_price": 3028.69
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "28/08/2026",
+    "min_price": 2719.49,
+    "max_price": 3323.83,
+    "modal_price": 3021.66
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "28/08/2026",
+    "min_price": 2637.77,
+    "max_price": 3223.95,
+    "modal_price": 2930.86
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "28/08/2026",
+    "min_price": 2611.88,
+    "max_price": 3192.3,
+    "modal_price": 2902.09
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "27/08/2026",
+    "min_price": 2818.13,
+    "max_price": 3444.39,
+    "modal_price": 3131.26
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "27/08/2026",
+    "min_price": 2770.47,
+    "max_price": 3386.13,
+    "modal_price": 3078.3
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "27/08/2026",
+    "min_price": 2708.46,
+    "max_price": 3310.34,
+    "modal_price": 3009.4
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "market": "Nashik APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "26/08/2026",
+    "min_price": 2869.54,
+    "max_price": 3507.22,
+    "modal_price": 3188.38
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "26/08/2026",
+    "min_price": 2855.44,
+    "max_price": 3489.98,
+    "modal_price": 3172.71
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "26/08/2026",
+    "min_price": 2733.83,
+    "max_price": 3341.35,
+    "modal_price": 3037.59
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "25/08/2026",
+    "min_price": 2843.08,
+    "max_price": 3474.88,
+    "modal_price": 3158.98
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "25/08/2026",
+    "min_price": 2894.62,
+    "max_price": 3537.86,
+    "modal_price": 3216.24
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "25/08/2026",
+    "min_price": 2795.9,
+    "max_price": 3417.21,
+    "modal_price": 3106.55
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gadchiroli",
+    "market": "Gadchiroli APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "24/08/2026",
+    "min_price": 2904.75,
+    "max_price": 3550.25,
+    "modal_price": 3227.5
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "24/08/2026",
+    "min_price": 3019.53,
+    "max_price": 3690.53,
+    "modal_price": 3355.03
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gondia",
+    "market": "Gondia APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "24/08/2026",
+    "min_price": 2949.09,
+    "max_price": 3604.45,
+    "modal_price": 3276.77
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "23/08/2026",
+    "min_price": 2826.39,
+    "max_price": 3454.47,
+    "modal_price": 3140.43
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "23/08/2026",
+    "min_price": 2789.6,
+    "max_price": 3409.52,
+    "modal_price": 3099.56
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Tur (Arhar)",
+    "arrival_date": "23/08/2026",
+    "min_price": 2793.11,
+    "max_price": 3413.81,
+    "modal_price": 3103.46
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Gram",
+    "arrival_date": "05/09/2026",
+    "min_price": 3013.65,
+    "max_price": 3683.35,
+    "modal_price": 3348.5
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Gram",
+    "arrival_date": "05/09/2026",
+    "min_price": 2857.62,
+    "max_price": 3492.64,
+    "modal_price": 3175.13
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Yavatmal",
+    "market": "Yavatmal APMC",
+    "commodity": "Gram",
+    "arrival_date": "05/09/2026",
+    "min_price": 2868.07,
+    "max_price": 3505.41,
+    "modal_price": 3186.74
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Gram",
+    "arrival_date": "04/09/2026",
+    "min_price": 3114.52,
+    "max_price": 3806.64,
+    "modal_price": 3460.58
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Gram",
+    "arrival_date": "04/09/2026",
+    "min_price": 2968.55,
+    "max_price": 3628.23,
+    "modal_price": 3298.39
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Gram",
+    "arrival_date": "04/09/2026",
+    "min_price": 2955.12,
+    "max_price": 3611.82,
+    "modal_price": 3283.47
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Gram",
+    "arrival_date": "03/09/2026",
+    "min_price": 3213.85,
+    "max_price": 3928.03,
+    "modal_price": 3570.94
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Gram",
+    "arrival_date": "03/09/2026",
+    "min_price": 3121.16,
+    "max_price": 3814.76,
+    "modal_price": 3467.96
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Gram",
+    "arrival_date": "03/09/2026",
+    "min_price": 3203.83,
+    "max_price": 3915.79,
+    "modal_price": 3559.81
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Gram",
+    "arrival_date": "02/09/2026",
+    "min_price": 3220.88,
+    "max_price": 3936.64,
+    "modal_price": 3578.76
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Yavatmal",
+    "market": "Yavatmal APMC",
+    "commodity": "Gram",
+    "arrival_date": "02/09/2026",
+    "min_price": 3110.9,
+    "max_price": 3802.21,
+    "modal_price": 3456.55
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Gram",
+    "arrival_date": "02/09/2026",
+    "min_price": 3138.23,
+    "max_price": 3835.61,
+    "modal_price": 3486.92
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Gram",
+    "arrival_date": "01/09/2026",
+    "min_price": 3199.96,
+    "max_price": 3911.06,
+    "modal_price": 3555.51
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Gram",
+    "arrival_date": "01/09/2026",
+    "min_price": 3226.76,
+    "max_price": 3943.82,
+    "modal_price": 3585.29
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Gram",
+    "arrival_date": "01/09/2026",
+    "min_price": 3156.18,
+    "max_price": 3857.56,
+    "modal_price": 3506.87
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "commodity": "Gram",
+    "arrival_date": "31/08/2026",
+    "min_price": 3315.73,
+    "max_price": 4052.55,
+    "modal_price": 3684.14
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Gram",
+    "arrival_date": "31/08/2026",
+    "min_price": 3427.24,
+    "max_price": 4188.84,
+    "modal_price": 3808.04
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Gram",
+    "arrival_date": "31/08/2026",
+    "min_price": 3404.77,
+    "max_price": 4161.39,
+    "modal_price": 3783.08
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Gram",
+    "arrival_date": "30/08/2026",
+    "min_price": 3358.45,
+    "max_price": 4104.77,
+    "modal_price": 3731.61
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Gram",
+    "arrival_date": "30/08/2026",
+    "min_price": 3414.91,
+    "max_price": 4173.78,
+    "modal_price": 3794.35
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Gram",
+    "arrival_date": "30/08/2026",
+    "min_price": 3316.44,
+    "max_price": 4053.42,
+    "modal_price": 3684.93
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Gram",
+    "arrival_date": "29/08/2026",
+    "min_price": 3199.58,
+    "max_price": 3910.6,
+    "modal_price": 3555.09
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Gram",
+    "arrival_date": "29/08/2026",
+    "min_price": 3228.68,
+    "max_price": 3946.16,
+    "modal_price": 3587.42
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Gram",
+    "arrival_date": "29/08/2026",
+    "min_price": 3209.16,
+    "max_price": 3922.3,
+    "modal_price": 3565.73
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Gram",
+    "arrival_date": "28/08/2026",
+    "min_price": 3394.89,
+    "max_price": 4149.31,
+    "modal_price": 3772.1
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Gram",
+    "arrival_date": "28/08/2026",
+    "min_price": 3431.93,
+    "max_price": 4194.58,
+    "modal_price": 3813.25
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "commodity": "Gram",
+    "arrival_date": "28/08/2026",
+    "min_price": 3281.54,
+    "max_price": 4010.77,
+    "modal_price": 3646.15
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Gram",
+    "arrival_date": "27/08/2026",
+    "min_price": 3360.52,
+    "max_price": 4107.3,
+    "modal_price": 3733.91
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Gram",
+    "arrival_date": "27/08/2026",
+    "min_price": 3394.55,
+    "max_price": 4148.89,
+    "modal_price": 3771.72
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Gram",
+    "arrival_date": "27/08/2026",
+    "min_price": 3437.91,
+    "max_price": 4201.89,
+    "modal_price": 3819.9
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Gram",
+    "arrival_date": "26/08/2026",
+    "min_price": 3434.8,
+    "max_price": 4198.08,
+    "modal_price": 3816.44
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Gram",
+    "arrival_date": "26/08/2026",
+    "min_price": 3409.67,
+    "max_price": 4167.37,
+    "modal_price": 3788.52
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Gram",
+    "arrival_date": "26/08/2026",
+    "min_price": 3434.32,
+    "max_price": 4197.5,
+    "modal_price": 3815.91
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Gram",
+    "arrival_date": "25/08/2026",
+    "min_price": 3506.65,
+    "max_price": 4285.91,
+    "modal_price": 3896.28
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Gram",
+    "arrival_date": "25/08/2026",
+    "min_price": 3338.52,
+    "max_price": 4080.42,
+    "modal_price": 3709.47
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Gram",
+    "arrival_date": "25/08/2026",
+    "min_price": 3443.69,
+    "max_price": 4208.95,
+    "modal_price": 3826.32
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gadchiroli",
+    "market": "Gadchiroli APMC",
+    "commodity": "Gram",
+    "arrival_date": "24/08/2026",
+    "min_price": 3390.78,
+    "max_price": 4144.28,
+    "modal_price": 3767.53
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Gram",
+    "arrival_date": "24/08/2026",
+    "min_price": 3296.98,
+    "max_price": 4029.64,
+    "modal_price": 3663.31
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Gram",
+    "arrival_date": "24/08/2026",
+    "min_price": 3283.55,
+    "max_price": 4013.23,
+    "modal_price": 3648.39
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Gram",
+    "arrival_date": "23/08/2026",
+    "min_price": 3156.82,
+    "max_price": 3858.34,
+    "modal_price": 3507.58
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Gram",
+    "arrival_date": "23/08/2026",
+    "min_price": 3142.36,
+    "max_price": 3840.66,
+    "modal_price": 3491.51
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Gram",
+    "arrival_date": "23/08/2026",
+    "min_price": 3251.32,
+    "max_price": 3973.84,
+    "modal_price": 3612.58
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "05/09/2026",
+    "min_price": 1320.94,
+    "max_price": 1614.48,
+    "modal_price": 1467.71
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "05/09/2026",
+    "min_price": 1278.76,
+    "max_price": 1562.92,
+    "modal_price": 1420.84
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "05/09/2026",
+    "min_price": 1284.63,
+    "max_price": 1570.11,
+    "modal_price": 1427.37
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "04/09/2026",
+    "min_price": 1260.23,
+    "max_price": 1540.29,
+    "modal_price": 1400.26
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "04/09/2026",
+    "min_price": 1268.6,
+    "max_price": 1550.52,
+    "modal_price": 1409.56
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "04/09/2026",
+    "min_price": 1294.48,
+    "max_price": 1582.14,
+    "modal_price": 1438.31
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "03/09/2026",
+    "min_price": 1204.8,
+    "max_price": 1472.54,
+    "modal_price": 1338.67
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "03/09/2026",
+    "min_price": 1235.6,
+    "max_price": 1510.18,
+    "modal_price": 1372.89
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "03/09/2026",
+    "min_price": 1268.69,
+    "max_price": 1550.63,
+    "modal_price": 1409.66
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gadchiroli",
+    "market": "Gadchiroli APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "02/09/2026",
+    "min_price": 1249.25,
+    "max_price": 1526.87,
+    "modal_price": 1388.06
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "02/09/2026",
+    "min_price": 1248.12,
+    "max_price": 1525.48,
+    "modal_price": 1386.8
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "02/09/2026",
+    "min_price": 1212.98,
+    "max_price": 1482.53,
+    "modal_price": 1347.75
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "01/09/2026",
+    "min_price": 1169.85,
+    "max_price": 1429.81,
+    "modal_price": 1299.83
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "01/09/2026",
+    "min_price": 1167.63,
+    "max_price": 1427.11,
+    "modal_price": 1297.37
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "01/09/2026",
+    "min_price": 1196.92,
+    "max_price": 1462.9,
+    "modal_price": 1329.91
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "31/08/2026",
+    "min_price": 1183.05,
+    "max_price": 1445.95,
+    "modal_price": 1314.5
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "31/08/2026",
+    "min_price": 1205.97,
+    "max_price": 1473.97,
+    "modal_price": 1339.97
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "31/08/2026",
+    "min_price": 1166.6,
+    "max_price": 1425.84,
+    "modal_price": 1296.22
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "30/08/2026",
+    "min_price": 1217.73,
+    "max_price": 1488.33,
+    "modal_price": 1353.03
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "30/08/2026",
+    "min_price": 1243.76,
+    "max_price": 1520.15,
+    "modal_price": 1381.95
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "30/08/2026",
+    "min_price": 1202.56,
+    "max_price": 1469.8,
+    "modal_price": 1336.18
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "29/08/2026",
+    "min_price": 1263.32,
+    "max_price": 1544.06,
+    "modal_price": 1403.69
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "29/08/2026",
+    "min_price": 1255.1,
+    "max_price": 1534.02,
+    "modal_price": 1394.56
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "29/08/2026",
+    "min_price": 1201.46,
+    "max_price": 1468.46,
+    "modal_price": 1334.96
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "28/08/2026",
+    "min_price": 1259.44,
+    "max_price": 1539.32,
+    "modal_price": 1399.38
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gondia",
+    "market": "Gondia APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "28/08/2026",
+    "min_price": 1228.29,
+    "max_price": 1501.25,
+    "modal_price": 1364.77
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "28/08/2026",
+    "min_price": 1235.26,
+    "max_price": 1509.76,
+    "modal_price": 1372.51
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "27/08/2026",
+    "min_price": 1261.31,
+    "max_price": 1541.6,
+    "modal_price": 1401.45
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "27/08/2026",
+    "min_price": 1243.6,
+    "max_price": 1519.96,
+    "modal_price": 1381.78
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "27/08/2026",
+    "min_price": 1278.07,
+    "max_price": 1562.09,
+    "modal_price": 1420.08
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "26/08/2026",
+    "min_price": 1305.92,
+    "max_price": 1596.12,
+    "modal_price": 1451.02
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "26/08/2026",
+    "min_price": 1253.3,
+    "max_price": 1531.82,
+    "modal_price": 1392.56
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "26/08/2026",
+    "min_price": 1322.11,
+    "max_price": 1615.91,
+    "modal_price": 1469.01
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "25/08/2026",
+    "min_price": 1303.79,
+    "max_price": 1593.52,
+    "modal_price": 1448.65
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "25/08/2026",
+    "min_price": 1323.77,
+    "max_price": 1617.95,
+    "modal_price": 1470.86
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "25/08/2026",
+    "min_price": 1303.79,
+    "max_price": 1593.52,
+    "modal_price": 1448.65
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "24/08/2026",
+    "min_price": 1319.57,
+    "max_price": 1612.81,
+    "modal_price": 1466.19
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "24/08/2026",
+    "min_price": 1262.43,
+    "max_price": 1542.97,
+    "modal_price": 1402.7
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "24/08/2026",
+    "min_price": 1252.8,
+    "max_price": 1531.2,
+    "modal_price": 1392.0
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "23/08/2026",
+    "min_price": 1275.1,
+    "max_price": 1558.46,
+    "modal_price": 1416.78
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "23/08/2026",
+    "min_price": 1268.51,
+    "max_price": 1550.41,
+    "modal_price": 1409.46
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Turmeric",
+    "arrival_date": "23/08/2026",
+    "min_price": 1300.38,
+    "max_price": 1589.36,
+    "modal_price": 1444.87
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Banana",
+    "arrival_date": "05/09/2026",
+    "min_price": 2199.36,
+    "max_price": 2688.1,
+    "modal_price": 2443.73
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Banana",
+    "arrival_date": "05/09/2026",
+    "min_price": 2242.65,
+    "max_price": 2741.01,
+    "modal_price": 2491.83
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Banana",
+    "arrival_date": "05/09/2026",
+    "min_price": 2195.23,
+    "max_price": 2683.05,
+    "modal_price": 2439.14
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Banana",
+    "arrival_date": "04/09/2026",
+    "min_price": 2256.36,
+    "max_price": 2757.78,
+    "modal_price": 2507.07
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Banana",
+    "arrival_date": "04/09/2026",
+    "min_price": 2275.7,
+    "max_price": 2781.42,
+    "modal_price": 2528.56
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Banana",
+    "arrival_date": "04/09/2026",
+    "min_price": 2257.54,
+    "max_price": 2759.22,
+    "modal_price": 2508.38
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Banana",
+    "arrival_date": "03/09/2026",
+    "min_price": 2258.17,
+    "max_price": 2759.99,
+    "modal_price": 2509.08
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Banana",
+    "arrival_date": "03/09/2026",
+    "min_price": 2300.32,
+    "max_price": 2811.5,
+    "modal_price": 2555.91
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Banana",
+    "arrival_date": "03/09/2026",
+    "min_price": 2270.88,
+    "max_price": 2775.52,
+    "modal_price": 2523.2
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Banana",
+    "arrival_date": "02/09/2026",
+    "min_price": 2390.01,
+    "max_price": 2921.13,
+    "modal_price": 2655.57
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "commodity": "Banana",
+    "arrival_date": "02/09/2026",
+    "min_price": 2451.23,
+    "max_price": 2995.95,
+    "modal_price": 2723.59
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Banana",
+    "arrival_date": "02/09/2026",
+    "min_price": 2422.04,
+    "max_price": 2960.28,
+    "modal_price": 2691.16
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Banana",
+    "arrival_date": "01/09/2026",
+    "min_price": 2587.36,
+    "max_price": 3162.32,
+    "modal_price": 2874.84
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Banana",
+    "arrival_date": "01/09/2026",
+    "min_price": 2522.71,
+    "max_price": 3083.31,
+    "modal_price": 2803.01
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Banana",
+    "arrival_date": "01/09/2026",
+    "min_price": 2460.9,
+    "max_price": 3007.76,
+    "modal_price": 2734.33
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Banana",
+    "arrival_date": "31/08/2026",
+    "min_price": 2447.78,
+    "max_price": 2991.74,
+    "modal_price": 2719.76
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Banana",
+    "arrival_date": "31/08/2026",
+    "min_price": 2422.78,
+    "max_price": 2961.18,
+    "modal_price": 2691.98
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Banana",
+    "arrival_date": "31/08/2026",
+    "min_price": 2539.51,
+    "max_price": 3103.85,
+    "modal_price": 2821.68
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Banana",
+    "arrival_date": "30/08/2026",
+    "min_price": 2579.83,
+    "max_price": 3153.13,
+    "modal_price": 2866.48
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Banana",
+    "arrival_date": "30/08/2026",
+    "min_price": 2607.68,
+    "max_price": 3187.16,
+    "modal_price": 2897.42
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Banana",
+    "arrival_date": "30/08/2026",
+    "min_price": 2586.65,
+    "max_price": 3161.47,
+    "modal_price": 2874.06
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Banana",
+    "arrival_date": "29/08/2026",
+    "min_price": 2668.44,
+    "max_price": 3261.42,
+    "modal_price": 2964.93
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Banana",
+    "arrival_date": "29/08/2026",
+    "min_price": 2575.9,
+    "max_price": 3148.32,
+    "modal_price": 2862.11
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Banana",
+    "arrival_date": "29/08/2026",
+    "min_price": 2651.38,
+    "max_price": 3240.58,
+    "modal_price": 2945.98
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Banana",
+    "arrival_date": "28/08/2026",
+    "min_price": 2501.19,
+    "max_price": 3057.01,
+    "modal_price": 2779.1
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Banana",
+    "arrival_date": "28/08/2026",
+    "min_price": 2522.04,
+    "max_price": 3082.5,
+    "modal_price": 2802.27
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Banana",
+    "arrival_date": "28/08/2026",
+    "min_price": 2625.04,
+    "max_price": 3208.38,
+    "modal_price": 2916.71
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Banana",
+    "arrival_date": "27/08/2026",
+    "min_price": 2668.84,
+    "max_price": 3261.92,
+    "modal_price": 2965.38
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Banana",
+    "arrival_date": "27/08/2026",
+    "min_price": 2647.99,
+    "max_price": 3236.43,
+    "modal_price": 2942.21
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Banana",
+    "arrival_date": "27/08/2026",
+    "min_price": 2625.18,
+    "max_price": 3208.56,
+    "modal_price": 2916.87
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Banana",
+    "arrival_date": "26/08/2026",
+    "min_price": 2586.15,
+    "max_price": 3160.85,
+    "modal_price": 2873.5
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Banana",
+    "arrival_date": "26/08/2026",
+    "min_price": 2725.41,
+    "max_price": 3331.05,
+    "modal_price": 3028.23
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Yavatmal",
+    "market": "Yavatmal APMC",
+    "commodity": "Banana",
+    "arrival_date": "26/08/2026",
+    "min_price": 2658.83,
+    "max_price": 3249.68,
+    "modal_price": 2954.25
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Banana",
+    "arrival_date": "25/08/2026",
+    "min_price": 2656.06,
+    "max_price": 3246.3,
+    "modal_price": 2951.18
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Banana",
+    "arrival_date": "25/08/2026",
+    "min_price": 2572.26,
+    "max_price": 3143.88,
+    "modal_price": 2858.07
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Banana",
+    "arrival_date": "25/08/2026",
+    "min_price": 2617.07,
+    "max_price": 3198.65,
+    "modal_price": 2907.86
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Banana",
+    "arrival_date": "24/08/2026",
+    "min_price": 2627.48,
+    "max_price": 3211.36,
+    "modal_price": 2919.42
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Banana",
+    "arrival_date": "24/08/2026",
+    "min_price": 2562.63,
+    "max_price": 3132.11,
+    "modal_price": 2847.37
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Amravati",
+    "market": "Amravati APMC",
+    "commodity": "Banana",
+    "arrival_date": "24/08/2026",
+    "min_price": 2547.44,
+    "max_price": 3113.54,
+    "modal_price": 2830.49
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Banana",
+    "arrival_date": "23/08/2026",
+    "min_price": 2680.54,
+    "max_price": 3276.22,
+    "modal_price": 2978.38
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Banana",
+    "arrival_date": "23/08/2026",
+    "min_price": 2814.23,
+    "max_price": 3439.61,
+    "modal_price": 3126.92
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Banana",
+    "arrival_date": "23/08/2026",
+    "min_price": 2744.6,
+    "max_price": 3354.52,
+    "modal_price": 3049.56
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "05/09/2026",
+    "min_price": 3391.61,
+    "max_price": 4145.31,
+    "modal_price": 3768.46
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "05/09/2026",
+    "min_price": 3377.41,
+    "max_price": 4127.95,
+    "modal_price": 3752.68
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "05/09/2026",
+    "min_price": 3416.15,
+    "max_price": 4175.29,
+    "modal_price": 3795.72
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "04/09/2026",
+    "min_price": 3228.62,
+    "max_price": 3946.1,
+    "modal_price": 3587.36
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "04/09/2026",
+    "min_price": 3310.1,
+    "max_price": 4045.68,
+    "modal_price": 3677.89
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ahmednagar",
+    "market": "Ahmednagar APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "04/09/2026",
+    "min_price": 3262.01,
+    "max_price": 3986.91,
+    "modal_price": 3624.46
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "03/09/2026",
+    "min_price": 3206.93,
+    "max_price": 3919.58,
+    "modal_price": 3563.25
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "03/09/2026",
+    "min_price": 3199.54,
+    "max_price": 3910.54,
+    "modal_price": 3555.04
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "03/09/2026",
+    "min_price": 3315.17,
+    "max_price": 4051.87,
+    "modal_price": 3683.52
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "02/09/2026",
+    "min_price": 3233.07,
+    "max_price": 3951.53,
+    "modal_price": 3592.3
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "02/09/2026",
+    "min_price": 3336.09,
+    "max_price": 4077.45,
+    "modal_price": 3706.77
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "02/09/2026",
+    "min_price": 3317.53,
+    "max_price": 4054.75,
+    "modal_price": 3686.14
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "01/09/2026",
+    "min_price": 3334.18,
+    "max_price": 4075.12,
+    "modal_price": 3704.65
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "01/09/2026",
+    "min_price": 3359.31,
+    "max_price": 4105.83,
+    "modal_price": 3732.57
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gondia",
+    "market": "Gondia APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "01/09/2026",
+    "min_price": 3417.87,
+    "max_price": 4177.39,
+    "modal_price": 3797.63
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "31/08/2026",
+    "min_price": 3594.96,
+    "max_price": 4393.84,
+    "modal_price": 3994.4
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Gondia",
+    "market": "Gondia APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "31/08/2026",
+    "min_price": 3533.56,
+    "max_price": 4318.8,
+    "modal_price": 3926.18
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "31/08/2026",
+    "min_price": 3524.72,
+    "max_price": 4308.0,
+    "modal_price": 3916.36
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "30/08/2026",
+    "min_price": 3487.51,
+    "max_price": 4262.51,
+    "modal_price": 3875.01
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "30/08/2026",
+    "min_price": 3326.51,
+    "max_price": 4065.73,
+    "modal_price": 3696.12
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "30/08/2026",
+    "min_price": 3457.54,
+    "max_price": 4225.88,
+    "modal_price": 3841.71
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "29/08/2026",
+    "min_price": 3342.03,
+    "max_price": 4084.71,
+    "modal_price": 3713.37
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Raigad",
+    "market": "Raigad APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "29/08/2026",
+    "min_price": 3457.5,
+    "max_price": 4225.84,
+    "modal_price": 3841.67
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "29/08/2026",
+    "min_price": 3492.23,
+    "max_price": 4268.29,
+    "modal_price": 3880.26
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "28/08/2026",
+    "min_price": 3423.28,
+    "max_price": 4184.0,
+    "modal_price": 3803.64
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "28/08/2026",
+    "min_price": 3456.77,
+    "max_price": 4224.95,
+    "modal_price": 3840.86
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sangli",
+    "market": "Sangli APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "28/08/2026",
+    "min_price": 3600.58,
+    "max_price": 4400.7,
+    "modal_price": 4000.64
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "27/08/2026",
+    "min_price": 3436.52,
+    "max_price": 4200.2,
+    "modal_price": 3818.36
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "27/08/2026",
+    "min_price": 3504.38,
+    "max_price": 4283.14,
+    "modal_price": 3893.76
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Chandrapur",
+    "market": "Chandrapur APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "27/08/2026",
+    "min_price": 3611.14,
+    "max_price": 4413.62,
+    "modal_price": 4012.38
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "26/08/2026",
+    "min_price": 3447.83,
+    "max_price": 4214.01,
+    "modal_price": 3830.92
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Jalgaon",
+    "market": "Jalgaon APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "26/08/2026",
+    "min_price": 3489.11,
+    "max_price": 4264.47,
+    "modal_price": 3876.79
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "26/08/2026",
+    "min_price": 3525.39,
+    "max_price": 4308.81,
+    "modal_price": 3917.1
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "25/08/2026",
+    "min_price": 3330.85,
+    "max_price": 4071.03,
+    "modal_price": 3700.94
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "25/08/2026",
+    "min_price": 3446.01,
+    "max_price": 4211.79,
+    "modal_price": 3828.9
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "25/08/2026",
+    "min_price": 3316.53,
+    "max_price": 4053.53,
+    "modal_price": 3685.03
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "24/08/2026",
+    "min_price": 3326.24,
+    "max_price": 4065.4,
+    "modal_price": 3695.82
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "24/08/2026",
+    "min_price": 3341.22,
+    "max_price": 4083.72,
+    "modal_price": 3712.47
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "24/08/2026",
+    "min_price": 3380.53,
+    "max_price": 4131.75,
+    "modal_price": 3756.14
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "23/08/2026",
+    "min_price": 3380.14,
+    "max_price": 4131.28,
+    "modal_price": 3755.71
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "23/08/2026",
+    "min_price": 3197.43,
+    "max_price": 3907.97,
+    "modal_price": 3552.7
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Orange (Nagpur)",
+    "arrival_date": "23/08/2026",
+    "min_price": 3331.14,
+    "max_price": 4071.4,
+    "modal_price": 3701.27
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Wardha",
+    "market": "Wardha APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "05/09/2026",
+    "min_price": 3601.73,
+    "max_price": 4402.11,
+    "modal_price": 4001.92
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "05/09/2026",
+    "min_price": 3680.07,
+    "max_price": 4497.87,
+    "modal_price": 4088.97
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "05/09/2026",
+    "min_price": 3524.28,
+    "max_price": 4307.46,
+    "modal_price": 3915.87
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "04/09/2026",
+    "min_price": 3560.61,
+    "max_price": 4351.85,
+    "modal_price": 3956.23
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "04/09/2026",
+    "min_price": 3610.33,
+    "max_price": 4412.63,
+    "modal_price": 4011.48
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Osmanabad",
+    "market": "Osmanabad APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "04/09/2026",
+    "min_price": 3538.4,
+    "max_price": 4324.72,
+    "modal_price": 3931.56
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "03/09/2026",
+    "min_price": 3349.94,
+    "max_price": 4094.38,
+    "modal_price": 3722.16
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "03/09/2026",
+    "min_price": 3400.14,
+    "max_price": 4155.72,
+    "modal_price": 3777.93
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "03/09/2026",
+    "min_price": 3471.88,
+    "max_price": 4243.4,
+    "modal_price": 3857.64
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "02/09/2026",
+    "min_price": 3348.98,
+    "max_price": 4093.2,
+    "modal_price": 3721.09
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "02/09/2026",
+    "min_price": 3262.76,
+    "max_price": 3987.82,
+    "modal_price": 3625.29
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "02/09/2026",
+    "min_price": 3293.82,
+    "max_price": 4025.78,
+    "modal_price": 3659.8
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "01/09/2026",
+    "min_price": 3211.03,
+    "max_price": 3924.59,
+    "modal_price": 3567.81
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Buldhana",
+    "market": "Buldhana APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "01/09/2026",
+    "min_price": 3306.64,
+    "max_price": 4041.44,
+    "modal_price": 3674.04
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "01/09/2026",
+    "min_price": 3354.67,
+    "max_price": 4100.15,
+    "modal_price": 3727.41
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Dhule",
+    "market": "Dhule APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "31/08/2026",
+    "min_price": 3146.32,
+    "max_price": 3845.5,
+    "modal_price": 3495.91
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "31/08/2026",
+    "min_price": 3242.9,
+    "max_price": 3963.54,
+    "modal_price": 3603.22
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Thane",
+    "market": "Thane APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "31/08/2026",
+    "min_price": 3099.07,
+    "max_price": 3787.75,
+    "modal_price": 3443.41
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "30/08/2026",
+    "min_price": 3153.38,
+    "max_price": 3854.14,
+    "modal_price": 3503.76
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "30/08/2026",
+    "min_price": 3109.43,
+    "max_price": 3800.41,
+    "modal_price": 3454.92
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Latur",
+    "market": "Latur APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "30/08/2026",
+    "min_price": 3133.78,
+    "max_price": 3830.18,
+    "modal_price": 3481.98
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "29/08/2026",
+    "min_price": 3321.08,
+    "max_price": 4059.1,
+    "modal_price": 3690.09
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Bhandara",
+    "market": "Bhandara APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "29/08/2026",
+    "min_price": 3165.66,
+    "max_price": 3869.14,
+    "modal_price": 3517.4
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Ratnagiri",
+    "market": "Ratnagiri APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "29/08/2026",
+    "min_price": 3168.5,
+    "max_price": 3872.62,
+    "modal_price": 3520.56
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Hingoli",
+    "market": "Hingoli APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "28/08/2026",
+    "min_price": 3048.17,
+    "max_price": 3725.55,
+    "modal_price": 3386.86
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "28/08/2026",
+    "min_price": 3104.8,
+    "max_price": 3794.76,
+    "modal_price": 3449.78
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Washim",
+    "market": "Washim APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "28/08/2026",
+    "min_price": 3206.81,
+    "max_price": 3919.43,
+    "modal_price": 3563.12
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Parbhani",
+    "market": "Parbhani APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "27/08/2026",
+    "min_price": 3049.0,
+    "max_price": 3726.56,
+    "modal_price": 3387.78
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Akola",
+    "market": "Akola APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "27/08/2026",
+    "min_price": 3196.94,
+    "max_price": 3907.38,
+    "modal_price": 3552.16
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "27/08/2026",
+    "min_price": 3085.45,
+    "max_price": 3771.11,
+    "modal_price": 3428.28
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "market": "Nagpur APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "26/08/2026",
+    "min_price": 3181.02,
+    "max_price": 3887.92,
+    "modal_price": 3534.47
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Beed",
+    "market": "Beed APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "26/08/2026",
+    "min_price": 3181.98,
+    "max_price": 3889.08,
+    "modal_price": 3535.53
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nandurbar",
+    "market": "Nandurbar APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "26/08/2026",
+    "min_price": 3171.9,
+    "max_price": 3876.76,
+    "modal_price": 3524.33
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "25/08/2026",
+    "min_price": 3381.16,
+    "max_price": 4132.52,
+    "modal_price": 3756.84
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Kolhapur",
+    "market": "Kolhapur APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "25/08/2026",
+    "min_price": 3377.69,
+    "max_price": 4128.29,
+    "modal_price": 3752.99
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Pune",
+    "market": "Pune APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "25/08/2026",
+    "min_price": 3235.02,
+    "max_price": 3953.92,
+    "modal_price": 3594.47
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Palghar",
+    "market": "Palghar APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "24/08/2026",
+    "min_price": 3151.8,
+    "max_price": 3852.2,
+    "modal_price": 3502.0
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Solapur",
+    "market": "Solapur APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "24/08/2026",
+    "min_price": 3177.76,
+    "max_price": 3883.92,
+    "modal_price": 3530.84
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Sindhudurg",
+    "market": "Sindhudurg APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "24/08/2026",
+    "min_price": 3141.61,
+    "max_price": 3839.75,
+    "modal_price": 3490.68
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Satara",
+    "market": "Satara APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "23/08/2026",
+    "min_price": 3307.63,
+    "max_price": 4042.65,
+    "modal_price": 3675.14
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Aurangabad",
+    "market": "Aurangabad APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "23/08/2026",
+    "min_price": 3231.11,
+    "max_price": 3949.13,
+    "modal_price": 3590.12
+  },
+  {
+    "state": "Maharashtra",
+    "district": "Nanded",
+    "market": "Nanded APMC",
+    "commodity": "Groundnut",
+    "arrival_date": "23/08/2026",
+    "min_price": 3324.01,
+    "max_price": 4062.69,
+    "modal_price": 3693.35
+  }
+]

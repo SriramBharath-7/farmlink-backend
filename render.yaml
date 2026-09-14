@@ -1,0 +1,51 @@
+# Render Blueprint (Infrastructure-as-Code) for the FarmLink backend.
+#
+# What this does when you connect this repo at https://dashboard.render.com/blueprints:
+#   1. Provisions a free-tier managed PostgreSQL 16 database.
+#   2. Provisions a free-tier web service running api_v2.py, with
+#      DATABASE_URL wired automatically from the database above (Render
+#      injects it — you never type a connection string by hand).
+#   3. Leaves CORS_ALLOWED_ORIGINS blank for you to fill in once you know
+#      your frontend's deployed URL (see DEPLOYMENT.md step 4).
+#
+# This file only takes effect if Render is told to use it (New + >
+# Blueprint, point at this repo). It does not run anything on its own —
+# verified in this session by installing this exact requirements.txt in
+# a clean venv and running the full test suite + starting uvicorn bound
+# to a $PORT-style env var (matching what Render's runtime does), not
+# just written from documentation.
+
+databases:
+  - name: farmlink-db
+    plan: free
+    postgresMajorVersion: "16"
+
+services:
+  - type: web
+    name: farmlink-api
+    runtime: python
+    plan: free
+    # Render has no India region (checked Sept 2026); Singapore is the
+    # closest of its 5 regions (Oregon/Ohio/Virginia/Frankfurt/Singapore)
+    # to Maharashtra, but still expect ~200-300ms latency from India, not
+    # local-region speed. Change if you'd rather optimize for a
+    # different judge/user location.
+    region: singapore
+    # Only migrations here, not seeding: verified in this session that
+    # db.seed_from_json is NOT idempotent (a second run throws
+    # IntegrityError on the buyer_profiles unique constraint), so it
+    # would break every redeploy if it ran on every build. `alembic
+    # upgrade head` IS safe to re-run (Alembic tracks the applied
+    # revision and no-ops if already current). Seed data once manually
+    # after the first deploy -- see DEPLOYMENT.md step 3.
+    buildCommand: "pip install -r requirements.txt && alembic upgrade head"
+    startCommand: "uvicorn api_v2:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: farmlink-db
+          property: connectionString
+      - key: CORS_ALLOWED_ORIGINS
+        value: ""   # fill in with your Vercel URL after step 4 in DEPLOYMENT.md, then redeploy
+      - key: PYTHON_VERSION
+        value: "3.12.3"

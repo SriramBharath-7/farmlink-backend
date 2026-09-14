@@ -1,0 +1,28 @@
+# Deployment requirements for api_v2.py (the deployed surface: FastAPI +
+# the deterministic engines + Postgres repository layer).
+#
+# Deliberately excludes crewai: verified by import-graph inspection
+# (nothing api_v2.py imports, directly or transitively, touches crewai)
+# and by actually running the full test suite + every endpoint with
+# crewai NOT installed in this environment. The optional LLM-narration
+# path degrades gracefully (llm_explanation_status field) exactly as
+# AUDIT_REPORT.md documents -- this is the existing designed behavior,
+# not a deployment shortcut. If you later want LLM narration in
+# production, add `crewai` back here and set GEMINI_API_KEY/
+# ANTHROPIC_API_KEY -- no code changes needed.
+
+fastapi>=0.110.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.0.0
+requests>=2.32.0
+python-dotenv>=1.0.0
+
+SQLAlchemy>=2.0.0
+alembic>=1.13.0
+psycopg2-binary>=2.9.0
+
+# Test-only, not needed at runtime, kept here so `pip install -r
+# requirements.txt` alone is still enough to run `pytest tests/`
+# (matches this package's existing single-command test convention).
+httpx>=0.28.0
+pytest>=7.0.0

@@ -1,0 +1,8 @@
+venv/
+venv_deploy_test/
+__pycache__/
+*.pyc
+.env
+.pytest_cache/
+*.egg-info/
+data/osm_geocode_cache.json

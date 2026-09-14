@@ -1,0 +1,167 @@
+[
+  {
+    "provider_id": "LG001",
+    "name": "Sahyadri Transport Co.",
+    "vehicle_types": [
+      "tempo",
+      "mini-truck"
+    ],
+    "rate_per_km_per_quintal": 0.86,
+    "base_district": "Hingoli",
+    "avg_rating": 4.8
+  },
+  {
+    "provider_id": "LG002",
+    "name": "Deccan Transport Co.",
+    "vehicle_types": [
+      "refrigerated van",
+      "tempo"
+    ],
+    "rate_per_km_per_quintal": 2.46,
+    "base_district": "Buldhana",
+    "avg_rating": 4.3
+  },
+  {
+    "provider_id": "LG003",
+    "name": "Konkan Transport Co.",
+    "vehicle_types": [
+      "tempo",
+      "6-wheeler truck"
+    ],
+    "rate_per_km_per_quintal": 1.82,
+    "base_district": "Gadchiroli",
+    "avg_rating": 4.3
+  },
+  {
+    "provider_id": "LG004",
+    "name": "Sahyadri Transport Co.",
+    "vehicle_types": [
+      "6-wheeler truck",
+      "tempo"
+    ],
+    "rate_per_km_per_quintal": 1.62,
+    "base_district": "Beed",
+    "avg_rating": 4.7
+  },
+  {
+    "provider_id": "LG005",
+    "name": "Vidarbha Transport Co.",
+    "vehicle_types": [
+      "6-wheeler truck",
+      "tempo"
+    ],
+    "rate_per_km_per_quintal": 1.5,
+    "base_district": "Nagpur",
+    "avg_rating": 4.0
+  },
+  {
+    "provider_id": "LG006",
+    "name": "Shivneri Transport Co.",
+    "vehicle_types": [
+      "tempo",
+      "refrigerated van"
+    ],
+    "rate_per_km_per_quintal": 1.29,
+    "base_district": "Nashik",
+    "avg_rating": 4.5
+  },
+  {
+    "provider_id": "LG007",
+    "name": "Vidarbha Transport Co.",
+    "vehicle_types": [
+      "refrigerated van",
+      "tempo"
+    ],
+    "rate_per_km_per_quintal": 0.82,
+    "base_district": "Gadchiroli",
+    "avg_rating": 4.7
+  },
+  {
+    "provider_id": "LG008",
+    "name": "Sahyadri Transport Co.",
+    "vehicle_types": [
+      "tempo",
+      "mini-truck"
+    ],
+    "rate_per_km_per_quintal": 1.73,
+    "base_district": "Latur",
+    "avg_rating": 4.1
+  },
+  {
+    "provider_id": "LG009",
+    "name": "Sahyadri Transport Co.",
+    "vehicle_types": [
+      "refrigerated van",
+      "tempo"
+    ],
+    "rate_per_km_per_quintal": 1.22,
+    "base_district": "Chandrapur",
+    "avg_rating": 4.7
+  },
+  {
+    "provider_id": "LG010",
+    "name": "Konkan Transport Co.",
+    "vehicle_types": [
+      "6-wheeler truck",
+      "mini-truck"
+    ],
+    "rate_per_km_per_quintal": 1.52,
+    "base_district": "Yavatmal",
+    "avg_rating": 4.3
+  },
+  {
+    "provider_id": "LG011",
+    "name": "Sahyadri Transport Co.",
+    "vehicle_types": [
+      "6-wheeler truck",
+      "tempo"
+    ],
+    "rate_per_km_per_quintal": 1.9,
+    "base_district": "Buldhana",
+    "avg_rating": 4.1
+  },
+  {
+    "provider_id": "LG012",
+    "name": "Shivneri Transport Co.",
+    "vehicle_types": [
+      "tempo",
+      "mini-truck"
+    ],
+    "rate_per_km_per_quintal": 1.29,
+    "base_district": "Ratnagiri",
+    "avg_rating": 4.4
+  },
+  {
+    "provider_id": "LG013",
+    "name": "Deccan Transport Co.",
+    "vehicle_types": [
+      "refrigerated van",
+      "mini-truck"
+    ],
+    "rate_per_km_per_quintal": 1.35,
+    "base_district": "Nagpur",
+    "avg_rating": 3.6
+  },
+  {
+    "provider_id": "LG014",
+    "name": "Sahyadri Transport Co.",
+    "vehicle_types": [
+      "mini-truck",
+      "refrigerated van"
+    ],
+    "rate_per_km_per_quintal": 2.45,
+    "base_district": "Dhule",
+    "avg_rating": 3.9
+  },
+  {
+    "provider_id": "LG015",
+    "name": "Vidarbha Transport Co.",
+    "vehicle_types": [
+      "mini-truck",
+      "refrigerated van"
+    ],
+    "rate_per_km_per_quintal": 0.95,
+    "base_district": "Nashik",
+    "avg_rating": 4.2
+  }
+]
