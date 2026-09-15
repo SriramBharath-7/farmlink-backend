@@ -1,0 +1,46 @@
+name: Daily AGMARKNET National Sync
+
+on:
+  # 00:30 UTC = 06:00 IST
+  schedule:
+    - cron: "30 0 * * *"
+
+  # Gives us a "Run workflow" button in GitHub
+  workflow_dispatch:
+
+jobs:
+  sync-agmarknet:
+    name: Sync National AGMARKNET Data
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      DATA_GOV_IN_API_KEY: ${{ secrets.DATA_GOV_IN_API_KEY }}
+      PYTHONUNBUFFERED: "1"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run national AGMARKNET sync
+        id: national_sync
+        continue-on-error: true
+        run: python -m db.ingest_agmarknet --ingest --all-states
+
+      - name: Retry failed states
+        if: steps.national_sync.outcome == 'failure'
+        run: python -m db.ingest_agmarknet --ingest --retry-failed
+
+      - name: Confirm national sync
+        if: steps.national_sync.outcome == 'success'
+        run: echo "National AGMARKNET sync completed successfully."
