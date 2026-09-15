@@ -67,7 +67,15 @@ class AgmarknetAdapter(SourceAdapter):
         }
         if district:
             params["filters[district]"] = district
-        resp = self._session.get(AGMARKNET_BASE_URL, params=params, timeout=8)
+        resp = self._session.get(
+            AGMARKNET_BASE_URL,
+            params=params,
+            headers={
+            "User-Agent": "curl/8.0.0",
+            "Accept": "*/*",
+            },
+            timeout=30,
+        )
         resp.raise_for_status()
         return resp.json().get("records", [])
 
