@@ -121,6 +121,7 @@ TRANSACTION_STATUSES = (
 )
 PAYMENT_STATUSES = ("INITIATED", "PROCESSING", "CONFIRMED", "FAILED")
 MARKET_PRICE_SOURCES = ("AGMARKNET", "DATA_GOV_IN", "ENAM", "SYNTHETIC")
+INGESTION_RUN_STATUSES = ("RUNNING", "SUCCESS", "FAILED")
 DATA_STATUSES = ("REAL", "SYNTHETIC", "USER_GENERATED")
 GRIEVANCE_COMPLAINT_TYPES = (
     "payment_not_received", "quality_mismatch", "quantity_mismatch",
@@ -245,11 +246,61 @@ class Market(Base):
     name = Column(String(200), nullable=False)
     apmc_name = Column(String(200))
     district = Column(String(100), nullable=False)
-    state = Column(String(100), nullable=False, server_default="Maharashtra")
+    state = Column(String(100), nullable=False, server_default="Unknown")
     latitude = Column(Numeric(9, 6))
     longitude = Column(Numeric(9, 6))
 
-    __table_args__ = (UniqueConstraint("name", "district", name="uq_market_name_district"),)
+    __table_args__ = (
+    UniqueConstraint(
+        "name",
+        "district",
+        "state",
+        name="uq_market_name_district_state",
+    ),
+    )
+class IngestionRun(Base):
+    __tablename__ = "ingestion_runs"
+
+    id = Column(BigInteger, primary_key=True)
+
+    source = Column(String(50), nullable=False)
+    state = Column(String(100), nullable=False)
+
+    status = Column(
+        enum("ingestion_run_status", INGESTION_RUN_STATUSES),
+        nullable=False,
+        server_default="RUNNING",
+    )
+
+    records_fetched = Column(
+        Integer,
+        nullable=False,
+        server_default="0",
+    )
+
+    records_processed = Column(
+        Integer,
+        nullable=False,
+        server_default="0",
+    )
+
+    started_at = Column(
+        DateTime,
+        nullable=False,
+        default=_utcnow_naive,
+    )
+
+    completed_at = Column(DateTime)
+    error_message = Column(Text)
+
+    __table_args__ = (
+        Index(
+            "ix_ingestion_runs_source_state_started",
+            "source",
+            "state",
+            "started_at",
+        ),
+    )
 
 
 class MarketPrice(Base):
@@ -259,6 +310,8 @@ class MarketPrice(Base):
     market_id = Column(BigInteger, ForeignKey("markets.id", ondelete="CASCADE"), nullable=False)
     commodity_id = Column(BigInteger, ForeignKey("commodities.id", ondelete="CASCADE"), nullable=False)
     arrival_date = Column(Date, nullable=False)
+    variety = Column(String(100), nullable=False, server_default="Unknown")
+    grade = Column(String(50), nullable=False, server_default="Unknown")
     min_price = Column(Numeric(10, 2), nullable=False)
     max_price = Column(Numeric(10, 2), nullable=False)
     modal_price = Column(Numeric(10, 2), nullable=False)
@@ -271,6 +324,15 @@ class MarketPrice(Base):
         CheckConstraint("min_price >= 0 AND max_price >= min_price AND modal_price >= min_price "
                          "AND modal_price <= max_price", name="ck_market_price_bounds"),
         Index("ix_market_prices_lookup", "commodity_id", "market_id", "arrival_date"),
+        UniqueConstraint(
+            "market_id",
+            "commodity_id",
+            "arrival_date",
+            "variety",
+            "grade",
+            "source",
+            name="uq_market_price_observation",
+            ),
     )
 
 

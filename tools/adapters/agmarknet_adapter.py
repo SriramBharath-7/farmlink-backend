@@ -89,6 +89,8 @@ class AgmarknetAdapter(SourceAdapter):
             market=raw.get("market", f"{raw.get('district', '')} APMC"),
             district=raw["district"],
             state=raw.get("state", "Maharashtra"),
+	    variety=(str(raw.get("variety") or "Unknown").strip() or "Unknown"),
+	    grade=(str(raw.get("grade") or "Unknown").strip() or "Unknown"),
             modal_price=float(raw["modal_price"]),
             min_price=float(raw["min_price"]),
             max_price=float(raw["max_price"]),

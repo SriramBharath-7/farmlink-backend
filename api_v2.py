@@ -216,6 +216,18 @@ class GrievanceResponse(BaseModel):
     farmer_message: str
 
 
+class MarketDataStatusResponse(BaseModel):
+    source: str
+    status: str
+    last_successful_sync: Optional[str] = None
+    latest_data_date: Optional[str] = None
+    records_available: int
+    states_with_real_data: int
+    fresh_states: int
+    stale_states: int
+    failed_states: List[str]
+
+
 # ---------------------------------------------------------------------
 # Optional LLM narration -- lazy import, never a hard dependency.
 # ---------------------------------------------------------------------
@@ -366,6 +378,40 @@ def sell_decision(req: SellDecisionRequest):
         decision["llm_explanation_status"] = "not_requested"
 
     return decision
+
+
+@app.get("/market-data/status", response_model=MarketDataStatusResponse)
+def market_data_status():
+    """
+    Report health of persisted REAL AGMARKNET market data.
+
+    This endpoint never contacts AGMARKNET and never treats SYNTHETIC
+    rows as production availability. State health is derived from each
+    state's latest IngestionRun so one state's success cannot hide
+    another state's failure.
+    """
+    db_session = None
+
+    try:
+        try:
+            db_session = _open_db_session()
+            from db.repositories import get_market_data_status
+            return get_market_data_status(db_session)
+        except HTTPException:
+            raise
+        except Exception as e:
+            raise HTTPException(
+                status_code=503,
+                detail={
+                    "error": "postgres_unavailable",
+                    "reason": f"{type(e).__name__}: {e}",
+                },
+            )
+    finally:
+        if db_session is not None:
+            engine = db_session.get_bind()
+            db_session.close()
+            engine.dispose()
 
 
 @app.get("/health")

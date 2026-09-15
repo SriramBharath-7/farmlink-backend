@@ -56,6 +56,8 @@ class PriceRecord:
     source_type: str
     data_status: str
     fetched_at: str
+    variety: str = "Unknown"
+    grade: str = "Unknown"
     fallback_reason: Optional[str] = None
 
     def __post_init__(self):

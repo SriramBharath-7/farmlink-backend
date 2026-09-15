@@ -15,35 +15,60 @@ including a throwaway test database.
 """
 
 from typing import List, Dict, Optional
-from sqlalchemy import select
+from sqlalchemy import select, func
 from sqlalchemy.orm import Session
 
-from db.models import Commodity, Market, MarketPrice, BuyerProfile, BuyerDemand
+from db.models import Commodity, Market, MarketPrice, BuyerProfile, BuyerDemand, IngestionRun
 
 
-def get_price_records(session: Session, commodity: str, district: str = "") -> List[Dict]:
+def get_price_records(
+    session: Session,
+    commodity: str,
+    district: str = "",
+) -> List[Dict]:
     """
-    Returns records shaped exactly like mock_mandi_prices.json entries:
-    arrival_date as a "DD/MM/YYYY" string (matching forecast_tool.py's
-    _parse_date expectation exactly), modal/min/max_price as floats.
+    Return market-price records for forecasting.
 
-    Args:
-        commodity: case-insensitive match against commodities.name
-        district: optional case-insensitive filter on markets.district;
-            omit to search state-wide (mirrors the JSON path's behavior
-            when decision_pipeline.py widens after insufficient_data)
+    Source hierarchy:
+    1. Prefer AGMARKNET observations when available.
+    2. Use SYNTHETIC observations only when no AGMARKNET observations
+       exist for the requested commodity/location.
+
+    LIVE and SYNTHETIC observations are never mixed in one forecast.
     """
-    query = (
-        select(MarketPrice, Commodity.name, Market.district, Market.state, Market.name)
-        .join(Commodity, MarketPrice.commodity_id == Commodity.id)
-        .join(Market, MarketPrice.market_id == Market.id)
-        .where(Commodity.name.ilike(commodity))
-    )
-    if district:
-        query = query.where(Market.district.ilike(district))
 
-    rows = session.execute(query).all()
+    def build_query(source: str):
+        query = (
+            select(
+                MarketPrice,
+                Commodity.name,
+                Market.district,
+                Market.state,
+                Market.name,
+            )
+            .join(Commodity, MarketPrice.commodity_id == Commodity.id)
+            .join(Market, MarketPrice.market_id == Market.id)
+            .where(
+                Commodity.name.ilike(commodity),
+                MarketPrice.source == source,
+            )
+        )
+
+        if district:
+            query = query.where(Market.district.ilike(district))
+
+        return query
+
+    # Production authority: persisted government observations.
+    rows = session.execute(build_query("AGMARKNET")).all()
+
+    # Explicit database fallback only when no government observations
+    # exist for this commodity/location.
+    if not rows:
+        rows = session.execute(build_query("SYNTHETIC")).all()
+
     records = []
+
     for price, commodity_name, market_district, market_state, market_name in rows:
         records.append({
             "commodity": commodity_name,
@@ -56,6 +81,7 @@ def get_price_records(session: Session, commodity: str, district: str = "") -> L
             "max_price": float(price.max_price),
             "data_status": price.source,
         })
+
     return records
 
 
@@ -99,3 +125,119 @@ def get_candidate_buyers(session: Session, commodity: str, kyc_verified_only: bo
             "kyc_verified": buyer.kyc_verified,
         })
     return buyers
+
+def get_market_data_status(session: Session) -> Dict:
+    """
+    Return aggregate health for persisted REAL AGMARKNET market data.
+
+    Rules:
+    - SYNTHETIC rows never contribute to availability or freshness.
+    - UNAVAILABLE: no AGMARKNET MarketPrice rows exist.
+    - FRESH: REAL rows exist and every represented state's latest
+      AGMARKNET ingestion attempt is SUCCESS.
+    - PARTIAL: REAL rows exist but at least one represented state's
+      latest AGMARKNET ingestion attempt is non-fresh.
+
+    Freshness is evaluated independently per state. A later SUCCESS for
+    one state therefore cannot hide a FAILED latest attempt for another.
+    """
+
+    real_summary = session.execute(
+        select(
+            func.count(MarketPrice.id),
+            func.count(func.distinct(Market.state)),
+            func.max(MarketPrice.arrival_date),
+        )
+        .select_from(MarketPrice)
+        .join(Market, MarketPrice.market_id == Market.id)
+        .where(MarketPrice.source == "AGMARKNET")
+    ).one()
+
+    records_available = int(real_summary[0] or 0)
+    states_with_real_data = int(real_summary[1] or 0)
+    latest_data_date = real_summary[2]
+
+    represented_states = set(
+        session.execute(
+            select(Market.state)
+            .join(MarketPrice, MarketPrice.market_id == Market.id)
+            .where(MarketPrice.source == "AGMARKNET")
+            .distinct()
+        ).scalars().all()
+    )
+
+    # Newest run first. We intentionally select the first row for each
+    # state rather than looking at one global "latest run".
+    runs = session.execute(
+        select(IngestionRun)
+        .where(IngestionRun.source == "AGMARKNET")
+        .order_by(IngestionRun.id.desc())
+    ).scalars().all()
+
+    latest_run_by_state = {}
+    for run in runs:
+        if run.state not in latest_run_by_state:
+            latest_run_by_state[run.state] = run
+
+    successful_completion_times = [
+        run.completed_at
+        for run in runs
+        if run.status == "SUCCESS" and run.completed_at is not None
+    ]
+    last_successful_sync = (
+        max(successful_completion_times)
+        if successful_completion_times
+        else None
+    )
+
+    # Only states represented by persisted REAL AGMARKNET data
+    # participate in national health. This prevents orphan/test metadata
+    # from incorrectly making an otherwise healthy dataset PARTIAL.
+    failed_states = sorted(
+        state
+        for state in represented_states
+        if (
+            state in latest_run_by_state
+            and latest_run_by_state[state].status == "FAILED"
+        )
+    )
+
+    fresh_state_names = {
+        state
+        for state in represented_states
+        if (
+            state in latest_run_by_state
+            and latest_run_by_state[state].status == "SUCCESS"
+        )
+    }
+
+    fresh_states = len(fresh_state_names)
+    stale_states = max(states_with_real_data - fresh_states, 0)
+
+    if records_available == 0:
+        status = "UNAVAILABLE"
+    elif stale_states > 0 or failed_states:
+        status = "PARTIAL"
+    else:
+        status = "FRESH"
+
+    return {
+        "source": "AGMARKNET",
+        "status": status,
+        "last_successful_sync": (
+            last_successful_sync.isoformat()
+            if last_successful_sync is not None
+            else None
+        ),
+        "latest_data_date": (
+            latest_data_date.isoformat()
+            if latest_data_date is not None
+            else None
+        ),
+        "records_available": records_available,
+        "states_with_real_data": states_with_real_data,
+        "fresh_states": fresh_states,
+        "stale_states": stale_states,
+        "failed_states": failed_states,
+    }
+
