@@ -243,6 +243,174 @@ def build_sell_decision(commodity: str, district: str, quantity_quintals: float,
     }
 
 
+def build_market_discovery(
+    commodity: str,
+    farmer_state: str,
+    farmer_district: str,
+    quantity_quintals: float,
+    db_session,
+    limit: int = 10,
+) -> dict:
+    """
+    Discover selling-market opportunities without asking the farmer to
+    choose a destination first.
+
+    REAL AGMARKNET observations are grouped by individual market and
+    passed through the existing deterministic forecast tool. The
+    farmer's district is used only as the produce/transport origin.
+
+    Ranking is based on estimated net market realization:
+        current modal price * quantity - estimated transport cost
+
+    Distance uses the project's existing district-distance proxy.
+    Transport rates remain the existing SYNTHETIC logistics provider
+    table and are labelled as such in the response. Opportunities whose
+    distance cannot be estimated are still returned, but rank below
+    opportunities with a calculable net realization.
+
+    This is market discovery, not buyer discovery. Buyer matching remains
+    a separate step after a promising selling opportunity is identified.
+    """
+    if db_session is None:
+        raise ValueError("build_market_discovery requires db_session")
+
+    if quantity_quintals <= 0:
+        return {
+            "error": "invalid_quantity",
+            "reason": "quantity_quintals must be greater than zero",
+        }
+
+    from db.repositories import get_market_opportunities
+
+    records = get_market_opportunities(db_session, commodity)
+    if not records:
+        return {
+            "error": "no_real_market_data",
+            "commodity": commodity,
+            "data_status": "UNAVAILABLE",
+        }
+
+    # Keep each physical mandi separate. A district can contain multiple
+    # markets with different price histories.
+    grouped = {}
+    for record in records:
+        key = (
+            record["state"].casefold(),
+            record["district"].casefold(),
+            record["market"].casefold(),
+        )
+        grouped.setdefault(key, []).append(record)
+
+    providers = _load_json("logistics_providers.json")
+    opportunities = []
+
+    for market_records in grouped.values():
+        forecast = forecast_price(market_records)
+        if forecast.get("insufficient_data"):
+            continue
+
+        sample = market_records[0]
+        market_state = sample["state"]
+        market_district = sample["district"]
+        market_name = sample["market"]
+
+        same_district = (
+            market_state.casefold() == farmer_state.casefold()
+            and market_district.casefold() == farmer_district.casefold()
+        )
+        same_state = market_state.casefold() == farmer_state.casefold()
+
+        if same_district:
+            distance_km = 0.0
+        else:
+            direct_distance = distance_between_districts(
+                farmer_district,
+                market_district,
+            )
+            distance_km = (
+                round(direct_distance * 1.25, 1)
+                if direct_distance is not None
+                else None
+            )
+
+        transport_cost, provider_id = _cheapest_transport_quote(
+            distance_km,
+            quantity_quintals,
+            providers,
+        )
+
+        current_modal = float(forecast["current_modal"])
+        gross_market_value = round(current_modal * quantity_quintals, 2)
+        estimated_net_realization = (
+            round(gross_market_value - transport_cost, 2)
+            if transport_cost is not None
+            else None
+        )
+
+        if same_district:
+            scope = "SAME_DISTRICT"
+        elif same_state:
+            scope = "SAME_STATE"
+        else:
+            scope = "OTHER_STATE"
+
+        opportunities.append({
+            "state": market_state,
+            "district": market_district,
+            "market": market_name,
+            "scope": scope,
+            "distance_km": distance_km,
+            "current_modal_price_per_quintal": current_modal,
+            "gross_market_value": gross_market_value,
+            "estimated_transport_cost": transport_cost,
+            "estimated_net_realization": estimated_net_realization,
+            "transport_provider_id": provider_id,
+            "price_forecast": {
+                **forecast,
+                "data_status": "AGMARKNET",
+                "source": "POSTGRES / AGMARKNET",
+            },
+        })
+
+    if not opportunities:
+        return {
+            "error": "insufficient_market_history",
+            "commodity": commodity,
+            "data_status": "UNAVAILABLE",
+        }
+
+    # Markets with a calculable net realization rank first. Within that
+    # set, economics decide the order, so a farther market can outrank a
+    # local one only when its higher market value survives transport cost.
+    opportunities.sort(
+        key=lambda item: (
+            item["estimated_net_realization"] is None,
+            -(item["estimated_net_realization"] or 0.0),
+            item["distance_km"] if item["distance_km"] is not None else float("inf"),
+            item["state"].casefold(),
+            item["district"].casefold(),
+            item["market"].casefold(),
+        )
+    )
+
+    return {
+        "request": {
+            "commodity": commodity,
+            "farmer_state": farmer_state,
+            "farmer_district": farmer_district,
+            "quantity_quintals": quantity_quintals,
+        },
+        "generated_at": datetime.now().isoformat(),
+        "markets_considered": len(opportunities),
+        "market_opportunities": opportunities[:max(1, limit)],
+        "data_status_summary": {
+            "market_price_data": "AGMARKNET (REAL, persisted in POSTGRES)",
+            "distance_data": "DERIVED (haversine x1.25 road-distance proxy)",
+            "transport_cost": "SYNTHETIC (logistics_providers.json rate table)",
+        },
+    }
+
+
 def build_matching_result(commodity: str, district: str, quantity_quintals: float, grade: str = "A",
                            use_live_routing: bool = False) -> dict:
     """

@@ -93,6 +93,68 @@ def get_price_records(
     return records
 
 
+def get_market_opportunities(session: Session, commodity: str) -> List[Dict]:
+    """
+    Return REAL AGMARKNET market observations that can be considered as
+    selling destinations for the requested commodity.
+
+    Unlike get_price_records(), this discovery query deliberately has
+    NO SYNTHETIC fallback. Market discovery must only advertise
+    opportunities that are backed by persisted government observations.
+
+    The result includes state, district, market, date, and price fields
+    so the discovery layer can group/forecast/rank candidate markets
+    without requiring the farmer to choose a destination beforehand.
+    """
+    rows = session.execute(
+        select(
+            MarketPrice,
+            Commodity.name,
+            Market.state,
+            Market.district,
+            Market.name,
+        )
+        .join(Commodity, MarketPrice.commodity_id == Commodity.id)
+        .join(Market, MarketPrice.market_id == Market.id)
+        .where(
+            Commodity.name.ilike(commodity),
+            MarketPrice.source == "AGMARKNET",
+            Market.state.is_not(None),
+            Market.district.is_not(None),
+        )
+        .order_by(
+            MarketPrice.arrival_date.desc(),
+            Market.state,
+            Market.district,
+            Market.name,
+        )
+    ).all()
+
+    opportunities = []
+
+    for price, commodity_name, market_state, market_district, market_name in rows:
+        state_name = (market_state or "").strip()
+        district_name = (market_district or "").strip()
+        market_name_clean = (market_name or "").strip()
+
+        if not state_name or not district_name:
+            continue
+
+        opportunities.append({
+            "commodity": commodity_name,
+            "state": state_name,
+            "district": district_name,
+            "market": market_name_clean,
+            "arrival_date": price.arrival_date.strftime("%d/%m/%Y"),
+            "modal_price": float(price.modal_price),
+            "min_price": float(price.min_price),
+            "max_price": float(price.max_price),
+            "data_status": "AGMARKNET",
+        })
+
+    return opportunities
+
+
 def get_market_locations(session: Session) -> List[Dict]:
     """
     Return canonical state -> district choices represented by persisted

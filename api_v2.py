@@ -25,7 +25,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-from tools.decision_pipeline import build_sell_decision, build_matching_result, build_logistics_result
+from tools.decision_pipeline import build_sell_decision, build_matching_result, build_logistics_result, build_market_discovery
 from tools.grievance_core import evaluate_grievance, generate_farmer_message
 
 app = FastAPI(
@@ -109,6 +109,14 @@ class SellDecisionRequest(BaseModel):
     use_live_routing: bool = False
     include_llm_explanation: bool = True
     data_source_mode: str = "direct"  # "direct" | "adapter" | "postgres" -- see decision_pipeline.build_sell_decision
+
+
+class MarketDiscoveryRequest(BaseModel):
+    crop: str
+    farmer_state: str
+    farmer_district: str
+    quantity_quintals: float
+    limit: int = Field(default=10, ge=1, le=50)
 
 
 # ---------------------------------------------------------------------
@@ -216,6 +224,28 @@ class GrievanceResponse(BaseModel):
     rule_applied: Dict[str, Any]
     status: str
     farmer_message: str
+
+
+class MarketOpportunity(BaseModel):
+    state: str
+    district: str
+    market: str
+    scope: str
+    distance_km: Optional[float]
+    current_modal_price_per_quintal: float
+    gross_market_value: float
+    estimated_transport_cost: Optional[float]
+    estimated_net_realization: Optional[float]
+    transport_provider_id: Optional[str]
+    price_forecast: PriceForecast
+
+
+class MarketDiscoveryResponse(BaseModel):
+    request: Dict[str, Any]
+    generated_at: str
+    markets_considered: int
+    market_opportunities: List[MarketOpportunity]
+    data_status_summary: Dict[str, str]
 
 
 class MarketDataStatusResponse(BaseModel):
@@ -327,6 +357,48 @@ def _open_db_session():
     from db.session import get_session_factory
     Session = get_session_factory()  # raises RuntimeError itself if DATABASE_URL unset
     return Session()
+
+
+@app.post("/agents/market-discovery", response_model=MarketDiscoveryResponse)
+def market_discovery(req: MarketDiscoveryRequest):
+    """
+    Discover real AGMARKNET-backed selling-market opportunities from the
+    farmer's produce location. The farmer supplies the origin; FarmLink
+    discovers candidate destinations.
+    """
+    db_session = None
+
+    try:
+        try:
+            db_session = _open_db_session()
+            result = build_market_discovery(
+                commodity=req.crop,
+                farmer_state=req.farmer_state,
+                farmer_district=req.farmer_district,
+                quantity_quintals=req.quantity_quintals,
+                db_session=db_session,
+                limit=req.limit,
+            )
+        except HTTPException:
+            raise
+        except Exception as e:
+            raise HTTPException(
+                status_code=503,
+                detail={
+                    "error": "postgres_unavailable",
+                    "reason": f"{type(e).__name__}: {e}",
+                },
+            )
+    finally:
+        if db_session is not None:
+            engine = db_session.get_bind()
+            db_session.close()
+            engine.dispose()
+
+    if result.get("error"):
+        raise HTTPException(status_code=422, detail=result)
+
+    return result
 
 
 @app.post("/agents/sell-decision", response_model=SellDecisionResponse)
