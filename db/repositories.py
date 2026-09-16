@@ -25,6 +25,7 @@ def get_price_records(
     session: Session,
     commodity: str,
     district: str = "",
+    state: str = "",
 ) -> List[Dict]:
     """
     Return market-price records for forecasting.
@@ -34,7 +35,11 @@ def get_price_records(
     2. Use SYNTHETIC observations only when no AGMARKNET observations
        exist for the requested commodity/location.
 
-    LIVE and SYNTHETIC observations are never mixed in one forecast.
+    Location filters:
+    - district narrows results to the farmer's district.
+    - state ensures national data does not accidentally cross state boundaries.
+
+    REAL and SYNTHETIC observations are never mixed in one forecast.
     """
 
     def build_query(source: str):
@@ -53,6 +58,9 @@ def get_price_records(
                 MarketPrice.source == source,
             )
         )
+
+        if state:
+            query = query.where(Market.state.ilike(state))
 
         if district:
             query = query.where(Market.district.ilike(district))
@@ -83,6 +91,51 @@ def get_price_records(
         })
 
     return records
+
+
+def get_market_locations(session: Session) -> List[Dict]:
+    """
+    Return canonical state -> district choices represented by persisted
+    REAL AGMARKNET observations.
+
+    SYNTHETIC rows are deliberately excluded so the farmer-facing
+    location selector only advertises locations backed by government
+    market-price data. Values come directly from Market.state and
+    Market.district, preventing frontend spelling drift.
+    """
+    rows = session.execute(
+        select(Market.state, Market.district)
+        .join(MarketPrice, MarketPrice.market_id == Market.id)
+        .where(
+            MarketPrice.source == "AGMARKNET",
+            Market.state.is_not(None),
+            Market.district.is_not(None),
+        )
+        .distinct()
+        .order_by(Market.state, Market.district)
+    ).all()
+
+    districts_by_state: Dict[str, set] = {}
+
+    for state, district in rows:
+        state_name = (state or "").strip()
+        district_name = (district or "").strip()
+
+        if not state_name or not district_name:
+            continue
+
+        districts_by_state.setdefault(state_name, set()).add(district_name)
+
+    return [
+        {
+            "state": state,
+            "districts": sorted(districts, key=str.casefold),
+        }
+        for state, districts in sorted(
+            districts_by_state.items(),
+            key=lambda item: item[0].casefold(),
+        )
+    ]
 
 
 def get_candidate_buyers(session: Session, commodity: str, kyc_verified_only: bool = True) -> List[Dict]:
@@ -126,6 +179,7 @@ def get_candidate_buyers(session: Session, commodity: str, kyc_verified_only: bo
         })
     return buyers
 
+
 def get_market_data_status(session: Session) -> Dict:
     """
     Return aggregate health for persisted REAL AGMARKNET market data.
@@ -166,8 +220,6 @@ def get_market_data_status(session: Session) -> Dict:
         ).scalars().all()
     )
 
-    # Newest run first. We intentionally select the first row for each
-    # state rather than looking at one global "latest run".
     runs = session.execute(
         select(IngestionRun)
         .where(IngestionRun.source == "AGMARKNET")
@@ -190,9 +242,6 @@ def get_market_data_status(session: Session) -> Dict:
         else None
     )
 
-    # Only states represented by persisted REAL AGMARKNET data
-    # participate in national health. This prevents orphan/test metadata
-    # from incorrectly making an otherwise healthy dataset PARTIAL.
     failed_states = sorted(
         state
         for state in represented_states
@@ -240,4 +289,3 @@ def get_market_data_status(session: Session) -> Dict:
         "stale_states": stale_states,
         "failed_states": failed_states,
     }
-

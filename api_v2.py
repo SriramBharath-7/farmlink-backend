@@ -73,6 +73,7 @@ app.add_middleware(
 
 class PriceRequest(BaseModel):
     crop: str = Field(..., examples=["Onion"])
+    state: str = Field(..., examples=["Maharashtra"])
     district: str = Field(..., examples=["Nashik"])
     quantity_quintals: float = Field(..., examples=[20])
     use_live_routing: bool = False
@@ -101,6 +102,7 @@ class GrievanceRequest(BaseModel):
 
 class SellDecisionRequest(BaseModel):
     crop: str
+    state: str
     district: str
     quantity_quintals: float
     grade: str = "A"
@@ -228,6 +230,16 @@ class MarketDataStatusResponse(BaseModel):
     failed_states: List[str]
 
 
+class MarketLocation(BaseModel):
+    state: str
+    districts: List[str]
+
+
+class MarketLocationsResponse(BaseModel):
+    source: str
+    locations: List[MarketLocation]
+
+
 # ---------------------------------------------------------------------
 # Optional LLM narration -- lazy import, never a hard dependency.
 # ---------------------------------------------------------------------
@@ -262,7 +274,14 @@ def _try_llm_explain(decision: dict) -> (Optional[str], str):
 
 @app.post("/agents/price-intelligence", response_model=PriceForecast)
 def price_intelligence(req: PriceRequest):
-    decision = build_sell_decision(req.crop, req.district, req.quantity_quintals, "A", req.use_live_routing)
+    decision = build_sell_decision(
+        req.crop,
+        req.district,
+        req.quantity_quintals,
+        "A",
+        req.use_live_routing,
+        state=req.state,
+    )
     if decision.get("error"):
         raise HTTPException(status_code=422, detail=decision)
     return decision["price_forecast"]
@@ -330,6 +349,7 @@ def sell_decision(req: SellDecisionRequest):
                 decision = build_sell_decision(
                     req.crop, req.district, req.quantity_quintals, req.grade,
                     req.use_live_routing, req.data_source_mode, db_session=db_session,
+                    state=req.state,
                 )
             except HTTPException:
                 raise
@@ -348,6 +368,7 @@ def sell_decision(req: SellDecisionRequest):
             decision = build_sell_decision(
                 req.crop, req.district, req.quantity_quintals, req.grade,
                 req.use_live_routing, req.data_source_mode, db_session=None,
+                state=req.state,
             )
     finally:
         if db_session is not None:
@@ -378,6 +399,41 @@ def sell_decision(req: SellDecisionRequest):
         decision["llm_explanation_status"] = "not_requested"
 
     return decision
+
+
+@app.get("/market-data/locations", response_model=MarketLocationsResponse)
+def market_data_locations():
+    """
+    Return canonical state -> district choices backed by persisted REAL
+    AGMARKNET observations. SYNTHETIC rows are excluded by the repository
+    query so the frontend only offers locations represented by real
+    government market-price data.
+    """
+    db_session = None
+
+    try:
+        try:
+            db_session = _open_db_session()
+            from db.repositories import get_market_locations
+            return {
+                "source": "AGMARKNET",
+                "locations": get_market_locations(db_session),
+            }
+        except HTTPException:
+            raise
+        except Exception as e:
+            raise HTTPException(
+                status_code=503,
+                detail={
+                    "error": "postgres_unavailable",
+                    "reason": f"{type(e).__name__}: {e}",
+                },
+            )
+    finally:
+        if db_session is not None:
+            engine = db_session.get_bind()
+            db_session.close()
+            engine.dispose()
 
 
 @app.get("/market-data/status", response_model=MarketDataStatusResponse)

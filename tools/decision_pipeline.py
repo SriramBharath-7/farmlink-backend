@@ -50,7 +50,7 @@ def _cheapest_transport_quote(distance_km, quantity_quintals, providers):
 
 def build_sell_decision(commodity: str, district: str, quantity_quintals: float, grade: str = "A",
                          use_live_routing: bool = False, data_source_mode: str = "direct",
-                         db_session=None) -> dict:
+                         db_session=None, state: str = "") -> dict:
     """
     Returns a single structured dict covering:
       - price forecast (deterministic, from forecast_tool)
@@ -100,7 +100,12 @@ def build_sell_decision(commodity: str, district: str, quantity_quintals: float,
             commodity_records = []
     elif data_source_mode == "postgres":
         from db.repositories import get_price_records
-        commodity_records = get_price_records(db_session, commodity, district)
+        commodity_records = get_price_records(
+            db_session,
+            commodity,
+            district=district,
+            state=state,
+        )
         price_source_label = "POSTGRES"
     else:
         mandi_records_all = _load_json("mock_mandi_prices.json")
@@ -128,7 +133,12 @@ def build_sell_decision(commodity: str, district: str, quantity_quintals: float,
                 commodity_records = []
         elif data_source_mode == "postgres":
             from db.repositories import get_price_records
-            commodity_records = get_price_records(db_session, commodity, district="")
+            commodity_records = get_price_records(
+                db_session,
+                commodity,
+                district="",
+                state=state,
+            )
             price_data_status = commodity_records[0]["data_status"] if commodity_records else price_data_status
         else:
             commodity_records = [r for r in mandi_records_all if r["commodity"].lower() == commodity.lower()]
@@ -208,8 +218,11 @@ def build_sell_decision(commodity: str, district: str, quantity_quintals: float,
 
     return {
         "request": {
-            "commodity": commodity, "district": district,
-            "quantity_quintals": quantity_quintals, "grade": grade,
+            "commodity": commodity,
+            "state": state,
+            "district": district,
+            "quantity_quintals": quantity_quintals,
+            "grade": grade,
         },
         "generated_at": datetime.now().isoformat(),
         "price_forecast": {**forecast, "data_status": price_data_status, "source": price_source_label},
