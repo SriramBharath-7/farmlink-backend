@@ -233,6 +233,7 @@ class MarketOpportunity(BaseModel):
     scope: str
     distance_km: Optional[float]
     distance_source: Optional[str] = None
+    routing_budget_reason: Optional[str] = None
     current_modal_price_per_quintal: float
     gross_market_value: float
     estimated_transport_cost: Optional[float]
@@ -242,6 +243,7 @@ class MarketOpportunity(BaseModel):
 
 
 class MarketDiscoveryResponse(BaseModel):
+    discovery_diagnostics: Dict[str, Any] = Field(default_factory=dict)
     request: Dict[str, Any]
     generated_at: str
     markets_considered: int

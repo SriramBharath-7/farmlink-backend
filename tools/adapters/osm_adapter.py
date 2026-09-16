@@ -27,6 +27,9 @@ class OSMRoutingAdapter(SourceAdapter):
     source_name = "OSM"
     source_type = "public_osm"
 
+    def __init__(self, budget=None):
+        self.budget = budget
+
     def fetch(self, origin_district: str, destination_district: str,
               origin_state: str = "Maharashtra",
               destination_state: str = "Maharashtra") -> List[Dict[str, Any]]:
@@ -34,8 +37,10 @@ class OSMRoutingAdapter(SourceAdapter):
 
         result = estimate_district_to_district(
             origin_district, destination_district,
-            origin_state=origin_state, destination_state=destination_state,
+            origin_state=origin_state, destination_state=destination_state, budget=self.budget,
         )
+        if "error" in result and self.budget is not None:
+            return [result]
         if "error" in result:
             raise AdapterError(result["error"])
 
@@ -53,7 +58,8 @@ class OSMRoutingAdapter(SourceAdapter):
         )
         return [{**record.to_dict(), "distance_source": result["distance_source"],
                  "origin_geocode_source": result["origin_geocode_source"],
-                 "destination_geocode_source": result["destination_geocode_source"]}]
+                 "destination_geocode_source": result["destination_geocode_source"],
+                 "budget_reason": result.get("budget_reason")}]
 
 
 class StaticHaversineAdapter(SourceAdapter):

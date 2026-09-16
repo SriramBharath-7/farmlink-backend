@@ -307,18 +307,16 @@ def build_market_discovery(
     providers = _load_json("logistics_providers.json")
     opportunities = []
     origin_lookup = normalize_location(farmer_state, farmer_district)
-    routing = OSMRoutingAdapter()
+    from tools.market_shortlist import shortlist_markets
+    from tools.osm_routing_tool import DiscoveryRoutingBudget, _load_geocode_cache
+    shortlist = shortlist_markets(grouped, origin_lookup, quantity_quintals, _load_geocode_cache())
+    budget = DiscoveryRoutingBudget()
+    routing = OSMRoutingAdapter(budget=budget)
     distance_cache = {}
 
-    for market_records in grouped.values():
-        # Match the existing chronological ordering, independently of whether
-        # forecast_price can produce a trend. Equal-date rows retain their
-        # existing input order; variety/grade selection is a separate policy.
-        latest_observation = sorted(
-            market_records,
-            key=lambda record: datetime.strptime(record["arrival_date"], "%d/%m/%Y"),
-        )[-1]
-        current_modal = float(latest_observation["modal_price"])
+    for candidate in shortlist:
+        market_records = candidate["records"]
+        current_modal = candidate["current_modal"]
         forecast = forecast_price(market_records)
 
         sample = market_records[0]
@@ -333,6 +331,7 @@ def build_market_discovery(
         if same_district:
             distance_km = 0.0
             distance_source = "SAME_DISTRICT_PROXY"
+            budget_reason = None
         else:
             if destination_lookup not in distance_cache:
                 try:
@@ -341,11 +340,11 @@ def build_market_discovery(
                         origin_state=farmer_state, destination_state=market_state,
                     )[0]
                     distance_cache[destination_lookup] = (
-                        route["distance_km"], route["distance_source"],
+                        route["distance_km"], route["distance_source"], route.get("budget_reason"),
                     )
                 except AdapterError:
-                    distance_cache[destination_lookup] = (None, "UNRESOLVED_COORDINATES")
-            distance_km, distance_source = distance_cache[destination_lookup]
+                    distance_cache[destination_lookup] = (None, "UNRESOLVED_COORDINATES", None)
+            distance_km, distance_source, budget_reason = distance_cache[destination_lookup]
 
         transport_cost, provider_id = _cheapest_transport_quote(
             distance_km,
@@ -374,6 +373,7 @@ def build_market_discovery(
             "scope": scope,
             "distance_km": distance_km,
             "distance_source": distance_source,
+            "routing_budget_reason": budget_reason,
             "current_modal_price_per_quintal": current_modal,
             "gross_market_value": gross_market_value,
             "estimated_transport_cost": transport_cost,
@@ -409,6 +409,16 @@ def build_market_discovery(
         },
         "generated_at": datetime.now().isoformat(),
         "markets_considered": len(opportunities),
+        "discovery_diagnostics": {
+            "total_eligible_markets": len(grouped),
+            "shortlisted_markets": len(shortlist),
+            "evaluated_markets": len(opportunities),
+            "markets_with_distance": sum(o["distance_km"] is not None for o in opportunities),
+            "candidate_cap": 12,
+            "external_http_attempts": budget.attempts,
+            "routing_budget_reason": budget.exhaustion_reason,
+            "search_scope": "Bounded shortlist; not exhaustive national optimization",
+        },
         "market_opportunities": opportunities[:max(1, limit)],
         "data_status_summary": {
             "market_price_data": "AGMARKNET (REAL, persisted in POSTGRES)",

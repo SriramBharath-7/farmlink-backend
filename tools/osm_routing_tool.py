@@ -40,6 +40,7 @@ import json
 import os
 import time
 import math
+import threading
 import requests
 from typing import Optional, Dict, Tuple
 from tools.district_geo import DISTRICT_COORDS, haversine_km
@@ -60,6 +61,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 GEOCODE_CACHE_PATH = os.path.join(BASE_DIR, "..", "data", "osm_geocode_cache.json")
 
 _last_call_ts = 0.0
+_request_start_lock = threading.Lock()
 
 
 def _respect_rate_limit():
@@ -97,8 +99,74 @@ def _valid_coords(record):
         return False
 
 
+class ExternalWorkExhausted(Exception):
+    pass
+
+
+class DiscoveryRoutingBudget:
+    """One discovery request's network allowance and geocode memo."""
+    def __init__(self, max_attempts=12, seconds=15):
+        self.max_attempts = max_attempts
+        self.deadline = time.monotonic() + seconds
+        self.attempts = 0
+        self.exhaustion_reason = None
+        self.geocodes = {}
+
+    def timeout(self):
+        remaining = self.deadline - time.monotonic()
+        if remaining <= 0:
+            self.exhaustion_reason = "DEADLINE_EXHAUSTED"
+        elif self.attempts >= self.max_attempts:
+            self.exhaustion_reason = "HTTP_BUDGET_EXHAUSTED"
+        if self.exhaustion_reason:
+            raise ExternalWorkExhausted(self.exhaustion_reason)
+        return min(REQUEST_TIMEOUT_SECONDS, remaining)
+
+
+def _http_get(url, budget=None, **kwargs):
+    if budget is None:
+        _request_start_lock.acquire()
+    else:
+        budget.timeout()
+        if not _request_start_lock.acquire(timeout=max(0, budget.deadline - time.monotonic())):
+            budget.exhaustion_reason = "DEADLINE_EXHAUSTED"
+            raise ExternalWorkExhausted(budget.exhaustion_reason)
+    try:
+        if budget is not None:
+            budget.timeout()
+        _respect_rate_limit()
+        timeout = budget.timeout() if budget is not None else REQUEST_TIMEOUT_SECONDS
+        if budget is not None:
+            budget.attempts += 1
+    finally:
+        _request_start_lock.release()
+    # Redirects must not create uncounted HTTP requests.
+    return requests.get(url, timeout=timeout, **({"allow_redirects": False} if budget else {}), **kwargs)
+
+
+def cached_district_coordinates(state, district, cache):
+    """Pure cache/static lookup: never invokes Nominatim."""
+    state, district = normalize_location(state, district)
+    key = json.dumps(["india", state.casefold(), district.casefold()])
+    record = cache.get(key)
+    if _valid_coords(record):
+        return float(record["lat"]), float(record["lon"])
+    return DISTRICT_COORDS.get(district) if state == "Maharashtra" else None
+
+
 def geocode_district(district: str, state: str = "Maharashtra", country: str = "India",
-                      use_cache: bool = True) -> Dict:
+                     use_cache: bool = True, budget=None) -> Dict:
+    key = (*normalize_location(state, district), country.strip().casefold())
+    if budget is not None and key in budget.geocodes:
+        return budget.geocodes[key]
+    result = _geocode_district(district, state, country, use_cache, budget)
+    if budget is not None:
+        budget.geocodes[key] = result
+    return result
+
+
+def _geocode_district(district: str, state: str = "Maharashtra", country: str = "India",
+                      use_cache: bool = True, budget=None) -> Dict:
     """
     Resolves a district name to (lat, lon) via Nominatim, caching to disk
     by normalized country/state/district so repeated lookups avoid HTTP.
@@ -124,14 +192,13 @@ def geocode_district(district: str, state: str = "Maharashtra", country: str = "
         return {**cache[cache_key], "lat": float(cache[cache_key]["lat"]),
                 "lon": float(cache[cache_key]["lon"]), "source": "OSM_LIVE_CACHED"}
 
+    budget_reason = None
     query = f"{district}, {state}, {country}"
     try:
-        _respect_rate_limit()
-        resp = requests.get(
-            NOMINATIM_URL,
+        resp = _http_get(
+            NOMINATIM_URL, budget=budget,
             params={"q": query, "format": "json", "limit": 1, "countrycodes": "in"},
             headers={"User-Agent": USER_AGENT},
-            timeout=REQUEST_TIMEOUT_SECONDS,
         )
         resp.raise_for_status()
         results = resp.json()
@@ -142,16 +209,18 @@ def geocode_district(district: str, state: str = "Maharashtra", country: str = "
                 cache[cache_key] = record
                 _save_geocode_cache(cache)
             return record
+    except ExternalWorkExhausted as exc:
+        budget_reason = str(exc)
     except (requests.RequestException, ValueError, KeyError, IndexError, TypeError):
         pass  # fall through to static fallback below -- never raise
 
     static = DISTRICT_COORDS.get(district) if state == "Maharashtra" and country == "India" else None
     if static:
-        return {"lat": static[0], "lon": static[1], "source": "STATIC_FALLBACK"}
-    return {"lat": None, "lon": None, "source": "NOT_FOUND"}
+        return {"lat": static[0], "lon": static[1], "source": "STATIC_FALLBACK", "budget_reason": budget_reason}
+    return {"lat": None, "lon": None, "source": "NOT_FOUND", "budget_reason": budget_reason}
 
 
-def get_road_route(origin_latlon: Tuple[float, float], dest_latlon: Tuple[float, float]) -> Dict:
+def get_road_route(origin_latlon: Tuple[float, float], dest_latlon: Tuple[float, float], budget=None) -> Dict:
     """
     Real road-network distance/duration via the OSRM public demo server.
     Falls back to the haversine x1.25 proxy (same formula already used
@@ -173,15 +242,14 @@ def get_road_route(origin_latlon: Tuple[float, float], dest_latlon: Tuple[float,
     if None in (lat1, lon1, lat2, lon2):
         return {"distance_km": None, "duration_minutes": None, "source": "UNRESOLVED_COORDINATES"}
 
+    budget_reason = None
     try:
-        _respect_rate_limit()
         coords = f"{lon1},{lat1};{lon2},{lat2}"  # OSRM wants lon,lat order
         url = OSRM_ROUTE_URL_TEMPLATE.format(coords=coords)
-        resp = requests.get(
-            url,
+        resp = _http_get(
+            url, budget=budget,
             params={"overview": "false", "alternatives": "false"},
             headers={"User-Agent": USER_AGENT},
-            timeout=REQUEST_TIMEOUT_SECONDS,
         )
         resp.raise_for_status()
         payload = resp.json()
@@ -196,6 +264,8 @@ def get_road_route(origin_latlon: Tuple[float, float], dest_latlon: Tuple[float,
                 "source": "OSRM_LIVE",
                 "attribution": "Route data (c) OpenStreetMap contributors, ODbL",
             }
+    except ExternalWorkExhausted as exc:
+        budget_reason = str(exc)
     except (requests.RequestException, ValueError, KeyError, IndexError, TypeError, AttributeError):
         pass  # fall through -- never raise
 
@@ -204,35 +274,41 @@ def get_road_route(origin_latlon: Tuple[float, float], dest_latlon: Tuple[float,
         "distance_km": round(straight_line * 1.25, 1),
         "duration_minutes": None,
         "source": "HAVERSINE_FALLBACK",
-        "fallback_reason": "OSRM demo server unavailable, rate-limited, or returned no route",
+        "fallback_reason": budget_reason or "OSRM demo server unavailable, rate-limited, or returned no route",
+        "budget_reason": budget_reason,
     }
 
 
 def estimate_district_to_district(origin_district: str, destination_district: str,
                                   origin_state: str = "Maharashtra",
-                                  destination_state: str = "Maharashtra") -> Dict:
+                                  destination_state: str = "Maharashtra", budget=None) -> Dict:
     """
     Convenience wrapper: geocode both districts, then route between them.
     This is the function decision_pipeline.py / logistics_core.py should
     call to replace the pure-haversine estimate_distance() -- same
     output shape (distance_km present), plus explicit source tagging.
     """
-    origin_geo = geocode_district(origin_district, state=origin_state)
-    dest_geo = geocode_district(destination_district, state=destination_state)
+    origin_geo = geocode_district(origin_district, state=origin_state, budget=budget)
+    dest_geo = (geocode_district(destination_district, state=destination_state, budget=budget)
+                if origin_geo["source"] != "NOT_FOUND" else origin_geo)
 
     if origin_geo["source"] == "NOT_FOUND" or dest_geo["source"] == "NOT_FOUND":
         return {
             "error": f"Could not resolve one or both districts: '{origin_district}', '{destination_district}'",
             "origin": origin_district, "destination": destination_district,
+            "distance_km": None,
+            "distance_source": origin_geo.get("budget_reason") or dest_geo.get("budget_reason") or "UNRESOLVED_COORDINATES",
+            "budget_reason": origin_geo.get("budget_reason") or dest_geo.get("budget_reason"),
         }
 
-    route = get_road_route((origin_geo["lat"], origin_geo["lon"]), (dest_geo["lat"], dest_geo["lon"]))
+    route = get_road_route((origin_geo["lat"], origin_geo["lon"]), (dest_geo["lat"], dest_geo["lon"]), budget=budget)
     return {
         "origin": origin_district,
         "destination": destination_district,
         "distance_km": route["distance_km"],
         "duration_minutes": route["duration_minutes"],
         "distance_source": route["source"],
+        "budget_reason": route.get("budget_reason") or origin_geo.get("budget_reason") or dest_geo.get("budget_reason"),
         "origin_geocode_source": origin_geo["source"],
         "destination_geocode_source": dest_geo["source"],
     }
