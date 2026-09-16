@@ -19,11 +19,11 @@ The original api.py is left untouched -- this is an additive file, not
 a replacement, per "don't delete functional features."
 """
 
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Dict, Any, Literal
 import os
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 from tools.decision_pipeline import build_sell_decision, build_matching_result, build_logistics_result, build_market_discovery
 from tools.grievance_core import evaluate_grievance, generate_farmer_message
@@ -262,6 +262,96 @@ class MarketDiscoveryResponse(BaseModel):
     data_status_summary: Dict[str, str]
 
 
+class MarketDetailsRequest(BaseModel):
+    market_id: str = Field(pattern=r"^[1-9][0-9]{0,18}$")
+    commodity_id: str = Field(pattern=r"^[1-9][0-9]{0,18}$")
+    observation_id: str = Field(pattern=r"^[1-9][0-9]{0,18}$")
+    farmer_state: str = Field(min_length=2, max_length=100)
+    farmer_district: str = Field(min_length=2, max_length=100)
+    quantity_quintals: float = Field(gt=0, allow_inf_nan=False)
+
+    @field_validator("market_id", "commodity_id", "observation_id")
+    @classmethod
+    def database_id(cls, value):
+        if int(value) > 9223372036854775807:
+            raise ValueError("ID exceeds database range")
+        return value
+
+    @field_validator("farmer_state", "farmer_district")
+    @classmethod
+    def origin_name(cls, value):
+        value = value.strip()
+        if len(value) < 2 or any(ord(c) < 32 for c in value):
+            raise ValueError("Enter a valid produce origin")
+        return value
+
+
+class Observation(BaseModel):
+    market_id: str
+    commodity_id: str
+    observation_id: str
+    observation_date: str
+    market: str
+    state: Optional[str]
+    district: Optional[str]
+    commodity: str
+    modal_price: Optional[float]
+    min_price: Optional[float]
+    max_price: Optional[float]
+    variety: Optional[str]
+    grade: Optional[str]
+    unit: Optional[str]
+    provenance: Dict[str, str]
+
+
+class MarketHistory(BaseModel):
+    selected_observation: Observation
+    observations: List[Observation]
+    truncated: bool
+    limit: int
+    status: Literal["available", "insufficient_history"]
+    mixed_varieties_grades_units: bool
+    note: str
+
+
+class MarketEconomics(BaseModel):
+    distance_km: Optional[float]
+    distance_source: Optional[str]
+    estimated_transport_cost: Optional[float]
+    gross_market_value: Optional[float]
+    estimated_net_realization: Optional[float]
+
+
+class MarketDecision(BaseModel):
+    recommended_action: Literal["SELL_NOW", "WAIT", "STORE", "INSUFFICIENT_DATA"]
+    reason: str
+    data_sufficiency: Literal["sufficient_for_heuristic", "insufficient"]
+    supporting_metrics: Dict[str, Any]
+    provenance: Dict[str, str]
+    limitations: List[str]
+
+
+class MarketCoordinates(BaseModel):
+    latitude: Optional[float]
+    longitude: Optional[float]
+    coordinate_source: Optional[str]
+    coordinate_precision: Literal["mandi_exact", "locality", "district_centroid", "unknown"]
+
+
+class MarketDetailsResponse(BaseModel):
+    market_id: str
+    commodity_id: str
+    selected_observation: Observation
+    history: MarketHistory
+    economics: MarketEconomics
+    forecast: PriceForecast
+    decision: MarketDecision
+    coordinates: MarketCoordinates
+    routing_diagnostics: Dict[str, Any]
+    provenance: Dict[str, Dict[str, str]]
+    limitations: List[str]
+
+
 class MarketDataStatusResponse(BaseModel):
     source: str
     status: str
@@ -413,6 +503,28 @@ def market_discovery(req: MarketDiscoveryRequest):
         raise HTTPException(status_code=422, detail=result)
 
     return result
+
+
+@app.post("/agents/market-details", response_model=MarketDetailsResponse)
+def market_details(req: MarketDetailsRequest):
+    from tools.market_intelligence import build_market_details
+    session = None
+    try:
+        session = _open_db_session()
+        result = build_market_details(session, req)
+        if result is None:
+            raise HTTPException(status_code=404, detail={"error": "selected_real_observation_not_found"})
+        return result
+    except HTTPException:
+        raise
+    except Exception:
+        # Do not expose connection strings, query parameters or driver messages.
+        raise HTTPException(status_code=503, detail={"error": "market_details_unavailable"})
+    finally:
+        if session is not None:
+            engine = session.get_bind()
+            session.close()
+            engine.dispose()
 
 
 @app.post("/agents/sell-decision", response_model=SellDecisionResponse)

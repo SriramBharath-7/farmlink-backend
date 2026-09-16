@@ -358,3 +358,33 @@ def get_market_data_status(session: Session) -> Dict:
         "stale_states": stale_states,
         "failed_states": failed_states,
     }
+
+
+def get_market_history(session: Session, market_id: int, commodity_id: int, observation_id: int):
+    """Bounded REAL-only history, plus the exact selected observation (never substituted)."""
+    query = (select(MarketPrice, Market.name, Market.state, Market.district, Commodity.name)
+             .join(Market, Market.id == MarketPrice.market_id)
+             .join(Commodity, Commodity.id == MarketPrice.commodity_id)
+             .where(MarketPrice.market_id == market_id, MarketPrice.commodity_id == commodity_id,
+                    MarketPrice.source == "AGMARKNET"))
+    selected = session.execute(query.where(MarketPrice.id == observation_id)).first()
+    if selected is None:
+        return None
+
+    def serialize(row):
+        price, market, state, district, commodity = row
+        return {
+            "market_id": str(price.market_id), "commodity_id": str(price.commodity_id),
+            "observation_id": str(price.id), "observation_date": price.arrival_date.isoformat(),
+            "market": market, "state": state, "district": district, "commodity": commodity,
+            "modal_price": float(price.modal_price) if price.modal_price is not None else None,
+            "min_price": float(price.min_price) if price.min_price is not None else None,
+            "max_price": float(price.max_price) if price.max_price is not None else None,
+            "variety": price.variety, "grade": price.grade, "unit": price.unit,
+            "provenance": {"category": "REAL", "source": "AGMARKNET"},
+        }
+
+    rows = session.execute(query.order_by(MarketPrice.arrival_date.desc(), MarketPrice.id.desc()).limit(181)).all()
+    return {"selected_observation": serialize(selected),
+            "observations": [serialize(row) for row in reversed(rows[:180])],
+            "truncated": len(rows) > 180, "limit": 180}
