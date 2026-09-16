@@ -273,9 +273,70 @@ def test_real_repository_excludes_synthetic_observations():
             assert result["markets_considered"] == 1
             item = result["market_opportunities"][0]
             assert item["market"] == "Mandi 1"
+            assert (item["market_id"], item["commodity_id"], item["observation_id"]) == ("1", "1", "1")
+            assert item["observation_date"] == "2026-09-01"
+            assert (item["variety"], item["grade"], item["unit"]) == ("Unknown", "Unknown", "quintal")
+            assert item["selection_available"] is True
             assert item["current_modal_price_per_quintal"] == 2000
             assert item["price_forecast"]["record_count"] == 1
             assert item["price_forecast"]["insufficient_data"] is True
             assert item["estimated_net_realization"] == 24000
     finally:
         engine.dispose()
+
+@pytest.mark.parametrize("count", [1, 2, 3])
+def test_selected_price_observation_metadata_and_string_ids(monkeypatch, count):
+    from api_v2 import MarketDiscoveryResponse
+    rows = history("Keralam", "Palakad", "Raw Mandi", 2000)[:count]
+    for index, row in enumerate(rows):
+        row.update(market_id=9007199254740993, commodity_id=9007199254740995,
+                   observation_id=9007199254741000 + index,
+                   observation_date=f"2026-09-0{index + 1}", variety=f"Variety {index}",
+                   grade=f"Grade {index}", unit="quintal", modal_price=2000 + index * 100)
+    rows.reverse()  # Repository order is descending by observation date.
+    item = MarketDiscoveryResponse(**discover(monkeypatch, rows, "Kerala", "Palakkad")).model_dump(mode="json")["market_opportunities"][0]
+    latest = rows[0]
+    for field in ("market_id", "commodity_id", "observation_id"):
+        assert item[field] == str(latest[field])
+    for field in ("observation_date", "variety", "grade", "unit", "commodity"):
+        assert item[field] == latest[field]
+    assert item["current_modal_price_per_quintal"] == latest["modal_price"]
+    assert item["selection_available"] is True
+    assert item["scope"] == "SAME_DISTRICT"
+    assert item["state"] == "Keralam" and item["district"] == "Palakad"
+    assert item["price_forecast"]["insufficient_data"] is (count < 3)
+    assert item["provenance"]["price_observation"] == {"category": "REAL", "source": "AGMARKNET"}
+    assert item["provenance"]["transport_assumptions"]["category"] == "SYNTHETIC"
+
+
+def test_equal_date_selection_preserves_existing_last_row_price(monkeypatch):
+    rows = history("Keralam", "Palakad", "Raw", 2000)[:1] * 2
+    rows = [dict(row, market_id="1", commodity_id="2", observation_id=str(i),
+                 modal_price=price, variety=str(i)) for row, i, price in zip(rows, (10, 11), (3000, 1000))]
+    item = discover(monkeypatch, rows)["market_opportunities"][0]
+    assert item["current_modal_price_per_quintal"] == 1000
+    assert item["observation_id"] == "11"
+    assert item["variety"] == "11"
+
+
+def test_ambiguous_market_ids_disable_selection_without_changing_economics(monkeypatch):
+    rows = history("Keralam", "Palakad", "Shared Name", 3000)[:2]
+    for i, row in enumerate(rows):
+        row.update(market_id=str(i + 1), commodity_id="1", observation_id=str(i + 10))
+    rows += history("Keralam", "Palakad", "Lower", 1000)[:1]
+    result = discover(monkeypatch, rows)
+    assert result["markets_considered"] == 2
+    item = result["market_opportunities"][0]
+    assert item["market"] == "Shared Name"
+    assert item["estimated_net_realization"] == 36000
+    assert item["market_id"] == "2" and item["observation_id"] == "11"
+    assert item["selection_available"] is False
+    assert item["selection_unavailable_reason"] == "ambiguous_market_identity"
+
+
+def test_official_origin_and_raw_state_match_same_state(monkeypatch):
+    from tools.adapters.osm_adapter import OSMRoutingAdapter
+    monkeypatch.setattr(OSMRoutingAdapter, "fetch", Mock(return_value=[{"distance_km": 100, "distance_source": "OSRM_LIVE"}]))
+    item = discover(monkeypatch, history("Keralam", "Thrissur", "Raw", 1000), "Kerala", "Palakkad")["market_opportunities"][0]
+    assert item["scope"] == "SAME_STATE"
+    assert item["state"] == "Keralam"

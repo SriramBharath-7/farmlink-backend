@@ -13,7 +13,7 @@ def shortlist_markets(grouped, origin, quantity, coordinate_cache):
         location = normalize_location(latest["state"], latest["district"])
         coords = cached_district_coordinates(*location, coordinate_cache)
         candidates.append({
-            "identity": identity, "records": records,
+            "identity": identity, "records": records, "observation": latest,
             "current_modal": float(latest["modal_price"]),
             "gross": float(latest["modal_price"]) * quantity,
             "location": location,

@@ -227,6 +227,17 @@ class GrievanceResponse(BaseModel):
 
 
 class MarketOpportunity(BaseModel):
+    market_id: Optional[str] = None
+    commodity_id: Optional[str] = None
+    observation_id: Optional[str] = None
+    observation_date: Optional[str] = None
+    commodity: Optional[str] = None
+    variety: Optional[str] = None
+    grade: Optional[str] = None
+    unit: Optional[str] = None
+    selection_available: bool = False
+    selection_unavailable_reason: Optional[str] = None
+    provenance: Dict[str, Dict[str, str]] = Field(default_factory=dict)
     state: str
     district: str
     market: str

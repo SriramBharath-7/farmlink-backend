@@ -319,7 +319,10 @@ def build_market_discovery(
         current_modal = candidate["current_modal"]
         forecast = forecast_price(market_records)
 
-        sample = market_records[0]
+        sample = candidate["observation"]
+        market_ids = {str(r["market_id"]) for r in market_records if r.get("market_id") is not None}
+        identity_ambiguous = len(market_ids) > 1
+        identity_complete = all(sample.get(k) is not None for k in ("market_id", "commodity_id", "observation_id"))
         market_state = sample["state"]
         market_district = sample["district"]
         market_name = sample["market"]
@@ -367,6 +370,20 @@ def build_market_discovery(
             scope = "OTHER_STATE"
 
         opportunities.append({
+            **{k: str(sample[k]) if sample.get(k) is not None else None
+               for k in ("market_id", "commodity_id", "observation_id")},
+            "observation_date": sample.get("observation_date") or datetime.strptime(sample["arrival_date"], "%d/%m/%Y").date().isoformat(),
+            "commodity": sample.get("commodity", commodity),
+            "variety": sample.get("variety"), "grade": sample.get("grade"), "unit": sample.get("unit"),
+            "selection_available": identity_complete and not identity_ambiguous,
+            "selection_unavailable_reason": "ambiguous_market_identity" if identity_ambiguous else (None if identity_complete else "missing_observation_identity"),
+            "provenance": {
+                "price_observation": {"category": "REAL", "source": "AGMARKNET"},
+                "distance": {"category": "DERIVED", "source": distance_source},
+                "economics": {"category": "DERIVED", "source": "observed price minus estimated transport"},
+                "transport_assumptions": {"category": "SYNTHETIC", "source": "logistics_providers.json"},
+                "origin": {"category": "USER_DECLARED", "source": "farmer input"},
+            },
             "state": market_state,
             "district": market_district,
             "market": market_name,

@@ -141,6 +141,13 @@ def get_market_opportunities(session: Session, commodity: str) -> List[Dict]:
             continue
 
         opportunities.append({
+            "market_id": str(price.market_id),
+            "commodity_id": str(price.commodity_id),
+            "observation_id": str(price.id),
+            "observation_date": price.arrival_date.isoformat(),
+            "variety": price.variety,
+            "grade": price.grade,
+            "unit": price.unit,
             "commodity": commodity_name,
             "state": state_name,
             "district": district_name,
