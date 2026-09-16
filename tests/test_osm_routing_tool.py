@@ -1,4 +1,5 @@
 import sys, os, json, unittest
+import tempfile
 from unittest.mock import patch, MagicMock
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
@@ -13,11 +14,18 @@ _sleep_patcher = patch("tools.osm_routing_tool.time.sleep", return_value=None)
 
 
 def setUpModule():
+    global CACHE_PATH, _cache_dir, _cache_patcher
+    _cache_dir = tempfile.TemporaryDirectory()
+    CACHE_PATH = os.path.join(_cache_dir.name, "cache.json")
+    _cache_patcher = patch.object(osm, "GEOCODE_CACHE_PATH", CACHE_PATH)
+    _cache_patcher.start()
     _sleep_patcher.start()
 
 
 def tearDownModule():
     _sleep_patcher.stop()
+    _cache_patcher.stop()
+    _cache_dir.cleanup()
 
 
 def _clear_cache_file():

@@ -262,7 +262,7 @@ def build_market_discovery(
     Ranking is based on estimated net market realization:
         current modal price * quantity - estimated transport cost
 
-    Distance uses the project's existing district-distance proxy.
+    Distance uses state-aware OSM routing with the existing geographic fallback.
     Transport rates remain the existing SYNTHETIC logistics provider
     table and are labelled as such in the response. Opportunities whose
     distance cannot be estimated are still returned, but rank below
@@ -281,6 +281,8 @@ def build_market_discovery(
         }
 
     from db.repositories import get_market_opportunities
+    from tools.adapters.osm_adapter import OSMRoutingAdapter
+    from tools.location_lookup import normalize_location
 
     records = get_market_opportunities(db_session, commodity)
     if not records:
@@ -303,6 +305,9 @@ def build_market_discovery(
 
     providers = _load_json("logistics_providers.json")
     opportunities = []
+    origin_lookup = normalize_location(farmer_state, farmer_district)
+    routing = OSMRoutingAdapter()
+    distance_cache = {}
 
     for market_records in grouped.values():
         forecast = forecast_price(market_records)
@@ -314,24 +319,26 @@ def build_market_discovery(
         market_district = sample["district"]
         market_name = sample["market"]
 
-        same_district = (
-            market_state.casefold() == farmer_state.casefold()
-            and market_district.casefold() == farmer_district.casefold()
-        )
-        same_state = market_state.casefold() == farmer_state.casefold()
+        destination_lookup = normalize_location(market_state, market_district)
+        same_district = origin_lookup == destination_lookup
+        same_state = origin_lookup[0] == destination_lookup[0]
 
         if same_district:
             distance_km = 0.0
+            distance_source = "SAME_DISTRICT_PROXY"
         else:
-            direct_distance = distance_between_districts(
-                farmer_district,
-                market_district,
-            )
-            distance_km = (
-                round(direct_distance * 1.25, 1)
-                if direct_distance is not None
-                else None
-            )
+            if destination_lookup not in distance_cache:
+                try:
+                    route = routing.fetch(
+                        farmer_district, market_district,
+                        origin_state=farmer_state, destination_state=market_state,
+                    )[0]
+                    distance_cache[destination_lookup] = (
+                        route["distance_km"], route["distance_source"],
+                    )
+                except AdapterError:
+                    distance_cache[destination_lookup] = (None, "UNRESOLVED_COORDINATES")
+            distance_km, distance_source = distance_cache[destination_lookup]
 
         transport_cost, provider_id = _cheapest_transport_quote(
             distance_km,
@@ -360,6 +367,7 @@ def build_market_discovery(
             "market": market_name,
             "scope": scope,
             "distance_km": distance_km,
+            "distance_source": distance_source,
             "current_modal_price_per_quintal": current_modal,
             "gross_market_value": gross_market_value,
             "estimated_transport_cost": transport_cost,
@@ -405,7 +413,7 @@ def build_market_discovery(
         "market_opportunities": opportunities[:max(1, limit)],
         "data_status_summary": {
             "market_price_data": "AGMARKNET (REAL, persisted in POSTGRES)",
-            "distance_data": "DERIVED (haversine x1.25 road-distance proxy)",
+            "distance_data": "DERIVED (OSM district routing; haversine x1.25 fallback; same-district zero proxy)",
             "transport_cost": "SYNTHETIC (logistics_providers.json rate table)",
         },
     }

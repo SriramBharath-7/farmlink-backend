@@ -27,10 +27,15 @@ class OSMRoutingAdapter(SourceAdapter):
     source_name = "OSM"
     source_type = "public_osm"
 
-    def fetch(self, origin_district: str, destination_district: str) -> List[Dict[str, Any]]:
+    def fetch(self, origin_district: str, destination_district: str,
+              origin_state: str = "Maharashtra",
+              destination_state: str = "Maharashtra") -> List[Dict[str, Any]]:
         from tools.osm_routing_tool import estimate_district_to_district  # lazy: avoids a hard `requests` dependency for callers who only ever use StaticHaversineAdapter
 
-        result = estimate_district_to_district(origin_district, destination_district)
+        result = estimate_district_to_district(
+            origin_district, destination_district,
+            origin_state=origin_state, destination_state=destination_state,
+        )
         if "error" in result:
             raise AdapterError(result["error"])
 
@@ -46,7 +51,9 @@ class OSMRoutingAdapter(SourceAdapter):
             fetched_at=self.now_iso(),
             fallback_reason=None if is_live else "OSRM demo server unavailable/rate-limited/no route -- see osm_routing_tool.py",
         )
-        return [record.to_dict()]
+        return [{**record.to_dict(), "distance_source": result["distance_source"],
+                 "origin_geocode_source": result["origin_geocode_source"],
+                 "destination_geocode_source": result["destination_geocode_source"]}]
 
 
 class StaticHaversineAdapter(SourceAdapter):

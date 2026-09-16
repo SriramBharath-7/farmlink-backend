@@ -39,9 +39,11 @@ is slow or down.
 import json
 import os
 import time
+import math
 import requests
 from typing import Optional, Dict, Tuple
 from tools.district_geo import DISTRICT_COORDS, haversine_km
+from tools.location_lookup import normalize_location
 
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
 OSRM_ROUTE_URL_TEMPLATE = "https://router.project-osrm.org/route/v1/driving/{coords}"
@@ -69,27 +71,41 @@ def _respect_rate_limit():
 
 
 def _load_geocode_cache() -> Dict:
-    if os.path.exists(GEOCODE_CACHE_PATH):
+    try:
         with open(GEOCODE_CACHE_PATH, "r", encoding="utf-8") as f:
-            return json.load(f)
+            cache = json.load(f)
+            return cache if isinstance(cache, dict) else {}
+    except (OSError, ValueError):
+        pass
     return {}
 
 
 def _save_geocode_cache(cache: Dict):
-    os.makedirs(os.path.dirname(GEOCODE_CACHE_PATH), exist_ok=True)
-    with open(GEOCODE_CACHE_PATH, "w", encoding="utf-8") as f:
-        json.dump(cache, f, indent=2, ensure_ascii=False)
+    try:
+        os.makedirs(os.path.dirname(GEOCODE_CACHE_PATH), exist_ok=True)
+        with open(GEOCODE_CACHE_PATH, "w", encoding="utf-8") as f:
+            json.dump(cache, f, indent=2, ensure_ascii=False)
+    except OSError:
+        pass  # A read-only cache must not discard a successful geocode.
+
+
+def _valid_coords(record):
+    try:
+        lat, lon = float(record["lat"]), float(record["lon"])
+        return math.isfinite(lat) and math.isfinite(lon) and -90 <= lat <= 90 and -180 <= lon <= 180
+    except (TypeError, ValueError, KeyError):
+        return False
 
 
 def geocode_district(district: str, state: str = "Maharashtra", country: str = "India",
                       use_cache: bool = True) -> Dict:
     """
     Resolves a district name to (lat, lon) via Nominatim, caching to disk
-    so repeated calls for the same district (there are ~36 Maharashtra
-    districts total -- a closed, small set) don't re-hit the live API.
+    by normalized country/state/district so repeated lookups avoid HTTP.
+    District-only legacy cache entries are deliberately ignored.
 
     Falls back to the static DISTRICT_COORDS table in district_geo.py if
-    the live call fails for any reason (timeout, rate limit, malformed
+    the state is Maharashtra and the live call fails (timeout, rate limit, malformed
     response, network unavailable) or the district isn't recognized by
     Nominatim under this query. This function NEVER raises for a network
     failure -- it degrades and tags the source instead.
@@ -97,9 +113,16 @@ def geocode_district(district: str, state: str = "Maharashtra", country: str = "
     Returns:
         {"lat": float, "lon": float, "source": "OSM_LIVE"|"STATIC_FALLBACK"|"NOT_FOUND"}
     """
+    state, district = normalize_location(state, district)
+    country = " ".join(country.split()).title()
+    if not state or not district:
+        return {"lat": None, "lon": None, "source": "NOT_FOUND"}
+    cache_key = json.dumps([country.casefold(), state.casefold(), district.casefold()])
     cache = _load_geocode_cache() if use_cache else {}
-    if use_cache and district in cache:
-        return {**cache[district], "source": cache[district].get("source", "OSM_LIVE") + "_CACHED"}
+    # Legacy district-only keys cannot prove which state was queried.
+    if cache_key in cache and _valid_coords(cache[cache_key]):
+        return {**cache[cache_key], "lat": float(cache[cache_key]["lat"]),
+                "lon": float(cache[cache_key]["lon"]), "source": "OSM_LIVE_CACHED"}
 
     query = f"{district}, {state}, {country}"
     try:
@@ -112,17 +135,17 @@ def geocode_district(district: str, state: str = "Maharashtra", country: str = "
         )
         resp.raise_for_status()
         results = resp.json()
-        if results:
+        if isinstance(results, list) and results and _valid_coords(results[0]):
             lat, lon = float(results[0]["lat"]), float(results[0]["lon"])
             record = {"lat": lat, "lon": lon, "source": "OSM_LIVE", "matched_display_name": results[0].get("display_name")}
             if use_cache:
-                cache[district] = record
+                cache[cache_key] = record
                 _save_geocode_cache(cache)
             return record
-    except (requests.RequestException, ValueError, KeyError, IndexError):
+    except (requests.RequestException, ValueError, KeyError, IndexError, TypeError):
         pass  # fall through to static fallback below -- never raise
 
-    static = DISTRICT_COORDS.get(district.strip().title())
+    static = DISTRICT_COORDS.get(district) if state == "Maharashtra" and country == "India" else None
     if static:
         return {"lat": static[0], "lon": static[1], "source": "STATIC_FALLBACK"}
     return {"lat": None, "lon": None, "source": "NOT_FOUND"}
@@ -164,13 +187,16 @@ def get_road_route(origin_latlon: Tuple[float, float], dest_latlon: Tuple[float,
         payload = resp.json()
         if payload.get("code") == "Ok" and payload.get("routes"):
             route = payload["routes"][0]
+            distance, duration = float(route["distance"]), float(route["duration"])
+            if not all(math.isfinite(v) and v >= 0 for v in (distance, duration)):
+                raise ValueError("Invalid route measurements")
             return {
-                "distance_km": round(route["distance"] / 1000, 1),
-                "duration_minutes": round(route["duration"] / 60, 1),
+                "distance_km": round(distance / 1000, 1),
+                "duration_minutes": round(duration / 60, 1),
                 "source": "OSRM_LIVE",
                 "attribution": "Route data (c) OpenStreetMap contributors, ODbL",
             }
-    except (requests.RequestException, ValueError, KeyError, IndexError):
+    except (requests.RequestException, ValueError, KeyError, IndexError, TypeError, AttributeError):
         pass  # fall through -- never raise
 
     straight_line = haversine_km((lat1, lon1), (lat2, lon2))
@@ -182,15 +208,17 @@ def get_road_route(origin_latlon: Tuple[float, float], dest_latlon: Tuple[float,
     }
 
 
-def estimate_district_to_district(origin_district: str, destination_district: str) -> Dict:
+def estimate_district_to_district(origin_district: str, destination_district: str,
+                                  origin_state: str = "Maharashtra",
+                                  destination_state: str = "Maharashtra") -> Dict:
     """
     Convenience wrapper: geocode both districts, then route between them.
     This is the function decision_pipeline.py / logistics_core.py should
     call to replace the pure-haversine estimate_distance() -- same
     output shape (distance_km present), plus explicit source tagging.
     """
-    origin_geo = geocode_district(origin_district)
-    dest_geo = geocode_district(destination_district)
+    origin_geo = geocode_district(origin_district, state=origin_state)
+    dest_geo = geocode_district(destination_district, state=destination_state)
 
     if origin_geo["source"] == "NOT_FOUND" or dest_geo["source"] == "NOT_FOUND":
         return {

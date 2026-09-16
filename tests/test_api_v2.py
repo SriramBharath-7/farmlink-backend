@@ -16,7 +16,7 @@ class TestHealth(unittest.TestCase):
 class TestPriceIntelligenceEndpoint(unittest.TestCase):
     def test_real_request_returns_typed_forecast(self):
         r = client.post("/agents/price-intelligence", json={
-            "crop": "Cotton", "district": "Nagpur", "quantity_quintals": 20,
+            "crop": "Cotton", "state": "Maharashtra", "district": "Nagpur", "quantity_quintals": 20,
         })
         self.assertEqual(r.status_code, 200)
         body = r.json()
@@ -86,7 +86,7 @@ class TestGrievanceEndpoint(unittest.TestCase):
 class TestSellDecisionEndpoint(unittest.TestCase):
     def test_without_llm_explanation(self):
         r = client.post("/agents/sell-decision", json={
-            "crop": "Onion", "district": "Nashik", "quantity_quintals": 20, "grade": "A",
+            "crop": "Onion", "state": "Maharashtra", "district": "Nashik", "quantity_quintals": 20, "grade": "A",
             "include_llm_explanation": False,
         })
         self.assertEqual(r.status_code, 200)
@@ -100,7 +100,7 @@ class TestSellDecisionEndpoint(unittest.TestCase):
         # endpoint returns the full structured result anyway, with a
         # clear status, rather than a 500.
         r = client.post("/agents/sell-decision", json={
-            "crop": "Onion", "district": "Nashik", "quantity_quintals": 20, "grade": "A",
+            "crop": "Onion", "state": "Maharashtra", "district": "Nashik", "quantity_quintals": 20, "grade": "A",
             "include_llm_explanation": True,
         })
         self.assertEqual(r.status_code, 200)

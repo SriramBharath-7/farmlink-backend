@@ -232,6 +232,7 @@ class MarketOpportunity(BaseModel):
     market: str
     scope: str
     distance_km: Optional[float]
+    distance_source: Optional[str] = None
     current_modal_price_per_quintal: float
     gross_market_value: float
     estimated_transport_cost: Optional[float]
