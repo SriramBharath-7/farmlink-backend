@@ -176,3 +176,106 @@ def test_multiple_mandis_share_one_district_route(monkeypatch):
     result = discover(monkeypatch, records)
     assert result["markets_considered"] == 2
     route.assert_called_once_with("Palakad", "Mysore", origin_state="Keralam", destination_state="Karnataka")
+
+
+@pytest.mark.parametrize("count", [1, 2, 3])
+def test_history_length_does_not_gate_market_economics(monkeypatch, count):
+    from tools.adapters.osm_adapter import OSMRoutingAdapter
+    from tools.logistics_core import estimate_transport_cost
+    from api_v2 import MarketDiscoveryResponse
+
+    monkeypatch.setattr(OSMRoutingAdapter, "fetch", Mock(return_value=[
+        {"distance_km": 100, "distance_source": "OSRM_LIVE"},
+    ]))
+    records = history("Keralam", "Palakad", "Raw Mandi", 2000)[:count]
+    # The first supplied row is newest, as in the repository query.
+    records[-1]["modal_price"] = 2500
+    records.reverse()
+    original = deepcopy(records)
+    result = discover(monkeypatch, records, "Karnataka", "Mysore")
+    item = MarketDiscoveryResponse(**result).model_dump()["market_opportunities"][0]
+    assert records == original
+    assert (item["state"], item["district"], item["market"]) == ("Keralam", "Palakad", "Raw Mandi")
+    assert item["current_modal_price_per_quintal"] == 2500
+    assert item["gross_market_value"] == 30000
+    cost = estimate_transport_cost(100, 12, pipeline._load_json("logistics_providers.json"))["cheapest_cost_inr"]
+    assert item["distance_km"] == 100
+    assert item["estimated_transport_cost"] == cost
+    assert item["estimated_net_realization"] == 30000 - cost
+    forecast = item["price_forecast"]
+    assert forecast["record_count"] == count
+    assert forecast["source"] == "POSTGRES / AGMARKNET"
+    if count < 3:
+        assert forecast["insufficient_data"] is True
+        assert forecast["reason"] == f"only_{count}_records_minimum_3_required"
+        assert forecast["expected_range"] is None
+        assert forecast["trend"] is None
+        assert forecast["confidence"] is None
+    else:
+        assert forecast["insufficient_data"] is False
+        assert forecast["expected_range"] is not None
+        assert forecast["trend"] is not None
+
+
+def test_ranking_uses_observed_price_not_forecast_fields(monkeypatch):
+    records = history("Kerala", "Palakkad", "Higher observed", 3000)[:1]
+    records += history("Kerala", "Palakkad", "Lower observed", 2000)
+    def misleading_forecast(rows):
+        return {"insufficient_data": False, "record_count": len(rows),
+                "current_modal": 1 if len(rows) == 1 else 999999,
+                "expected_range": {"low": 999999, "high": 999999},
+                "confidence": 0.01 if len(rows) == 1 else 0.99}
+    monkeypatch.setattr(pipeline, "forecast_price", misleading_forecast)
+    items = discover(monkeypatch, records)["market_opportunities"]
+    assert [item["market"] for item in items] == ["Higher observed", "Lower observed"]
+    assert [item["estimated_net_realization"] for item in items] == [36000, 24000]
+
+
+def test_short_history_unknown_distance_stays_null_and_ranks_last(monkeypatch):
+    records = history("Bihar", "Unknown", "High unknown", 100000)[:1]
+    records += history("Kerala", "Palakkad", "Local", 100)[:2]
+    local, unknown = discover(monkeypatch, records)["market_opportunities"]
+    assert local["market"] == "Local"
+    assert local["estimated_net_realization"] == 1200
+    assert unknown["current_modal_price_per_quintal"] == 100000
+    assert unknown["distance_km"] is None
+    assert unknown["estimated_transport_cost"] is None
+    assert unknown["estimated_net_realization"] is None
+    assert unknown["price_forecast"]["insufficient_data"] is True
+
+
+def test_real_repository_excludes_synthetic_observations():
+    # Execute the actual repository query against disposable in-memory tables.
+    # No PostgreSQL, migrations, seed scripts, or on-disk datasets are involved.
+    from datetime import date
+    from sqlalchemy import create_engine
+    from sqlalchemy.orm import Session
+    from db.models import Commodity, Market, MarketPrice
+
+    engine = create_engine("sqlite:///:memory:")
+    try:
+        for table in (Commodity.__table__, Market.__table__, MarketPrice.__table__):
+            table.create(engine)
+        with Session(engine) as session:
+            session.add(Commodity(id=1, name="Onion"))
+            session.add_all([Market(id=i, name=f"Mandi {i}", state="Keralam", district="Palakad")
+                             for i in (1, 2)])
+            session.flush()
+            for i, market_id, source, price in [(1, 1, "AGMARKNET", 2000),
+                                               (2, 1, "SYNTHETIC", 9000),
+                                               (3, 2, "SYNTHETIC", 10000)]:
+                session.add(MarketPrice(id=i, market_id=market_id, commodity_id=1,
+                    arrival_date=date(2026, 9, i), variety="Unknown", grade="Unknown",
+                    min_price=price, modal_price=price, max_price=price,
+                    unit="quintal", source=source))
+            session.flush()
+            result = pipeline.build_market_discovery("Onion", "Kerala", "Palakkad", 12, session)
+            assert result["markets_considered"] == 1
+            item = result["market_opportunities"][0]
+            assert item["market"] == "Mandi 1"
+            assert item["current_modal_price_per_quintal"] == 2000
+            assert item["price_forecast"]["record_count"] == 1
+            assert item["price_forecast"]["insufficient_data"] is True
+            assert item["estimated_net_realization"] == 24000
+    finally:
+        engine.dispose()

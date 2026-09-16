@@ -255,8 +255,9 @@ def build_market_discovery(
     Discover selling-market opportunities without asking the farmer to
     choose a destination first.
 
-    REAL AGMARKNET observations are grouped by individual market and
-    passed through the existing deterministic forecast tool. The
+    REAL AGMARKNET observations are grouped by individual market. The
+    latest observed price drives economics; forecasting is optional
+    enrichment and insufficient history does not exclude a market. The
     farmer's district is used only as the produce/transport origin.
 
     Ranking is based on estimated net market realization:
@@ -310,9 +311,15 @@ def build_market_discovery(
     distance_cache = {}
 
     for market_records in grouped.values():
+        # Match the existing chronological ordering, independently of whether
+        # forecast_price can produce a trend. Equal-date rows retain their
+        # existing input order; variety/grade selection is a separate policy.
+        latest_observation = sorted(
+            market_records,
+            key=lambda record: datetime.strptime(record["arrival_date"], "%d/%m/%Y"),
+        )[-1]
+        current_modal = float(latest_observation["modal_price"])
         forecast = forecast_price(market_records)
-        if forecast.get("insufficient_data"):
-            continue
 
         sample = market_records[0]
         market_state = sample["state"]
@@ -346,7 +353,6 @@ def build_market_discovery(
             providers,
         )
 
-        current_modal = float(forecast["current_modal"])
         gross_market_value = round(current_modal * quantity_quintals, 2)
         estimated_net_realization = (
             round(gross_market_value - transport_cost, 2)
@@ -379,13 +385,6 @@ def build_market_discovery(
                 "source": "POSTGRES / AGMARKNET",
             },
         })
-
-    if not opportunities:
-        return {
-            "error": "insufficient_market_history",
-            "commodity": commodity,
-            "data_status": "UNAVAILABLE",
-        }
 
     # Markets with a calculable net realization rank first. Within that
     # set, economics decide the order, so a farther market can outrank a
